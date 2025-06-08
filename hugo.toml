@@ -1,8 +1,8 @@
 baseURL = "http://www.example.com"
-title = "johndoe"
+title = "Emilinho Janez"
 theme = "hugo-coder"
-languageCode = "en"
-defaultContentLanguage = "en"
+languageCode = "es"
+defaultContentLanguage = "es"
 pagination.pagerSize  = 6
 enableEmoji = true
 
@@ -17,9 +17,9 @@ noClasses = false
 [params]
 author = "Emilio Juárez"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Emilio Juárez personal website"
+description = "Emilio Juáre1z personal website"
 keywords = "blog,developer,personal"
-info = ["Full Stack DevOps", "Magician"]
+info = ["Incursionando en Ciberseguridad", "Free Software", "Ciclista", "AI (NLP, Machine Learning)"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
@@ -134,19 +134,19 @@ author = "authors"
 name = "Github"
 icon = "fa-brands fa-github fa-2x"
 weight = 1
-url = "https://github.com/johndoe/"
+url = "https://github.com/Emilio-J4n3z"
 
 [[params.social]]
 name = "Gitlab"
 icon = "fa-brands fa-gitlab fa-2x"
 weight = 2
-url = "https://gitlab.com/johndoe/"
+url = "https://gitlab.com/emilinho"
 
 [[params.social]]
 name = "Twitter"
 icon = "fa-brands fa-x-twitter fa-2x"
 weight = 3
-url = "https://twitter.com/johndoe/"
+url = "https://twitter.com/emilinhone/"
 
 [[params.social]]
 name = "LinkedIn"
@@ -168,8 +168,51 @@ url = "https://myhugosite.com/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
 
+# CONFIGURACIÓN MULTIIDIOMA
+
+# Español (idioma principal)
+[languages.es]
+languageName = ":es:"
+title = "Emilinho Janez"
+weight = 1
+
+[languages.es.params]
+author = "Emilio Juárez"
+info = ["Incursionando en Ciberseguridad", "Software Libre", "Ciclista", "IA (PLN, Machine Learning)"]
+description = "Sitio web personal de Emilio Juárez"
+keywords = "blog,desarrollador,personal"
+
+[[languages.es.menu.main]]
+name = "Acerca de"
+weight = 1
+url = "about/"
+
+[[languages.es.menu.main]]
+name = "Blog"
+weight = 2
+url = "posts/"
+
+[[languages.es.menu.main]]
+name = "Proyectos"
+weight = 3
+url = "projects/"
+
+[[languages.es.menu.main]]
+name = "Contacto"
+weight = 5
+url = "contact/"
+
+# Inglés
+
 [languages.en]
 languageName = ":uk:"
+weight = 2
+
+[languages.en.params]
+author = "Emilio Juárez"
+info = ["Exploring Cybersecurity", "Free Software", "Cyclist", "AI (NLP, Machine Learning)"]
+description = "Emilio Juárez personal website"
+keywords = "blog,developer,personal"
 
 [[languages.en.menu.main]]
 name = "About"
@@ -191,14 +234,17 @@ name = "Contact me"
 weight = 5
 url = "contact/"
 
+
+# Portugués Brasileño
 [languages.pt-br]
 languageName = ":brazil:"
-title = "João Ninguém"
+title = "Emilinho Janez"
+weight = 3
 
 [languages.pt-br.params]
-author = "João Ninguém"
-info = "Full Stack DevOps e Mágico"
-description = "Sítio pessoal de João Ninguém"
+author = "Emilio Juárez"
+info = ["Incursionando em Cibersegurança", "Software Livre", "Ciclista", "IA (PLN, Machine Learning)"]
+description = "Site pessoal do Emilio Juárez"
 keywords = "blog,desenvolvedor,pessoal"
 
 [[languages.pt-br.menu.main]]

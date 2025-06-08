@@ -15,14 +15,15 @@ one = "autor"
 other = "autores"
 
 [posts]
+one = "publicación"
 other = "publicaciones"
 
 [reading_time]
 one = "Un minuto de lectura"
-other = "{{ .Count }} minutos de lectura."
+other = "{{ .Count }} minutos de lectura"
 
 [page_not_found]
-other = "Página no encontrada."
+other = "Página no encontrada"
 
 [page_does_not_exist]
 other = "Disculpa, la página no existe."
@@ -31,13 +32,13 @@ other = "Disculpa, la página no existe."
 other = "Puedes regresar a la <a href=\"{{ . }}\">página inicial</a>."
 
 [licensed_under]
-other = "Licensed under"
+other = "Licenciado bajo"
 
 [powered_by]
 other = "Desarrollado por"
 
 [see_also]
-other = "También ver en"
+other = "Ver también"
 
 [note]
 other = "nota"
@@ -61,4 +62,59 @@ other = "advertencia"
 other = "error"
 
 [link_to_heading]
-other = "Link to heading"
+other = "Enlace al encabezado"
+
+# Traducciones adicionales comunes para hugo-coder
+[menu]
+other = "Menú"
+
+[home]
+other = "Inicio"
+
+[about]
+other = "Acerca de"
+
+[blog]
+other = "Blog"
+
+[projects]
+other = "Proyectos"
+
+[contact]
+other = "Contacto"
+
+[archive]
+other = "Archivo"
+
+[search]
+other = "Buscar"
+
+[recent_posts]
+other = "Publicaciones recientes"
+
+[older_posts]
+other = "Publicaciones anteriores"
+
+[newer_posts]
+other = "Publicaciones más recientes"
+
+[previous]
+other = "Anterior"
+
+[next]
+other = "Siguiente"
+
+[last_modified]
+other = "Última modificación"
+
+[published]
+other = "Publicado"
+
+[draft]
+other = "Borrador"
+
+[summary]
+other = "Resumen"
+
+[social]
+other = "Redes sociales"
