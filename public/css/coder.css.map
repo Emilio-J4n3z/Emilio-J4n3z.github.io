@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "coder.css",
-	"sourceRoot": "/home/emilinho/Documents/Sitio",
+	"sourceRoot": "/home/emilinho/git/Sitio-web/Emilio-J4n3z.github.io",
 	"sources": [
 		"themes/hugo-coder/assets/scss/coder.scss",
 		"themes/hugo-coder/assets/scss/css/normalize.css",

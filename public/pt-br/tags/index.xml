@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on João Ninguém</title>
+    <title>Tags on Emilinho Janez</title>
     <link>http://localhost:1313/pt-br/tags/</link>
-    <description>Recent content in Tags on João Ninguém</description>
+    <description>Recent content in Tags on Emilinho Janez</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
@@ -37,6 +37,13 @@
       <description></description>
     </item>
     <item>
+      <title>Shortcodes</title>
+      <link>http://localhost:1313/pt-br/tags/shortcodes/</link>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt-br/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Emoji</title>
       <link>http://localhost:1313/pt-br/tags/emoji/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
@@ -48,13 +55,6 @@
       <link>http://localhost:1313/pt-br/tags/text/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pt-br/tags/text/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Códigos curtos</title>
-      <link>http://localhost:1313/pt-br/tags/shortcodes/</link>
-      <pubDate>Wed, 04 Jan 2023 11:51:36 +0100</pubDate>
-      <guid>http://localhost:1313/pt-br/tags/shortcodes/</guid>
       <description></description>
     </item>
   </channel>
