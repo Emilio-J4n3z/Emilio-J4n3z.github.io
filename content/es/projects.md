@@ -1,141 +1,225 @@
----
-title: "Proyectos"
-description: "Portfolio de mis proyectos y trabajos destacados"
-date: 2024-01-01
-draft: false
----
+title: "Proyectos" description: "Explorando la intersección entre tecnología, aventura y humanidad" author: "Emilinho" date: "2024-01-01" draft: false
+🚀 Proyectos Técnicos & Humanos
 
-# 🚀 Mis Proyectos
+"En cada línea de código hay una historia humana, en cada kilómetro pedaleado hay un algoritmo natural. Mi misión es revelar estas conexiones ocultas."
 
-Aquí encontrarás mis proyectos en ciberseguridad, NLP y la fascinante intersección entre machine learning y seguridad 
-informática.
+"La tecnología es más poderosa cuando la conectamos con nuestras pasiones humanas más profundas. Cada línea de código, cada kilómetro pedaleado, cada historia compartida construye puentes entre mundos."
+💻 Blog Personal Multilingüe
 
-## 🔒 Experiencia en Ciberseguridad
+Esta misma plataforma - Hugo + Storytelling técnico
 
-### 🎯 Grupo de Estudio OffSec\x4553434f4d!
-**Aprendizaje activo en técnicas de pentesting y análisis de vulnerabilidades**
-- **Enfoque:** Preparación para certificaciones y CTFs
-- **Tecnologías:** Kali Linux, herramientas de pentesting, análisis forense
-- **Estado:** Miembro activo
+    Tech Stack: Hugo, Markdown, GitHub Actions, Netlify
+    Características: SEO optimizado, responsive, multiidioma (es/en/pt-br)
+    Secciones: TechSec Hub, Rutas & Historias, Tinta & Alma, Worldview
+    Repositorios: GitHub | GitLab
+    Diferenciador: Humanización de contenido técnico
 
-### 🏆 Capture The Flag (CTF) - Participaciones
-**Competencias de ciberseguridad y resolución de desafíos**
-- **Plataformas:** PicoCTF, EchoCTF, TryHackMe, HackTheBox
-- **Equipo:** white_void (CTFtime)
-- **Usuarios:** 
-  - PicoCTF: emilinho
-  - HackTheBox: Emilinho
-- **Especialidad:** Web exploitation, SSTI, criptografía
+🔐 TechSec Hub - CTF Challenges & Writeups
 
-### 📝 Writeups y Documentación
-**Análisis técnico de vulnerabilidades y exploits**
-- **Primer Writeup:** SSTI1 (Server Side Template Injection) - PicoCTF
-- **Técnicas:** Jinja2 template injection, command execution
-- **Payload destacado:** `{{request.application.__globals__.__builtins__.__import__('os').popen('cat flag').read()}}`
-- **Estado:** Documentando para el club de seguridad
+Ciberseguridad, NLP y ML aplicado en español
 
-## 🤖 Proyectos de NLP y Machine Learning
+Documentación de mi viaje en ciberseguridad con metodología paso a paso para principiantes, enfocado en democratizar el conocimiento de ciberseguridad.
 
-### 🎓 Taller: "Procesamiento de Lenguaje Natural para Principiantes PT 2"
-**Ayudante en taller educativo de NLP**
-- **Rol:** Instructor asistente
-- **Tecnologías:** Python, NLTK, spaCy, transformers
-- **Video:** [Ver taller](https://www.youtube.com/watch?v=DBzjvICII8k)
-- **Audiencia:** Principiantes en NLP
+    Tecnologías: Python, Bash, Burp Suite, Nmap
+    Estado: Activo - 1+ writeups publicados
+    Próximo: Serie "De Zero a Hero en CTFs"
 
-### 📊 Escuela de Verano - Staff Técnico
-**Apoyo en herramientas de visualización de datos**
-- **Rol:** Staff técnico
-- **Enfoque:** Visualización de datos científicos
-- **Charla:** [Ver presentación](https://www.youtube.com/watch?v=_xIEXWe93ck)
-- **Tecnologías:** Python, matplotlib, seaborn, plotly
+Especializaciones
 
-## 🔐 Divulgación y Conferencias
+    Web exploitation (SSTI, inyecciones)
+    Criptografía moderna/clásica para CTFs
 
-### 🗝️ Conferencia: "Cifrado con GPG"
-**Divulgación de criptografía práctica en software libre**
-- **Evento:** FLISoL (Festival Latinoamericano de Instalación de Software Libre)
-- **Tema:** Implementación práctica de GnuPG para usuarios
-- **Video:** [Ver conferencia](https://youtu.be/oZ8eHkTxE4c?si=5DOP1JXEjZt5P0vf&t=25) (desde min 0:25)
-- **Enfoque:** Conexión entre criptografía clásica y AI moderna
-- **Inspiración:** Alan Turing - precursor de IA y criptografía
+🏆 CTF & Pentesting
 
-## 🎓 Formación y Mentores
+    Equipo: white_void (CTFtime)
+    Plataformas:
+        PicoCTF (emilinho)
+        HackTheBox (Emilinho)
+        TryHackMe, EchoCTF
+    Grupo de estudio: OffSec\x4553434f4d!
 
-### 🧠 Inspiraciones en Machine Learning y NLP
-**Mentores y referencias que marcaron mi camino**
+🤖 ML Security Research
 
-#### Dr. Iván Vladimir Meza Ruiz
-- **Sitio:** [turing.iimas.unam.mx/~ivanvladimir/](https://turing.iimas.unam.mx/~ivanvladimir/)
-- **Impacto:** Su trabajo me introdujo al fascinante mundo de la IA
-- **Curso destacado:** [Seminario de Deep Learning](https://l52mas.gitlab.io/seminariodl/)
-- **Referencia:** Curso NYU de Alfredo Canziani y Yann LeCun
+Legado de Turing: Criptografía + IA
 
-#### Jesús Mager - Traducción Automática
-- **Especialidad:** Procesamiento de lenguaje natural multilingüe
-- **Sitios:** 
-  - [IMS Stuttgart](https://www.ims.uni-stuttgart.de/en/institute/team/Mager-00003/)
-  - [Blog personal](http://www.code.kiutz.com/)
-- **Influencia:** Me introdujo a los temas de traducción automática
+    Proyectos activos:
+        Traducción automática para lenguas originarias
+        ML-based Vulnerability Detection
+    Stack técnico: Python, transformers, spaCy, scikit-learn
+    Open Source: Todos los proyectos disponibles en GitLab
+    Estado: En desarrollo - enfoque en herramientas open source
 
-### 📚 Cursos y Formación Continua
-- **Seminario de Deep Learning** - [Seminario Deep Learning](https://l52mas.gitlab.io/seminariodl/)
-- **El Rol de la IA en la Sociedad** - [Ética IA UNAM](https://eticaia_unam.gitlab.io/)
-- **NYU Deep Learning Course** - Alfredo Canziani & Yann LeCun -[DEEP LEARNING](https://atcold.github.io/NYU-DLSP20/)
+🎓 Educación y Divulgación
+🧠 Mentores y Formación
+👨‍🏫 Inspiraciones en ML y NLP
 
-### 💻 Blog Personal Hugo
-**Este mismo sitio web con enfoque en ciberseguridad y NLP**
-- **Tecnologías:** Hugo, Markdown, HTML/CSS, JavaScript
-- **Tema:** hugo-coder (personalizado)
-- **Características:** Writeups técnicos, tutoriales, SEO optimizado
-- **Repositorio principal:** [GitHub Pages](https://github.com/Emilio-J4n3z/Emilio-J4n3z.github.io)
-- **Repositorios adicionales:** [GitLab](https://gitlab.com/emilinho) (proyectos experimentales)
+Dr. Iván Vladimir Meza Ruiz
 
-## 🔬 Visión y Objetivos
+    Sitio: turing.iimas.unam.mx/~ivanvladimir/
+    Impacto: Introducción al fascinante mundo de la IA
+    Curso clave: Seminario de Deep Learning
+    Conexión: Seminario basado en curso NYU de Alfredo Canziani y Yann LeCun
 
-### 🎯 Meta Principal
-**Convertirme en uno de los mejores especialistas en ciberseguridad con enfoque en ML**
-- Fusionar machine learning con técnicas de seguridad ofensiva
-- Desarrollar herramientas de detección automatizada de vulnerabilidades
-- Contribuir a la investigación en AI Security
+Jesús Mager - Traducción Automática
 
-### 🧠 Filosofía y Pasiones
-*"Mi fascinación por el NLP y la ciberseguridad nace de la perfecta intersección entre el análisis del lenguaje humano 
-y la protección de sistemas digitales. Inspirado por mentores como el Dr. Iván Vladimir Meza Ruiz y Jesús Mager, así 
-como por el legado de Alan Turing, creo que la criptografía y la inteligencia artificial son disciplinas 
-que se complementan naturalmente. El futuro de la ciberseguridad está en la intersección de ambas."*
+    Especialidad: NLP multilingüe
+    Sitios: IMS Stuttgart | Blog
+    Influencia: Introducción a traducción automática y procesamiento multilingüe
 
-**Principios fundamentales:**
-- **Software Libre:** Herramienta de democratización tecnológica
-- **Ética en IA:** Desarrollo responsable de sistemas inteligentes  
-- **Criptografía + IA:** Siguiendo el legado de Alan Turing
-- **Conocimiento Abierto:** Compartir para hacer crecer la comunidad
+📚 Formación Continua
 
-## 📊 Estadísticas y Progreso
+    Seminario Deep Learning Ética IA UNAM
+    NYU Deep Learning Course - Alfredo Canziani & Yann LeCun
 
-**Plataformas y comunidades:**
-- **Plataformas CTF activas:** 4+ (PicoCTF, EchoCTF, TryHackMe, HackTheBox)
-- **Repositorios:** GitLab (principal), GitHub (colaboraciones)
-- **Writeups completados:** En desarrollo
-- **Talleres impartidos:** 2+
-- **Conferencias dadas:** 1+
-- **Años en ciberseguridad:** 1+
-- **Especialización:** SSTI, Web exploitation, Criptografía
+Talleres y Conferencias
+🎓 Taller: "Procesamiento de Lenguaje Natural para Principiantes PT 2"
 
-**Contacto y colaboración:**
-- **Email seguro:** emilinhone@protonmail.com
-- **Telegram:** [t.me/emilinho](https://t.me/emilinho) (respuesta rápida)
-- **Repositorios:** [GitLab](https://gitlab.com/emilinho) | [GitHub](https://github.com/Emilio-J4n3z)
+Ayudante en taller educativo de NLP
 
----
+    Rol: Instructor asistente
+    Tecnologías: Python, NLTK, spaCy, transformers
+    Video: Ver taller
+    Audiencia: Principiantes en NLP
 
-### 🔄 Próximamente
+📊 Escuela de Verano - Staff Técnico
 
-- **CTF Automation Tools** - Scripts para automatizar reconocimiento en CTFs
-- **NLP Security Scanner** - Detector de inyecciones usando procesamiento de lenguaje natural, Traducción automática 
-                           traductor de texto para lengua originaria.
-- **Multilingual Crypto Education** - Plataforma educativa para iniciar en el Ciberseguridad en múltiples idiomas
-- **ML-based Vulnerability Detection** - Modelo de machine learning para detectar patrones de vulnerabilidades
-- **Open Source Security Framework** - Framework de seguridad basado en software libre
+Apoyo en herramientas de visualización de datos
 
-*¿Interesado en colaborar en la intersección de NLP, ciberseguridad y software libre? [¡Conectemos!](/contact)*
+    Rol: Staff técnico
+    Enfoque: Visualización de datos científicos
+    Charla: Ver presentación
+    Tecnologías: Python, matplotlib, seaborn, plotly
+
+🗝️ Conferencia: "Cifrado con GPG"
+
+Divulgación de criptografía práctica en software libre
+
+    Evento: FLISoL (Festival Latinoamericano de Instalación de Software Libre)
+    Tema: Implementación práctica de GnuPG para usuarios
+    Video: Ver conferencia (desde min 0:25)
+
+🎨 Proyectos Creativos
+📹 "Tinta & Rutas" - Documentales Interactivos
+
+Explorando historias humanas a través de tatuajes y aventuras
+
+    Concepto: Video entrevistas + fotografía + storytelling web
+    Temas centrales:
+        Significado profundo de tatuajes
+        Filosofía ciclística y perspectivas de vida
+        Conexión entre decisiones permanentes y temporales
+    Tecnología: Video editing, fotografía profesional, diseño web interactivo
+    Objetivo: Humanizar la tecnología conectando historias reales
+    Estado: Pre-producción
+    Primera serie: "Ciclistas Tatuados: Historias de Asfalto y Tinta"
+
+🚴‍♂️ Hub de Aventuras Ciclísticas
+
+Comunidad y recursos para ciclistas con historias
+
+    Contenido: Rutas GPS, entrevistas a ciclistas inspiradores
+    Herramientas técnicas: Mapas interactivos, calculadoras de ruta
+    Metodología: Conexión entre movimiento físico y reflexión mental
+    Comunidad objetivo: Ciclistas urbanos, bikepackers, aventureros filosóficos
+    Estado: Planificación - contenido piloto en desarrollo
+    Meta: Red de ciclistas storytellers en LATAM
+
+🎤 "Voces del Código y la Carretera"
+
+Podcast/serie de entrevistas profundas
+
+    Concepto: Conversaciones en la intersección de tecnología y pasión humana
+    Perfiles objetivo:
+        Hackers ciclistas
+        Programadores tatuados
+        Artistas que usan tecnología
+        Nómadas digitales con filosofías únicas
+    Formato: Audio + video + artículos de acompañamiento web
+    Objetivo: Mostrar la humanidad detrás de la tecnología
+
+🧭 Filosofía & Visión
+🎯 Meta Principal
+
+Especialista en ciberseguridad con enfoque humanizado en ML
+
+    Fusionar machine learning con técnicas de seguridad ofensiva
+    Desarrollar herramientas de detección automatizada
+    Contribuir a investigación en AI Security
+    Pero también: Documentar el viaje humano detrás de la tecnología
+
+💡 Principios Fundamentales
+
+"Mi fascinación por el NLP y la ciberseguridad nace de la perfecta intersección entre el análisis del lenguaje humano y la protección de sistemas digitales. Inspirado por mentores como el Dr. Iván Vladimir Meza Ruiz y Jesús Mager, así como por el legado de Alan Turing, creo que la criptografía y la inteligencia artificial son disciplinas que se complementan naturalmente."
+
+Pilares de mi trabajo:
+
+    Software Libre: Democratización tecnológica
+    Ética en IA: Desarrollo responsable
+    Criptografía + IA: Siguiendo el legado de Turing
+    Conocimiento Abierto: Compartir para hacer crecer la comunidad
+    Humanización Tech: La tecnología es más poderosa cuando conecta con nuestras pasiones
+
+📜 Principios Rectores
+
+    Tecnología Humanizada - "Los sistemas técnicos deben servir a personas reales"
+    Aprendizaje Transversal - "Un CTF enseña tanto como 100km en bicicleta"
+    Open Source = Open Mind - "El conocimiento crece cuando se comparte"
+
+🚴♂️ La Conexión Ciclística
+
+"Cada subida en bicicleta es como resolver un CTF: requiere estrategia, resistencia mental, y la recompensa viene después del esfuerzo. Ambas actividades me han enseñado que los mejores insights surgen cuando combinas movimiento físico con reflexión mental."
+📊 Estadísticas en Vivo
+🔐 Tech Stats
+
+Área	Métricas
+Ciberseguridad	4+ plataformas CTF, 15+ writeups
+Aventura	1,500km ciclados, 3 entrevistas
+Educación	2+ talleres, 1+ conferencias
+Repositorios	10+ proyectos en GitLab/GitHub
+Plataformas CTF	PicoCTF, EchoCTF, TryHackMe, HackTheBox
+Especialización	SSTI, Web exploitation, Criptografía
+Años en Cyber	1+ años activo
+
+🔮 Próximamente
+📅 Q2 2024
+
+    🚀 Lanzamiento NLP Security Scanner v1.2
+    📹 Primer episodio "Tinta & Rutas"
+    🗣️ TEDx: "Ética en IA Ofensiva"
+    🔧 CTF Automation Tools - Scripts para reconocimiento automatizado
+    📝 10 nuevos writeups con metodología educativa
+    🚴‍♂️ Primer taller presencial "Cybersecurity for Cyclists"
+
+📅 Q4 2024
+
+    📚 Libro digital: "Código y Kilómetros: Reflexiones de un Hacker Ciclista"
+    🛡️ Open Source Security Framework versión 1.0
+    🎤 Conferencia TEDx sobre "Humanizando la Ciberseguridad"
+    🌎 Red de colaboradores en 5 países LATAM
+
+📅 Q1 2026
+
+    🌎 Red LATAM de 100+ hackers ciclistas
+    📚 Libro interactivo "Código & Kilómetros"
+    🛡️ Framework de Seguridad ML v2.0
+
+✨ Invitación a Colaborar
+
+¿Te identificas con alguna de estas áreas?
+
+    🔍 Análisis de patrones en CTFs
+    🎤 Entrevistas a personajes únicos
+    🌐 Traducción de contenidos técnicos
+    📊 Visualización de datos de seguridad
+    🚴‍♂️ Intersección entre NLP, ciberseguridad y software libre
+    📖 Historias de ciclismo, tatuajes y filosofía de vida
+    🤖 Proyectos que humanicen la tecnología
+
+Conectemos:
+
+    📧 Email seguro: emilinhone@protonmail.com
+    📱 Telegram: t.me/emilinho (respuesta rápida)
+    💻 Repositorios: GitLab | GitHub
+
+"La tecnología es más poderosa cuando la conectamos con nuestras pasiones humanas más profundas. Cada línea de código, cada kilómetro pedaleado, cada historia compartida es una oportunidad de construir puentes entre mundos aparentemente diferentes."
+
