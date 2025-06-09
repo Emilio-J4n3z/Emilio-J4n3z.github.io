@@ -79,9 +79,9 @@ informática.
 - **Influencia:** Me introdujo a los temas de traducción automática
 
 ### 📚 Cursos y Formación Continua
-- **Seminario de Deep Learning** - Universidad
+- **Seminario de Deep Learning** - [Seminario Deep Learning](https://l52mas.gitlab.io/seminariodl/)
 - **El Rol de la IA en la Sociedad** - [Ética IA UNAM](https://eticaia_unam.gitlab.io/)
-- **NYU Deep Learning Course** - Alfredo Canziani & Yann LeCun
+- **NYU Deep Learning Course** - Alfredo Canziani & Yann LeCun -[DEEP LEARNING](https://atcold.github.io/NYU-DLSP20/)
 
 ### 💻 Blog Personal Hugo
 **Este mismo sitio web con enfoque en ciberseguridad y NLP**
@@ -119,7 +119,7 @@ que se complementan naturalmente. El futuro de la ciberseguridad está en la int
 - **Writeups completados:** En desarrollo
 - **Talleres impartidos:** 2+
 - **Conferencias dadas:** 1+
-- **Años en ciberseguridad:** 2+
+- **Años en ciberseguridad:** 1+
 - **Especialización:** SSTI, Web exploitation, Criptografía
 
 **Contacto y colaboración:**
@@ -132,8 +132,9 @@ que se complementan naturalmente. El futuro de la ciberseguridad está en la int
 ### 🔄 Próximamente
 
 - **CTF Automation Tools** - Scripts para automatizar reconocimiento en CTFs
-- **NLP Security Scanner** - Detector de inyecciones usando procesamiento de lenguaje natural
-- **Multilingual Crypto Education** - Plataforma educativa de criptografía en múltiples idiomas
+- **NLP Security Scanner** - Detector de inyecciones usando procesamiento de lenguaje natural, Traducción automática 
+                           traductor de texto para lengua originaria.
+- **Multilingual Crypto Education** - Plataforma educativa para iniciar en el Ciberseguridad en múltiples idiomas
 - **ML-based Vulnerability Detection** - Modelo de machine learning para detectar patrones de vulnerabilidades
 - **Open Source Security Framework** - Framework de seguridad basado en software libre
 
