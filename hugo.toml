@@ -3,6 +3,7 @@ title = "Emilinho Janez"
 theme = "hugo-coder"
 languageCode = "es"
 defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = true
 pagination.pagerSize  = 6
 enableEmoji = true
 
@@ -17,7 +18,7 @@ noClasses = false
 [params]
 author = "Emilio Juárez"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Emilio Juáre1z personal website"
+description = "Emilio Juárez personal website"
 keywords = "blog,developer,personal"
 info = ["Incursionando en Ciberseguridad", "Free Software", "Ciclista", "AI (NLP, Machine Learning)"]
 avatarURL = "images/avatar.jpg"
@@ -49,81 +50,6 @@ customJS = []
 # Custom remote JS files
 customRemoteJS = []
 
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-# [params.fathomAnalytics]
-# siteID = "ABCDE"
-# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-
-# If you want to use plausible(https://plausible.io) for analytics, add this section
-# [params.plausibleAnalytics]
-# domain = "example.com"
-# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
-# outboundLinksTracking = true
-# fileDownloadsTracking = true
-
-# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
-# [params.goatCounter]
-# code = "code"
-
-# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
-# [params.cloudflare]
-# token = "token"
-
-# If you want to use Matomo(https://matomo.org) for analytics, add this section
-# [params.matomo]
-# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
-# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
-
-# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
-# [params.googleTagManager]
-# id = "gid"
-
-# If you want to use Yandex Metrika(https://metrika.yandex.ru) for analytics, add this section
-# [params.yandexMetrika]
-# id = "gid"
-
-# If you want to use Application Insights(https://azure.com/) for analytics, add this section
-# [params.applicationInsights]
-# connectionString = "connectionString"
-
-# If you want to use microanalytics.io for analytics, add this section
-# [params.microAnalytics]
-# id = "ABCDE"
-# dnt = "false" # respect DNT tracker, "true" by default
-
-# If you want to use Pirsch(https://pirsch.io) for analytics, add this section
-# [params.pirsch]
-# code = "ABCDE"
-
-# If you want to use Umami(https://umami.is) for analytics, add this section
-# [params.umami]
-# siteID = "ABCDE"
-# scriptURL = "analytics.REGION.umami.is/SCRIPTNAME.js"
-
-# If you want to implement a Content-Security-Policy, add this section
-# [params.csp]
-# childsrc = ["'self'"]
-# fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
-# formaction = ["'self'"]
-# framesrc = ["'self'", "https://www.youtube.com"]
-# imgsrc = ["'self'"]
-# objectsrc = ["'none'"]
-# stylesrc = [
-#   "'self'",
-#   "'unsafe-inline'",
-#   "https://fonts.googleapis.com/",
-#   "https://cdn.jsdelivr.net/",
-# ]
-# scriptsrc = [
-#   "'self'",
-#   "'unsafe-inline'",
-#   "https://www.google-analytics.com",
-#   "https://cdn.jsdelivr.net/",
-# ]
-# prefetchsrc = ["'self'"]
-# # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
-# connectsrc = ["'self'", "https://www.google-analytics.com"]
-
 [taxonomies]
 category = "categories"
 series = "series"
@@ -152,13 +78,13 @@ url = "https://twitter.com/emilinhone/"
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 4
-url = "https://www.linkedin.com/in/johndoe/"
+url = "https://www.linkedin.com/in/emilinho/"
 
 [[params.social]]
 name = "Medium"
 icon = "fa-brands fa-medium fa-2x"
 weight = 5
-url = "https://medium.com/@johndoe"
+url = "https://medium.com/"
 
 [[params.social]]
 name = "RSS"
@@ -175,6 +101,7 @@ type = "application/rss+xml"
 languageName = ":es:"
 title = "Emilinho Janez"
 weight = 1
+contentDir = "content/es"
 
 [languages.es.params]
 author = "Emilio Juárez"
@@ -185,28 +112,29 @@ keywords = "blog,desarrollador,personal"
 [[languages.es.menu.main]]
 name = "Acerca de"
 weight = 1
-url = "about/"
+url = "/about/"
 
 [[languages.es.menu.main]]
 name = "Blog"
 weight = 2
-url = "posts/"
+url = "/posts/"
 
 [[languages.es.menu.main]]
 name = "Proyectos"
 weight = 3
-url = "projects/"
+url = "/projects/"
 
 [[languages.es.menu.main]]
 name = "Contacto"
 weight = 5
-url = "contact/"
+url = "/contact/"
 
 # Inglés
-
 [languages.en]
 languageName = ":uk:"
+title = "Emilinho Janez"
 weight = 2
+contentDir = "content/en"
 
 [languages.en.params]
 author = "Emilio Juárez"
@@ -217,29 +145,29 @@ keywords = "blog,developer,personal"
 [[languages.en.menu.main]]
 name = "About"
 weight = 1
-url = "about/"
+url = "/about/"
 
 [[languages.en.menu.main]]
 name = "Blog"
 weight = 2
-url = "posts/"
+url = "/posts/"
 
 [[languages.en.menu.main]]
 name = "Projects"
 weight = 3
-url = "projects/"
+url = "/projects/"
 
 [[languages.en.menu.main]]
-name = "Contact me"
+name = "Contact"
 weight = 5
-url = "contact/"
-
+url = "/contact/"
 
 # Portugués Brasileño
 [languages.pt-br]
 languageName = ":brazil:"
 title = "Emilinho Janez"
 weight = 3
+contentDir = "content/pt-br"
 
 [languages.pt-br.params]
 author = "Emilio Juárez"
@@ -250,19 +178,19 @@ keywords = "blog,desenvolvedor,pessoal"
 [[languages.pt-br.menu.main]]
 name = "Sobre"
 weight = 1
-url = "about/"
+url = "/about/"
 
 [[languages.pt-br.menu.main]]
 name = "Blog"
 weight = 2
-url = "posts/"
+url = "/posts/"
 
 [[languages.pt-br.menu.main]]
 name = "Projetos"
 weight = 3
-url = "projects/"
+url = "/projects/"
 
 [[languages.pt-br.menu.main]]
 name = "Contato"
 weight = 5
-url = "contact/"
+url = "/contact/"

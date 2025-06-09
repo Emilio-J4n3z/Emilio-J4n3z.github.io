@@ -1,6 +1,6 @@
 +++
 authors = ["Lone Coder"]
-title = "Rich Content"
+title = "Contenido Enriquecido"
 date = "2023-07-12"
 description = "A brief description of Hugo Shortcodes"
 tags = [

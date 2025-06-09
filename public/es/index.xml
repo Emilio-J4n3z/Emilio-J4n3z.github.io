@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Es on Emilinho Janez</title>
+    <title>Emilinho Janez</title>
     <link>http://localhost:1313/es/</link>
-    <description>Recent content in Es on Emilinho Janez</description>
+    <description>Recent content on Emilinho Janez</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Fri, 02 Feb 2024 04:14:54 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Example</title>
+      <title>&#34;Mi primer ejemplo&#34;</title>
       <link>http://localhost:1313/es/posts/primer_ejemplo/</link>
       <pubDate>Fri, 02 Feb 2024 04:14:54 -0800</pubDate>
       <guid>http://localhost:1313/es/posts/primer_ejemplo/</guid>
-      <description>&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;&#xA;&lt;h2 id=&#34;headline-1&#34;&gt;&#xA;Bienvenidos a la pirmera nota de los tatuajes.&#xA;&lt;/h2&gt;&#xA;&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;&#xA;&lt;p&gt;&#xA;En este video podrán observar varios tatuajes.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/RCJQDMYluW0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Bienvenidos a la pirmera nota de los tatuajes.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;En este video podrán observar varios tatuajes.&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/RCJQDMYluW0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
     </item>
     <item>
-      <title>Markdown Syntax Guide</title>
+      <title>Contacto</title>
+      <link>http://localhost:1313/es/contact/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/contact/</guid>
+      <description>&lt;h1 id=&#34;contacto&#34;&gt;&#xA;  Contacto&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#contacto&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;¿Tienes alguna pregunta, propuesta de colaboración o simplemente quieres conectar? ¡Me encantaría escucharte!&lt;/p&gt;&#xA;&lt;h2 id=&#34;-información-de-contacto&#34;&gt;&#xA;  📧 Información de contacto&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-informaci%c3%b3n-de-contacto&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:emilinhone@protonmail.com&#34; &gt;emilinhone@protonmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Telegram:&lt;/strong&gt; &lt;a href=&#34;https://t.me/emilinho&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;t.me/emilinho&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/emilinho/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Emilinho&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitLab:&lt;/strong&gt; &lt;a href=&#34;https://gitlab.com/emilinho&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emilinho&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&#34;https://github.com/Emilio-J4n3z&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Emilio-J4n3z&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; &lt;a href=&#34;https://twitter.com/emilinhone&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@emilinhone&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-áreas-de-colaboración&#34;&gt;&#xA;  💼 Áreas de colaboración&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-%c3%a1reas-de-colaboraci%c3%b3n&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Estoy especialmente interesado en:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Procesamiento de Lenguaje Natural (NLP)&lt;/strong&gt; - Proyectos de machine learning y análisis de texto&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ciberseguridad&lt;/strong&gt; - Pentesting, análisis de vulnerabilidades, CTFs y writeups&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fusión ML + Ciberseguridad&lt;/strong&gt; - Aplicaciones de inteligencia artificial en seguridad informática&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Criptografía&lt;/strong&gt; - Implementación y divulgación de herramientas como GnuPG&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Software Libre&lt;/strong&gt; - Contribuciones a proyectos de código abierto&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Traducción Automática&lt;/strong&gt; - Sistemas de procesamiento multilingüe&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ética en IA&lt;/strong&gt; - Responsabilidad social en el desarrollo de sistemas inteligentes&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mentoría y Talleres&lt;/strong&gt; - Enseñanza de conceptos de seguridad y NLP&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;-formulario-de-contacto&#34;&gt;&#xA;  📝 Formulario de contacto&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-formulario-de-contacto&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Puedes contactarme a través de cualquiera de estos medios:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proyectos</title>
+      <link>http://localhost:1313/es/projects/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/projects/</guid>
+      <description>&lt;h1 id=&#34;-mis-proyectos&#34;&gt;&#xA;  🚀 Mis Proyectos&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-mis-proyectos&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Aquí encontrarás mis proyectos en ciberseguridad, NLP y la fascinante intersección entre machine learning y seguridad&#xA;informática.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-experiencia-en-ciberseguridad&#34;&gt;&#xA;  🔒 Experiencia en Ciberseguridad&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-experiencia-en-ciberseguridad&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-grupo-de-estudio-offsecx4553434f4d&#34;&gt;&#xA;  🎯 Grupo de Estudio OffSec\x4553434f4d!&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-grupo-de-estudio-offsecx4553434f4d&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Aprendizaje activo en técnicas de pentesting y análisis de vulnerabilidades&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Enfoque:&lt;/strong&gt; Preparación para certificaciones y CTFs&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tecnologías:&lt;/strong&gt; Kali Linux, herramientas de pentesting, análisis forense&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Estado:&lt;/strong&gt; Miembro activo&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-capture-the-flag-ctf---participaciones&#34;&gt;&#xA;  🏆 Capture The Flag (CTF) - Participaciones&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-capture-the-flag-ctf---participaciones&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Competencias de ciberseguridad y resolución de desafíos&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guía de Sintaxis Markdown</title>
       <link>http://localhost:1313/es/posts/markdown-syntax/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/es/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Rich Content</title>
+      <title>Contenido Enriquecido</title>
       <link>http://localhost:1313/es/posts/rich-content/</link>
       <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/es/posts/rich-content/</guid>
@@ -44,7 +58,7 @@
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>HTML and CSS only tabs</title>
+      <title>Pestañas Solo con HTML y CSS</title>
       <link>http://localhost:1313/es/posts/html-and-css-only-tabs/</link>
       <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/es/posts/html-and-css-only-tabs/</guid>
@@ -84,20 +98,6 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/es/about/</guid>
       <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;&#xA;&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>http://localhost:1313/es/sigueme-en/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/es/sigueme-en/</guid>
-      <description>&lt;p&gt;Follow me, @emilinhone.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/es/proyectos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/es/proyectos/</guid>
-      <description>&lt;p&gt;Nada que ver aqui&amp;hellip; sigue adelante!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

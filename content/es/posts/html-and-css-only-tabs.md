@@ -1,6 +1,6 @@
 +++
 authors = ["Lone Coder"]
-title = "HTML and CSS only tabs"
+title = "Pestañas Solo con HTML y CSS"
 date = "2023-07-09"
 description = "Sample article showcasing shortcodes for HTML/CSS only tabs"
 tags = [
