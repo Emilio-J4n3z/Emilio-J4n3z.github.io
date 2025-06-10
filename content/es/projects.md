@@ -1,188 +1,195 @@
-title: "Proyectos" description: "Explorando la intersección entre tecnología, aventura y humanidad" author: "Emilinho" date: "2024-01-01" draft: false
-🚀 Proyectos Técnicos & Humanos
 
-"En cada línea de código hay una historia humana, en cada kilómetro pedaleado hay un algoritmo natural. Mi misión es revelar estas conexiones ocultas."
+---
+title: "Proyectos"
+description: "Explorando la intersección entre tecnología, aventura y humanidad"
+author: "Emilinho"
+date: "2024-01-01"
+draft: false
+---
 
-"La tecnología es más poderosa cuando la conectamos con nuestras pasiones humanas más profundas. Cada línea de código, cada kilómetro pedaleado, cada historia compartida construye puentes entre mundos."
-💻 Blog Personal Multilingüe
+# 🚀 Proyectos Técnicos & Humanos
 
-Esta misma plataforma - Hugo + Storytelling técnico
+> "En cada línea de código hay una historia humana, en cada kilómetro pedaleado hay un algoritmo natural. Mi misión es revelar estas conexiones ocultas."
 
-    Tech Stack: Hugo, Markdown, GitHub Actions, Netlify
-    Características: SEO optimizado, responsive, multiidioma (es/en/pt-br)
-    Secciones: TechSec Hub, Rutas & Historias, Tinta & Alma, Worldview
-    Repositorios: GitHub | GitLab
-    Diferenciador: Humanización de contenido técnico
+> "La tecnología es más poderosa cuando la conectamos con nuestras pasiones humanas más profundas."
 
-🔐 TechSec Hub - CTF Challenges & Writeups
+## 💻 Blog Personal Multilingüe
 
-Ciberseguridad, NLP y ML aplicado en español
+**Esta misma plataforma** - Hugo + Storytelling técnico
+
+- **Tech Stack:** Hugo, Markdown, GitHub Actions, Netlify
+- **Características:** 
+  - SEO optimizado
+  - Responsive
+  - Multiidioma (es/en/pt-br)
+- **Secciones:**
+  - TechSec Hub
+  - Rutas & Historias
+  - Tinta & Alma
+  - Worldview
+- **Repositorios:** [GitHub Pages](https://github.com/Emilio-J4n3z/Emilio-J4n3z.github.io) | [GitLab](https://gitlab.com/emilinho) (proyectos experimentales)
+- **Diferenciador:** Humanización de contenido técnico
+
+## 🔐 TechSec Hub - CTF Challenges & Writeups
+
+**Ciberseguridad, NLP y ML aplicado en español**
 
 Documentación de mi viaje en ciberseguridad con metodología paso a paso para principiantes, enfocado en democratizar el conocimiento de ciberseguridad.
 
-    Tecnologías: Python, Bash, Burp Suite, Nmap
-    Estado: Activo - 1+ writeups publicados
-    Próximo: Serie "De Zero a Hero en CTFs"
 
-Especializaciones
+- **Tecnologías:** Python, Bash, Burp Suite, Nmap
+- **Estado:** Activo (1+ writeups publicados)
+- **Próximo:** Serie "De Zero a Hero en CTFs"
+- **Especializaciones:**
+  - Web exploitation (SSTI, inyecciones)
+  - Criptografía moderna/clásica para CTFs
 
-    Web exploitation (SSTI, inyecciones)
-    Criptografía moderna/clásica para CTFs
+### 🏆 CTF & Pentesting
+- **Equipo:** white_void ([CTFtime](https://ctftime.org))
+- **Plataformas:**
+  - PicoCTF ([emilinho](https://picoctf.org))
+  - HackTheBox ([Emilinho](https://app.hackthebox.com))
+  - TryHackMe
+  - EchoCTF
+- **Grupo de estudio:** OffSec\x4553434f4d!
 
-🏆 CTF & Pentesting
+## 🤖 ML Security Research
 
-    Equipo: white_void (CTFtime)
-    Plataformas:
-        PicoCTF (emilinho)
-        HackTheBox (Emilinho)
-        TryHackMe, EchoCTF
-    Grupo de estudio: OffSec\x4553434f4d!
+**Legado de Turing:** Criptografía + IA
 
-🤖 ML Security Research
+- **Proyectos activos:**
+  - Traducción automática para lenguas originarias
+  - ML-based Vulnerability Detection
+- **Stack técnico:** Python, transformers, spaCy, scikit-learn
+- **Proyectos:** OSINT automatizado, análisis de malware con ML
+- **Estado:** En desarrollo (enfoque en herramientas open source)
+- **Objetivo:** Herramientas open source para la comunidad
 
-Legado de Turing: Criptografía + IA
+## 🎓 Educación y Divulgación
 
-    Proyectos activos:
-        Traducción automática para lenguas originarias
-        ML-based Vulnerability Detection
-    Stack técnico: Python, transformers, spaCy, scikit-learn
-    Open Source: Todos los proyectos disponibles en GitLab
-    Estado: En desarrollo - enfoque en herramientas open source
+### 🧠 Mentores y Formación
+### 👨‍🏫 Inspiraciones en ML y NLP
+**Dr. Iván Vladimir Meza Ruiz**
+- [Sitio web](http://turing.iimas.unam.mx/~ivanvladimir/)
+- **Impacto:** Introducción al fascinante mundo de la IA
+- **Curso clave:** [Seminario de Deep Learning](https://l52mas.gitlab.io/seminariodl/) 
+- **Conexión:** Seminario de Deep Learning (basado en curso NYU de Yann LeCun)
 
-🎓 Educación y Divulgación
-🧠 Mentores y Formación
-👨‍🏫 Inspiraciones en ML y NLP
+**Jesús Mager - Traducción Automática**
+- **Especialidad:** NLP multilingüe
+- **Sitios:** [IMS Stuttgart](https://www.ims.uni-stuttgart.de) | [Blog personal](https://ejemplo.com)
+- **Influencia:** Introducción a traducción automática y procesamiento multilingüe
 
-Dr. Iván Vladimir Meza Ruiz
+### 📚 Formación Continua
+- **Seminario de Deep Learning** - [Seminario Deep Learning](https://l52mas.gitlab.io/seminariodl/)
+- **El Rol de la IA en la Sociedad** - [Ética IA UNAM](https://eticaia_unam.gitlab.io/)
+- **NYU Deep Learning Course** - Alfredo Canziani & Yann LeCun -[DEEP LEARNING](https://atcold.github.io/NYU-DLSP20/)
 
-    Sitio: turing.iimas.unam.mx/~ivanvladimir/
-    Impacto: Introducción al fascinante mundo de la IA
-    Curso clave: Seminario de Deep Learning
-    Conexión: Seminario basado en curso NYU de Alfredo Canziani y Yann LeCun
+### 🎓 Talleres y Conferencias
+**Taller NLP para Principiantes PT 2**  
+- **Rol:** Instructor asistente
+- **Tecnologías:** Python, NLTK, spaCy, transformers
+- **Video:** [Ver taller](https://www.youtube.com/watch?v=DBzjvICII8k)
+- **Audiencia:** Principiantes en NLP
 
-Jesús Mager - Traducción Automática
+### 📊 Escuela de Verano - Staff Técnico
+**Apoyo en herramientas de visualización de datos**
+- **Rol:** Staff técnico
+- **Enfoque:** Visualización de datos científicos
+- **Charla:** [Ver presentación](https://youtu.be/_xIEXWe93ck)
+- **Tecnologías:** Python, matplotlib, seaborn, plotly
 
-    Especialidad: NLP multilingüe
-    Sitios: IMS Stuttgart | Blog
-    Influencia: Introducción a traducción automática y procesamiento multilingüe
+### 🗝️ Conferencia: "Cifrado con GPG"
+**Divulgación de criptografía práctica en software libre**
+- **Evento:** FLISoL (Festival Latinoamericano de Instalación de Software Libre)
+- **Tema:** Implementación práctica de GnuPG para usuarios
+- **Video:** [Ver conferencia](https://youtu.be/oZ8eHkTxE4c?si=5DOP1JXEjZt5P0vf&t=25) (desde min 0:25)
+- **Enfoque:** Conexión entre criptografía clásica y AI moderna
+- **Inspiración:** Alan Turing - precursor de IA y criptografía
 
-📚 Formación Continua
+### 🎨 Proyectos Creativos
+### 📹 "Tinta & Rutas"
+**Explorando historias humanas a través de tatuajes y aventuras**
+- **Concepto:** Video entrevistas + fotografía + storytelling web
+- **Temas centrales:**
+    - Significado profundo de tatuajes
+    - Filosofía ciclística y perspectivas de vida
+    - Conexión entre decisiones permanentes y temporales
+- **Tecnología:** Video editing, fotografía profesional, diseño web interactivo
+- **Objetivo:** Humanizar la tecnología conectando historias reales
+- **Estado:** Pre-producción
+- **Primera serie:** "Ciclistas Tatuados: Historias de Asfalto y Tinta"
 
-    Seminario Deep Learning Ética IA UNAM
-    NYU Deep Learning Course - Alfredo Canziani & Yann LeCun
+### 🚴‍♂️ Hub de Aventuras Ciclísticas
+**Comunidad y recursos para ciclistas con historias**
+- **Contenido:** Rutas GPS + entrevistas
+- **Herramientas técnicas:** Mapas interactivos, calculadoras de ruta
+- **Metodología:** Conexión entre movimiento físico y reflexión mental
+- **Comunidad objetivo:** Ciclistas urbanos, bikepackers, aventureros filosóficos
+- **Estado:** Planificación - contenido piloto en desarrollo
+- **Meta:** Red de ciclistas storytellers en LATAM
 
-Talleres y Conferencias
-🎓 Taller: "Procesamiento de Lenguaje Natural para Principiantes PT 2"
+### 🎤 "Voces del Código y la Carretera"
+**Podcast/serie de entrevistas profundas**
+- **Concepto:** Conversaciones en la intersección de tecnología y pasión humana
+- **Perfiles objetivo:**
+    - Hackers ciclistas
+    - Progrmadores tatuados
+    - Artistas que usan tecnología
+    - Nómadas digitales con filosofías únicas
+- **Formato:** Audio + video + artículos de acompañamiento web
+- **Objetivo:**' Mostrar la humanidad detrás de la tecnología
 
-Ayudante en taller educativo de NLP
+### 🧭 Filosofía & Visión
+### 🎯 Meta Principal
 
-    Rol: Instructor asistente
-    Tecnologías: Python, NLTK, spaCy, transformers
-    Video: Ver taller
-    Audiencia: Principiantes en NLP
+**Especialista en ciberseguridad con enfoque humanizado en ML**
+    - Fusionar machine learning con técnicas de seguridad ofensiva
+    - Desarrollar herramientas de detección automatizada
+    - Contribuir a investigación en AI Security
+    - **Pero también:** Documentar el viaje humano detrás de la tecnología
 
-📊 Escuela de Verano - Staff Técnico
+### 💡 Principios Fundamentales
 
-Apoyo en herramientas de visualización de datos
+"Mi fascinación por el NLP y la ciberseguridad nace de la perfecta intersección entre el análisis del lenguaje humano 
+y la protección de sistemas digitales. Inspirado por mentores como el Dr. Iván Vladimir Meza Ruiz y Jesús Mager, así 
+como por el legado de Alan Turing, creo que la criptografía y la inteligencia artificial son disciplinas que se 
+complementan naturalmente."
 
-    Rol: Staff técnico
-    Enfoque: Visualización de datos científicos
-    Charla: Ver presentación
-    Tecnologías: Python, matplotlib, seaborn, plotly
+**Pilares de mi trabajo:**
+    - **Software Libre:** Democratización tecnológica
+    - **Ética en IA:** Desarrollo responsable
+    - **Criptografía + IA:** Siguiendo el legado de Turing
+    - **Conocimiento Abierto:** Compartir para hacer crecer la comunidad
+    - **Humanización Tech:** La tecnología es más poderosa cuando conecta con nuestras pasiones
 
-🗝️ Conferencia: "Cifrado con GPG"
+### 📜 Principios Rectores
+    1. **Tecnología Humanizada** - "Los sistemas técnicos deben servir a personas reales"
+    2. **Aprendizaje Transversal** - "Un CTF enseña tanto como 100km en bicicleta"
+    3. **Open Source = Open Mind** - "El conocimiento crece cuando se comparte"
 
-Divulgación de criptografía práctica en software libre
+### 🚴♂️ La Conexión Ciclística
 
-    Evento: FLISoL (Festival Latinoamericano de Instalación de Software Libre)
-    Tema: Implementación práctica de GnuPG para usuarios
-    Video: Ver conferencia (desde min 0:25)
+"Cada subida en bicicleta es como resolver un CTF: requiere estrategia, resistencia mental, y la recompensa viene 
+después del esfuerzo. Ambas actividades me han enseñado que los mejores insights surgen cuando combinas movimiento 
+físico con reflexión mental."
 
-🎨 Proyectos Creativos
-📹 "Tinta & Rutas" - Documentales Interactivos
+### 📊 Estadísticas en Vivo
+### 🔐 Tech Stats
 
-Explorando historias humanas a través de tatuajes y aventuras
+| Área           | Métricas                                      |
+|----------------|-----------------------------------------------|
+| Ciberseguridad | 4+ plataformas CTF, 15+ writeups             |
+| Aventura       | 1,500km ciclados, 3 entrevistas              |
+| Educación      | 2+ talleres, 1+ conferencias                 |
+| Repositorios   | 10+ proyectos en GitLab/GitHub               |
+| Plataformas CTF| PicoCTF, EchoCTF, TryHackMe, HackTheBox      |
+| Especialización| SSTI, Web exploitation, Criptografía         |
+| Años en Cyber  | 1+ años activo                               |
 
-    Concepto: Video entrevistas + fotografía + storytelling web
-    Temas centrales:
-        Significado profundo de tatuajes
-        Filosofía ciclística y perspectivas de vida
-        Conexión entre decisiones permanentes y temporales
-    Tecnología: Video editing, fotografía profesional, diseño web interactivo
-    Objetivo: Humanizar la tecnología conectando historias reales
-    Estado: Pre-producción
-    Primera serie: "Ciclistas Tatuados: Historias de Asfalto y Tinta"
-
-🚴‍♂️ Hub de Aventuras Ciclísticas
-
-Comunidad y recursos para ciclistas con historias
-
-    Contenido: Rutas GPS, entrevistas a ciclistas inspiradores
-    Herramientas técnicas: Mapas interactivos, calculadoras de ruta
-    Metodología: Conexión entre movimiento físico y reflexión mental
-    Comunidad objetivo: Ciclistas urbanos, bikepackers, aventureros filosóficos
-    Estado: Planificación - contenido piloto en desarrollo
-    Meta: Red de ciclistas storytellers en LATAM
-
-🎤 "Voces del Código y la Carretera"
-
-Podcast/serie de entrevistas profundas
-
-    Concepto: Conversaciones en la intersección de tecnología y pasión humana
-    Perfiles objetivo:
-        Hackers ciclistas
-        Programadores tatuados
-        Artistas que usan tecnología
-        Nómadas digitales con filosofías únicas
-    Formato: Audio + video + artículos de acompañamiento web
-    Objetivo: Mostrar la humanidad detrás de la tecnología
-
-🧭 Filosofía & Visión
-🎯 Meta Principal
-
-Especialista en ciberseguridad con enfoque humanizado en ML
-
-    Fusionar machine learning con técnicas de seguridad ofensiva
-    Desarrollar herramientas de detección automatizada
-    Contribuir a investigación en AI Security
-    Pero también: Documentar el viaje humano detrás de la tecnología
-
-💡 Principios Fundamentales
-
-"Mi fascinación por el NLP y la ciberseguridad nace de la perfecta intersección entre el análisis del lenguaje humano y la protección de sistemas digitales. Inspirado por mentores como el Dr. Iván Vladimir Meza Ruiz y Jesús Mager, así como por el legado de Alan Turing, creo que la criptografía y la inteligencia artificial son disciplinas que se complementan naturalmente."
-
-Pilares de mi trabajo:
-
-    Software Libre: Democratización tecnológica
-    Ética en IA: Desarrollo responsable
-    Criptografía + IA: Siguiendo el legado de Turing
-    Conocimiento Abierto: Compartir para hacer crecer la comunidad
-    Humanización Tech: La tecnología es más poderosa cuando conecta con nuestras pasiones
-
-📜 Principios Rectores
-
-    Tecnología Humanizada - "Los sistemas técnicos deben servir a personas reales"
-    Aprendizaje Transversal - "Un CTF enseña tanto como 100km en bicicleta"
-    Open Source = Open Mind - "El conocimiento crece cuando se comparte"
-
-🚴♂️ La Conexión Ciclística
-
-"Cada subida en bicicleta es como resolver un CTF: requiere estrategia, resistencia mental, y la recompensa viene después del esfuerzo. Ambas actividades me han enseñado que los mejores insights surgen cuando combinas movimiento físico con reflexión mental."
-📊 Estadísticas en Vivo
-🔐 Tech Stats
-
-Área	Métricas
-Ciberseguridad	4+ plataformas CTF, 15+ writeups
-Aventura	1,500km ciclados, 3 entrevistas
-Educación	2+ talleres, 1+ conferencias
-Repositorios	10+ proyectos en GitLab/GitHub
-Plataformas CTF	PicoCTF, EchoCTF, TryHackMe, HackTheBox
-Especialización	SSTI, Web exploitation, Criptografía
-Años en Cyber	1+ años activo
-
-🔮 Próximamente
-📅 Q2 2024
-
+### 🔮 Próximamente
+### 📅 Q2 2024
+    
     🚀 Lanzamiento NLP Security Scanner v1.2
     📹 Primer episodio "Tinta & Rutas"
     🗣️ TEDx: "Ética en IA Ofensiva"
@@ -190,22 +197,22 @@ Años en Cyber	1+ años activo
     📝 10 nuevos writeups con metodología educativa
     🚴‍♂️ Primer taller presencial "Cybersecurity for Cyclists"
 
-📅 Q4 2024
+### 📅 Q4 2024
 
     📚 Libro digital: "Código y Kilómetros: Reflexiones de un Hacker Ciclista"
     🛡️ Open Source Security Framework versión 1.0
     🎤 Conferencia TEDx sobre "Humanizando la Ciberseguridad"
     🌎 Red de colaboradores en 5 países LATAM
 
-📅 Q1 2026
+### 📅 Q1 2026
 
     🌎 Red LATAM de 100+ hackers ciclistas
     📚 Libro interactivo "Código & Kilómetros"
     🛡️ Framework de Seguridad ML v2.0
 
-✨ Invitación a Colaborar
+### ✨ Invitación a Colaborar
 
-¿Te identificas con alguna de estas áreas?
+***¿Te identificas con alguna de estas áreas?***
 
     🔍 Análisis de patrones en CTFs
     🎤 Entrevistas a personajes únicos
@@ -215,11 +222,16 @@ Años en Cyber	1+ años activo
     📖 Historias de ciclismo, tatuajes y filosofía de vida
     🤖 Proyectos que humanicen la tecnología
 
-Conectemos:
+***Conectemos:***
 
-    📧 Email seguro: emilinhone@protonmail.com
-    📱 Telegram: t.me/emilinho (respuesta rápida)
-    💻 Repositorios: GitLab | GitHub
+   ### 📧 **Email seguro:** 
+    - emilinhone@protonmail.com
+   ### 📱 **Telegram:** 
+    - https://t.me/emilinho (respuesta rápida)
+   ### 💻 **Repositorios:** 
+    - https://gitlab.com/emilinho | 
+    - https://github.com/Emilio-J4n3z
 
-"La tecnología es más poderosa cuando la conectamos con nuestras pasiones humanas más profundas. Cada línea de código, cada kilómetro pedaleado, cada historia compartida es una oportunidad de construir puentes entre mundos aparentemente diferentes."
-
+"La tecnología es más poderosa cuando la conectamos con nuestras pasiones humanas más profundas. Cada línea de código, 
+cada kilómetro pedaleado, cada historia compartida es una oportunidad de construir puentes entre mundos aparentemente
+diferentes."
