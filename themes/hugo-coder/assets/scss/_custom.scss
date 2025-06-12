@@ -1,0 +1,558 @@
+// ===== VARIABLES GLOBALES MEJORADAS =====
+// Colores principales inspirados en cada temática específica
+:root {
+  // TechSec - Matrix/Circuitos/Terminal
+  --techsec-primary: #00ff41;
+  --techsec-secondary: #008f11;
+  --techsec-accent: #0066cc;
+  --techsec-dark: #0d1117;
+  --techsec-gradient: linear-gradient(135deg, #0d1117 0%, #1a1a1a 25%, rgba(0, 255, 65, 0.1) 50%, rgba(0, 143, 17, 0.1) 75%, rgba(0, 102, 204, 0.1) 100%);
+
+  // Rutas - Elementos Naturales (MEJORADO)
+  --rutas-fire: #ff4500;      // Fuego más intenso
+  --rutas-water: #1e90ff;     // Agua más vibrante
+  --rutas-earth: #8b4513;     // Tierra más rica
+  --rutas-air: #87ceeb;       // Aire suave
+  --rutas-snow: #f0f8ff;      // Nieve pura
+  --rutas-green: #228b22;     // Verde natural
+  // Gradiente que representa los 4 elementos + naturaleza
+  --rutas-gradient: linear-gradient(135deg, 
+    rgba(255, 69, 0, 0.15) 0%,     // Fuego
+    rgba(30, 144, 255, 0.15) 25%,  // Agua
+    rgba(139, 69, 19, 0.15) 50%,   // Tierra
+    rgba(135, 206, 235, 0.15) 75%, // Aire
+    rgba(34, 139, 34, 0.1) 100%    // Naturaleza
+  );
+
+  // Tinta - Estilos de Tatuaje
+  --tinta-realism: #2c2c2c;
+  --tinta-japanese: #dc143c;
+  --tinta-biomech: #708090;
+  --tinta-skin: #deb887;
+  --tinta-gradient: linear-gradient(135deg, rgba(44, 44, 44, 0.3) 0%, rgba(220, 20, 60, 0.2) 33%, rgba(112, 128, 144, 0.2) 66%, rgba(222, 184, 135, 0.1) 100%);
+
+  // Worldview - Culturas y Tradiciones
+  --worldview-festive: #ff6347;
+  --worldview-cultural: #9370db;
+  --worldview-tradition: #ffd700;
+  --worldview-celebration: #ff1493;
+  --worldview-heritage: #4682b4;
+  --worldview-gradient: linear-gradient(135deg, rgba(255, 99, 71, 0.2) 0%, rgba(147, 112, 219, 0.2) 25%, rgba(255, 215, 0, 0.2) 50%, rgba(255, 20, 147, 0.1) 75%, rgba(70, 130, 180, 0.1) 100%);
+
+  // Variables de diseño
+  --border-width: 4px;
+  --card-padding: 1.5rem;
+  --card-border-radius: 12px;
+  --section-border-radius: 8px;
+  --grid-gap: 2rem;
+  --grid-gap-small: 1rem;
+  --stat-font-size: 1.8rem;        // Reducido de 2rem
+  --stat-label-size: 0.8rem;       // Reducido de 0.9rem
+
+  // Efectos y sombras
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+// ===== MIXINS MEJORADOS =====
+@mixin section-base {
+  padding: 2rem;
+  border-radius: var(--card-border-radius);
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+@mixin card-hover-effect($shadow-color: rgba(0, 0, 0, 0.3)) {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px $shadow-color;
+  }
+}
+
+@mixin responsive-grid($min-width: 300px, $gap: var(--grid-gap)) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+  margin: $gap 0;
+}
+
+@mixin section-icon($icons, $size: 0.9rem) {
+  &::after {
+    content: $icons;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: $size;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}
+
+// ===== SECCIONES TEMÁTICAS CON EFECTOS ESPECIALES =====
+
+// TechSec - Efecto Matrix/Terminal
+.section-techsec {
+  @include section-base;
+  @include section-icon("🖥️⚡🔧", 1rem);
+
+  background: var(--techsec-gradient);
+  color: var(--techsec-primary);
+  border: 2px solid var(--techsec-primary);
+  border-left: var(--border-width) solid var(--techsec-primary);
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3),
+              inset 0 0 20px rgba(0, 255, 65, 0.1);
+
+  // Efecto de escaneo matrix
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent);
+    animation: matrix-scan 3s infinite;
+    z-index: 0;
+  }
+
+  // Soporte para tema oscuro
+  body.colorscheme-dark & {
+    background: linear-gradient(135deg, #0d1117 0%, #1a1a1a 50%, rgba(0, 255, 65, 0.15) 100%);
+  }
+}
+
+@keyframes matrix-scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+// Rutas - Elementos Naturales (MEJORADO)
+.section-rutas {
+  @include section-base;
+  @include section-icon("🔥💧🌍💨❄️", 0.8rem);
+
+  background: var(--rutas-gradient);
+  color: var(--rutas-fire);
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, 
+    var(--rutas-fire) 0%, 
+    var(--rutas-water) 25%, 
+    var(--rutas-earth) 50%, 
+    var(--rutas-air) 75%, 
+    var(--rutas-green) 100%
+  ) 1;
+  border-left: 5px solid var(--rutas-fire);
+  box-shadow: 
+    0 4px 15px rgba(255, 69, 0, 0.2),      // Sombra de fuego
+    0 8px 25px rgba(30, 144, 255, 0.15),   // Sombra de agua
+    0 12px 35px rgba(139, 69, 19, 0.1);    // Sombra de tierra
+
+  // Efecto de elementos flotantes
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, 
+      rgba(255, 69, 0, 0.1) 0%, 
+      rgba(30, 144, 255, 0.1) 25%,
+      rgba(139, 69, 19, 0.1) 50%,
+      transparent 70%
+    );
+    animation: element-float 6s ease-in-out infinite;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  // Texto en color apropiado para legibilidad
+  body.colorscheme-dark & {
+    color: #ffffff;
+  }
+}
+
+@keyframes element-float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% { 
+    transform: translateY(-10px) rotate(90deg);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-5px) rotate(180deg);
+    opacity: 0.4;
+  }
+  75% { 
+    transform: translateY(-15px) rotate(270deg);
+    opacity: 0.7;
+  }
+}
+
+// Tinta - Estilos de Tatuaje
+.section-tinta {
+  @include section-base;
+  @include section-icon("⚙️🐉🎌", 1rem);
+
+  background: var(--tinta-gradient);
+  color: var(--tinta-japanese);
+  border: 3px solid var(--tinta-realism);
+  border-style: dashed solid dashed solid;
+  box-shadow: 0 4px 15px rgba(44, 44, 44, 0.3),
+              inset 0 0 15px rgba(220, 20, 60, 0.1);
+
+  body.colorscheme-dark & {
+    color: #ffffff;
+  }
+}
+
+// Worldview - Culturas y Tradiciones
+.section-worldview {
+  @include section-base;
+  @include section-icon("🎭🎨🌮🎉🌺", 0.9rem);
+
+  background: var(--worldview-gradient);
+  color: var(--worldview-festive);
+  border: 2px solid var(--worldview-festive);
+  border-left: var(--border-width) solid var(--worldview-tradition);
+  box-shadow: var(--shadow-light),
+              0 8px 25px rgba(147, 112, 219, 0.15),
+              0 12px 35px rgba(255, 215, 0, 0.1);
+
+  body.colorscheme-dark & {
+    color: #ffffff;
+  }
+}
+
+// ===== COMPONENTES MEJORADOS =====
+
+// Grid de Posts
+.latest-posts-grid {
+  @include responsive-grid(300px);
+}
+
+.post-card {
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  // Soporte para tema oscuro
+  body.colorscheme-dark & {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  // Variantes por sección
+  &.techsec {
+    @include card-hover-effect(rgba(0, 255, 65, 0.3));
+    background: var(--techsec-gradient);
+    border-left: 3px solid var(--techsec-primary);
+    color: var(--techsec-primary);
+    font-family: 'Courier New', monospace;
+  }
+
+  &.rutas {
+    @include card-hover-effect(rgba(255, 107, 53, 0.3));
+    background: var(--rutas-gradient);
+    border-left: 3px solid var(--rutas-fire);
+  }
+
+  &.tinta {
+    @include card-hover-effect(rgba(220, 20, 60, 0.3));
+    background: var(--tinta-gradient);
+    border-left: 3px solid var(--tinta-realism);
+    border-style: solid dashed;
+  }
+
+  &.worldview {
+    @include card-hover-effect(rgba(255, 99, 71, 0.3));
+    background: var(--worldview-gradient);
+    border-left: 3px solid var(--worldview-festive);
+  }
+}
+
+// Contador de Estadísticas (REDISEÑADO COMPACTO)
+.stats-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  // Tamaño más compacto
+  min-width: 120px;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  
+  // Estilo glassmorphism sutil
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  // Efecto hover suave
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  body.colorscheme-dark & {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-number {
+    font-size: var(--stat-font-size);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    transition: all 0.3s ease;
+
+    // Colores específicos por sección
+    .section-techsec & {
+      color: var(--techsec-primary);
+      text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    }
+
+    .section-rutas & {
+      // Gradiente multicolor para representar los elementos
+      background: linear-gradient(135deg, 
+        var(--rutas-fire) 0%, 
+        var(--rutas-water) 25%, 
+        var(--rutas-earth) 50%, 
+        var(--rutas-air) 75%, 
+        var(--rutas-green) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+    }
+
+    .section-tinta & {
+      color: var(--tinta-japanese);
+      text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+    }
+
+    .section-worldview & {
+      color: var(--worldview-tradition);
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+  }
+
+  .stat-label {
+    font-size: var(--stat-label-size);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+  }
+}
+
+// Highlight Boxes Mejorados
+.highlight-box {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: var(--section-border-radius);
+  position: relative;
+
+  &.techsec {
+    background: rgba(0, 255, 65, 0.1);
+    border-left: var(--border-width) solid var(--techsec-primary);
+    border-top: 1px dashed var(--techsec-secondary);
+    font-family: 'Courier New', monospace;
+
+    &::before {
+      content: "[INFO]";
+      position: absolute;
+      top: -8px;
+      left: 15px;
+      background: var(--techsec-dark);
+      color: var(--techsec-primary);
+      padding: 0 8px;
+      font-size: 0.7rem;
+      border-radius: 3px;
+    }
+  }
+
+  &.rutas {
+    background: var(--rutas-gradient);
+    border-left: var(--border-width) solid var(--rutas-fire);
+    border-image: linear-gradient(135deg, 
+      var(--rutas-fire) 0%, 
+      var(--rutas-water) 25%, 
+      var(--rutas-earth) 50%, 
+      var(--rutas-air) 75%, 
+      var(--rutas-green) 100%
+    ) 1;
+  }
+
+  &.tinta {
+    background: rgba(44, 44, 44, 0.1);
+    border-left: var(--border-width) solid var(--tinta-japanese);
+    border-right: 2px dashed var(--tinta-biomech);
+  }
+
+  &.worldview {
+    background: linear-gradient(135deg,
+      rgba(255, 99, 71, 0.1) 0%,
+      rgba(147, 112, 219, 0.1) 50%,
+      rgba(255, 215, 0, 0.1) 100%);
+    border-left: var(--border-width) solid var(--worldview-festive);
+  }
+}
+
+// ===== COMPONENTES ESPECIALES =====
+
+// CTF Info (para TechSec)
+.ctf-info {
+  background: rgba(0, 255, 65, 0.1);
+  border: 2px solid var(--techsec-primary);
+  border-radius: var(--section-border-radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  position: relative;
+
+  &::before {
+    content: "[SYSTEM]";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: var(--techsec-dark);
+    color: var(--techsec-primary);
+    padding: 0 8px;
+    font-size: 0.7rem;
+    border-radius: 3px;
+  }
+
+  strong {
+    color: var(--techsec-primary);
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+  }
+}
+
+// Difficulty Stars (para TechSec)
+.difficulty-stars {
+  color: #ffd700;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  animation: pulse-stars 2s infinite;
+}
+
+@keyframes pulse-stars {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+// ===== UTILIDADES =====
+
+// Clases de utilidad para colores
+.text-techsec { color: var(--techsec-primary) !important; }
+.text-rutas { color: var(--rutas-fire) !important; }
+.text-tinta { color: var(--tinta-japanese) !important; }
+.text-worldview { color: var(--worldview-festive) !important; }
+
+// Bordes
+.border-techsec { border-color: var(--techsec-primary) !important; }
+.border-rutas { border-color: var(--rutas-fire) !important; }
+.border-tinta { border-color: var(--tinta-realism) !important; }
+.border-worldview { border-color: var(--worldview-festive) !important; }
+
+// ===== RESPONSIVE DESIGN =====
+@media (max-width: 768px) {
+  :root {
+    --card-padding: 1rem;
+    --grid-gap: 1rem;
+    --stat-font-size: 1.5rem;
+    --stat-label-size: 0.75rem;
+  }
+
+  .latest-posts-grid {
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap-small);
+  }
+
+  .stats-counter {
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .stat-item {
+    min-width: 100px;
+    padding: 0.8rem 1rem;
+  }
+
+  .post-card {
+    padding: var(--card-padding);
+  }
+
+  // Ocultar iconos decorativos en móvil
+  .section-techsec::after,
+  .section-rutas::after,
+  .section-tinta::after,
+  .section-worldview::after {
+    display: none;
+  }
+
+  // Simplificar efectos en móvil
+  .section-techsec::before,
+  .section-rutas::before {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-counter {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .stat-item {
+    min-width: 80px;
+    padding: 0.6rem 0.8rem;
+  }
+
+  :root {
+    --stat-font-size: 1.3rem;
+    --stat-label-size: 0.7rem;
+  }
+
+  .highlight-box.techsec::before {
+    display: none;
+  }
+}
+
+// ===== MODO OSCURO MEJORADO =====
+body.colorscheme-dark {
+  .post-card {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-item {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .highlight-box {
+    background: rgba(20, 20, 20, 0.5);
+  }
+}
