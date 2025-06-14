@@ -1,0 +1,51 @@
+<div class="progress-comparison">
+  <div class="progress-header">
+    <h3>{{ .Get "title" }}</h3>
+    <p>{{ .Get "subtitle" }}</p>
+  </div>
+  
+  <div class="progress-grid">
+    {{ range split .Inner "|" }}
+      {{ $items := split . "," }}
+      <div class="metric">
+        <div class="metric-icon">{{ index $items 0 }}</div>
+        <div class="years">
+          <span class="year-2023">{{ index $items 1 }}</span>
+          <span class="arrow">→</span>
+          <span class="year-2024">{{ index $items 2 }}</span>
+          <span class="arrow">→</span>
+          <span class="year-2025 highlight">{{ index $items 3 }}</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: {{ index $items 4 }}%"></div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.progress-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.metric {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.highlight {
+  color: #2ecc71;
+  font-weight: bold;
+}
+.progress-bar {
+  height: 6px;
+  background: #f0f0f0;
+  margin-top: 8px;
+}
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+</style>
