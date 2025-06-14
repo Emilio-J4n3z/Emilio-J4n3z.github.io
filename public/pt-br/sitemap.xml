@@ -485,6 +485,37 @@
                 href="http://localhost:1313/pt-br/about/"
                 />
   </url><url>
+    <loc>http://localhost:1313/pt-br/posts/rotas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pt-br/posts/tinta/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/tinta/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/tinta/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/pt-br/posts/worldview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/worldview/"
+                />
+  </url><url>
     <loc>http://localhost:1313/pt-br/contact/</loc>
     <xhtml:link
                 rel="alternate"
@@ -502,6 +533,23 @@
                 href="http://localhost:1313/pt-br/contact/"
                 />
   </url><url>
+    <loc>http://localhost:1313/pt-br/difficulty/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/difficulty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/difficulty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/difficulty/"
+                />
+  </url><url>
     <loc>http://localhost:1313/pt-br/projects/</loc>
     <xhtml:link
                 rel="alternate"
@@ -517,6 +565,40 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://localhost:1313/pt-br/projects/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/pt-br/sections/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/sections/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/sections/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/sections/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/pt-br/posts/techsec/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/techsec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/techsec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/techsec/"
                 />
   </url>
 </urlset>

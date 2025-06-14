@@ -5,21 +5,50 @@
     <loc>http://localhost:1313/es/posts/primer_ejemplo/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/blue/</loc>
-    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
+    <loc>http://localhost:1313/es/difficulty/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/categories/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/blue/"
+                href="http://localhost:1313/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/tags/blue/"
+                href="http://localhost:1313/es/categories/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/categories/ctf-writeups/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/difficulty/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/difficulty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/difficulty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/difficulty/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/</loc>
-    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -36,8 +65,14 @@
                 href="http://localhost:1313/es/"
                 />
   </url><url>
+    <loc>http://localhost:1313/es/tags/jinja2/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/picoctf/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/es/posts/</loc>
-    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -54,21 +89,14 @@
                 href="http://localhost:1313/es/posts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/red/</loc>
-    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/red/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/red/"
-                />
+    <loc>http://localhost:1313/es/tags/ssti/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/es/tags/</loc>
-    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -83,6 +111,144 @@
                 rel="alternate"
                 hreflang="es"
                 href="http://localhost:1313/es/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/posts/techsec/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/techsec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/techsec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/techsec/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/categories/web-exploitation/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/web-exploitation/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/posts/rutas/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/contact/</loc>
+    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/contact/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/posts/tinta/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/tinta/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/tinta/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/anatom%C3%ADa/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/biomec%C3%A1nico/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/ciclismo/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/dise%C3%B1o-personal/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/posts/tinta/mi-vision-biomecanica/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/categories/proyectos-personales/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/blue/</loc>
+    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/blue/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/tags/blue/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/red/</loc>
+    <lastmod>2024-02-02T04:14:54-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/red/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/tags/red/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/projects/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/projects/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/posts/worldview/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/worldview/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/authors/</loc>
@@ -101,24 +267,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="http://localhost:1313/es/authors/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/categories/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/tags/css/</loc>
@@ -525,38 +673,21 @@
                 href="http://localhost:1313/es/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/contact/</loc>
+    <loc>http://localhost:1313/es/sections/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/contact/"
+                href="http://localhost:1313/en/sections/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/contact/"
+                href="http://localhost:1313/pt-br/sections/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/contact/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/projects/"
+                href="http://localhost:1313/es/sections/"
                 />
   </url>
 </urlset>

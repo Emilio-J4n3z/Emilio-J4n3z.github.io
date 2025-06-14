@@ -542,6 +542,25 @@
                 href="http://localhost:1313/en/contact/"
                 />
   </url><url>
+    <loc>http://localhost:1313/en/difficulty/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/difficulty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/difficulty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/difficulty/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/posts/ink/</loc>
+  </url><url>
     <loc>http://localhost:1313/en/projects/</loc>
     <xhtml:link
                 rel="alternate"
@@ -557,6 +576,59 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/en/projects/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/posts/routes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/en/sections/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/sections/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/sections/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/sections/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/posts/techsec/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/techsec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/techsec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/techsec/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/posts/worldview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/es/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/worldview/"
                 />
   </url>
 </urlset>

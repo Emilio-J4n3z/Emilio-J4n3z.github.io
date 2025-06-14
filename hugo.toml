@@ -50,10 +50,13 @@ customJS = []
 # Custom remote JS files
 customRemoteJS = []
 
+# Taxonomías personalizadas
 [taxonomies]
 category = "categories"
-series = "series"
 tag = "tags"
+series = "series"
+difficulty = "difficulty"
+section = "sections"
 author = "authors"
 
 [[params.social]]
@@ -120,13 +123,33 @@ weight = 2
 url = "/posts/"
 
 [[languages.es.menu.main]]
-name = "Proyectos"
+name = "TechSec"
 weight = 3
+url = "/posts/techsec/"
+
+[[languages.es.menu.main]]
+name = "Rutas"
+weight = 4
+url = "/posts/rutas/"
+
+[[languages.es.menu.main]]
+name = "Tinta"
+weight = 5
+url = "/posts/tinta/"
+
+[[languages.es.menu.main]]
+name = "Worldview"
+weight = 6
+url = "/posts/worldview/"
+
+[[languages.es.menu.main]]
+name = "Proyectos"
+weight = 7
 url = "/projects/"
 
 [[languages.es.menu.main]]
 name = "Contacto"
-weight = 5
+weight = 8
 url = "/contact/"
 
 # Inglés
@@ -153,13 +176,33 @@ weight = 2
 url = "/posts/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "TechSec"
 weight = 3
+url = "/posts/techsec/"
+
+[[languages.en.menu.main]]
+name = "Routes"
+weight = 4
+url = "/posts/rutas/"
+
+[[languages.en.menu.main]]
+name = "Ink"
+weight = 5
+url = "/posts/tinta/"
+
+[[languages.en.menu.main]]
+name = "Worldview"
+weight = 6
+url = "/posts/worldview/"
+
+[[languages.en.menu.main]]
+name = "Projects"
+weight = 7
 url = "/projects/"
 
 [[languages.en.menu.main]]
 name = "Contact"
-weight = 5
+weight = 8
 url = "/contact/"
 
 # Portugués Brasileño
@@ -186,11 +229,31 @@ weight = 2
 url = "/posts/"
 
 [[languages.pt-br.menu.main]]
-name = "Projetos"
+name = "TechSec"
 weight = 3
+url = "/posts/techsec/"
+
+[[languages.pt-br.menu.main]]
+name = "Rotas"
+weight = 4
+url = "/posts/rutas/"
+
+[[languages.pt-br.menu.main]]
+name = "Tinta"
+weight = 5
+url = "/posts/tinta/"
+
+[[languages.pt-br.menu.main]]
+name = "Worldview"
+weight = 6
+url = "/posts/worldview/"
+
+[[languages.pt-br.menu.main]]
+name = "Projetos"
+weight = 7
 url = "/projects/"
 
 [[languages.pt-br.menu.main]]
 name = "Contato"
-weight = 5
+weight = 8
 url = "/contact/"

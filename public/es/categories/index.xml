@@ -6,8 +6,29 @@
     <description>Recent content in Categories on Emilinho Janez</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF Writeups</title>
+      <link>http://localhost:1313/es/categories/ctf-writeups/</link>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/categories/ctf-writeups/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Exploitation</title>
+      <link>http://localhost:1313/es/categories/web-exploitation/</link>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/categories/web-exploitation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proyectos Personales</title>
+      <link>http://localhost:1313/es/categories/proyectos-personales/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/categories/proyectos-personales/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Syntax</title>
       <link>http://localhost:1313/es/categories/syntax/</link>
