@@ -1,0 +1,8 @@
+{{/*
+Shortcode para secciones temáticas
+Uso: {{< section "techsec" >}}contenido{{< /section >}}
+*/}}
+{{ $type := .Get 0 | default "default" }}
+<div class="section-{{ $type }}">
+  {{ .Inner | markdownify }}
+</div>
