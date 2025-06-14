@@ -1,0 +1,24 @@
+{{/*
+Shortcode para mostrar estadísticas en formato de grid con 2-3 valores
+Uso: {{< stats "24,Cumbres Conquistadas" "1247,Kilómetros 2024" "156,Horas Pedaleando" >}}
+*/}}
+<div class="stats-counter">
+  {{ range .Params }}
+    {{ $parts := split . "," }}
+    {{ if ge (len $parts) 2 }}
+      <div class="stat-item">
+        <div class="stat-number">
+          {{ index $parts 0 }}
+          {{ if gt (len $parts) 2 }}
+            <span class="stat-unit">{{ index $parts 1 }}</span>
+          {{ end }}
+        </div>
+        {{ if gt (len $parts) 2 }}
+          <div class="stat-label">{{ index $parts 2 }}</div>
+        {{ else }}
+          <div class="stat-label">{{ index $parts 1 }}</div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
