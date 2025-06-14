@@ -1,5 +1,4 @@
-// ===== VARIABLES GLOBALES MEJORADAS =====
-// Colores principales inspirados en cada temática específica
+// ===== VARIABLES GLOBALES COMPLETAS =====
 :root {
   // TechSec - Matrix/Circuitos/Terminal
   --techsec-primary: #00ff41;
@@ -8,20 +7,23 @@
   --techsec-dark: #0d1117;
   --techsec-gradient: linear-gradient(135deg, #0d1117 0%, #1a1a1a 25%, rgba(0, 255, 65, 0.1) 50%, rgba(0, 143, 17, 0.1) 75%, rgba(0, 102, 204, 0.1) 100%);
 
-  // Rutas - Elementos Naturales (MEJORADO)
-  --rutas-fire: #ff4500;      // Fuego más intenso
-  --rutas-water: #1e90ff;     // Agua más vibrante
-  --rutas-earth: #8b4513;     // Tierra más rica
-  --rutas-air: #87ceeb;       // Aire suave
-  --rutas-snow: #f0f8ff;      // Nieve pura
-  --rutas-green: #228b22;     // Verde natural
-  // Gradiente que representa los 4 elementos + naturaleza
-  --rutas-gradient: linear-gradient(135deg, 
-    rgba(255, 69, 0, 0.15) 0%,     // Fuego
-    rgba(30, 144, 255, 0.15) 25%,  // Agua
-    rgba(139, 69, 19, 0.15) 50%,   // Tierra
-    rgba(135, 206, 235, 0.15) 75%, // Aire
-    rgba(34, 139, 34, 0.1) 100%    // Naturaleza
+  // Rutas - Elementos Naturales y Ciclismo
+  --rutas-fire: #ff4500;           // Fuego/Energía del pedaleo
+  --rutas-water: #1e90ff;          // Agua/Frescura de montaña
+  --rutas-earth: #8b4513;          // Tierra/Senderos
+  --rutas-air: #87ceeb;            // Aire/Viento en descensos
+  --rutas-snow: #f0f8ff;           // Nieve de las cumbres
+  --rutas-green: #228b22;          // Verde/Naturaleza
+  --rutas-sunset: #ff6347;         // Atardeceres pedaleando
+  --rutas-asphalt: #36454f;        // Asfalto de carretera
+  
+  // Gradiente principal para rutas
+  --rutas-gradient: linear-gradient(135deg,
+    rgba(255, 69, 0, 0.15) 0%,      // Fuego del esfuerzo
+    rgba(30, 144, 255, 0.15) 25%,   // Agua de montaña
+    rgba(139, 69, 19, 0.15) 50%,    // Tierra del camino
+    rgba(135, 206, 235, 0.15) 75%,  // Aire del viento
+    rgba(34, 139, 34, 0.1) 100%     // Verde de la naturaleza
   );
 
   // Tinta - Estilos de Tatuaje
@@ -46,8 +48,8 @@
   --section-border-radius: 8px;
   --grid-gap: 2rem;
   --grid-gap-small: 1rem;
-  --stat-font-size: 1.8rem;        // Reducido de 2rem
-  --stat-label-size: 0.8rem;       // Reducido de 0.9rem
+  --stat-font-size: 1.8rem;
+  --stat-label-size: 0.8rem;
 
   // Efectos y sombras
   --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -55,7 +57,7 @@
   --shadow-heavy: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
-// ===== MIXINS MEJORADOS =====
+// ===== MIXINS UNIVERSALES =====
 @mixin section-base {
   padding: 2rem;
   border-radius: var(--card-border-radius);
@@ -64,22 +66,24 @@
   overflow: hidden;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  
+  // Asegurar visibilidad
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-@mixin card-hover-effect($shadow-color: rgba(0, 0, 0, 0.3)) {
+@mixin section-hover-effect($shadow-colors...) {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px $shadow-color;
+    transform: translateY(-3px) scale(1.01);
+    @if length($shadow-colors) > 0 {
+      box-shadow: #{$shadow-colors};
+    } @else {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
   }
-}
-
-@mixin responsive-grid($min-width: 300px, $gap: var(--grid-gap)) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
-  gap: $gap;
-  margin: $gap 0;
 }
 
 @mixin section-icon($icons, $size: 0.9rem) {
@@ -90,21 +94,33 @@
     right: 20px;
     font-size: $size;
     opacity: 0.8;
-    z-index: 1;
+    z-index: 2;
+    pointer-events: none;
+    animation: icon-float 15s ease-in-out infinite;
   }
 }
 
-// ===== SECCIONES TEMÁTICAS CON EFECTOS ESPECIALES =====
+@mixin responsive-grid($min-width: 300px, $gap: var(--grid-gap)) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+  margin: $gap 0;
+}
 
-// TechSec - Efecto Matrix/Terminal
+// ===== SECCIÓN TECHSEC =====
 .section-techsec {
   @include section-base;
-  @include section-icon("🖥️⚡🔧", 1rem);
+  @include section-hover-effect(
+    0 0 20px rgba(0, 255, 65, 0.3),
+    0 10px 30px rgba(0, 255, 65, 0.2),
+    inset 0 0 20px rgba(0, 255, 65, 0.1)
+  );
+  @include section-icon("🖥️⚡🔧💻🛡️", 1rem);
 
-  background: var(--techsec-gradient);
-  color: var(--techsec-primary);
-  border: 2px solid var(--techsec-primary);
-  border-left: var(--border-width) solid var(--techsec-primary);
+  background: var(--techsec-gradient) !important;
+  color: var(--techsec-primary) !important;
+  border: 2px solid var(--techsec-primary) !important;
+  border-left: var(--border-width) solid var(--techsec-primary) !important;
   font-family: 'Courier New', monospace;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.3),
               inset 0 0 20px rgba(0, 255, 65, 0.1);
@@ -117,125 +133,430 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent);
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(0, 255, 65, 0.2), 
+      transparent
+    );
     animation: matrix-scan 3s infinite;
-    z-index: 0;
+    z-index: 1;
+    pointer-events: none;
   }
 
-  // Soporte para tema oscuro
   body.colorscheme-dark & {
-    background: linear-gradient(135deg, #0d1117 0%, #1a1a1a 50%, rgba(0, 255, 65, 0.15) 100%);
+    background: linear-gradient(135deg, #0d1117 0%, #1a1a1a 50%, rgba(0, 255, 65, 0.15) 100%) !important;
+    color: #ffffff !important;
   }
 }
 
-@keyframes matrix-scan {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-// Rutas - Elementos Naturales (MEJORADO)
-.section-rutas {
+// Variante especial: TechSec con tema de 4 elementos (para la sección de datos)
+.section-techsec.data-elements {
   @include section-base;
-  @include section-icon("🔥💧🌍💨❄️", 0.8rem);
+  @include section-icon("🔥💧🌍💨📊", 1rem);
 
-  background: var(--rutas-gradient);
-  color: var(--rutas-fire);
-  border: 2px solid transparent;
-  border-image: linear-gradient(135deg, 
-    var(--rutas-fire) 0%, 
-    var(--rutas-water) 25%, 
-    var(--rutas-earth) 50%, 
-    var(--rutas-air) 75%, 
-    var(--rutas-green) 100%
-  ) 1;
-  border-left: 5px solid var(--rutas-fire);
-  box-shadow: 
-    0 4px 15px rgba(255, 69, 0, 0.2),      // Sombra de fuego
-    0 8px 25px rgba(30, 144, 255, 0.15),   // Sombra de agua
-    0 12px 35px rgba(139, 69, 19, 0.1);    // Sombra de tierra
+  // Fusión de tech y elementos naturales
+  background: linear-gradient(135deg,
+    rgba(0, 255, 65, 0.1) 0%,        // Tech base
+    rgba(255, 69, 0, 0.1) 20%,       // Fuego
+    rgba(30, 144, 255, 0.1) 40%,     // Agua
+    rgba(139, 69, 19, 0.1) 60%,      // Tierra
+    rgba(135, 206, 235, 0.1) 80%,    // Aire
+    rgba(0, 255, 65, 0.1) 100%       // Tech final
+  ) !important;
 
-  // Efecto de elementos flotantes
+  color: var(--techsec-primary) !important;
+  border: 2px solid transparent !important;
+  border-image: linear-gradient(135deg,
+    var(--techsec-primary) 0%,
+    var(--rutas-fire) 25%,
+    var(--rutas-water) 50%,
+    var(--rutas-earth) 75%,
+    var(--rutas-air) 100%
+  ) 1 !important;
+  border-left: 5px solid var(--techsec-primary) !important;
+
+  font-family: 'Courier New', monospace;
+  box-shadow:
+    0 0 20px rgba(0, 255, 65, 0.2),
+    0 8px 25px rgba(255, 69, 0, 0.1),
+    0 12px 35px rgba(30, 144, 255, 0.1);
+
+  // Efecto de partículas de datos flotantes
   &::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, 
-      rgba(255, 69, 0, 0.1) 0%, 
-      rgba(30, 144, 255, 0.1) 25%,
-      rgba(139, 69, 19, 0.1) 50%,
-      transparent 70%
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle,
+      rgba(0, 255, 65, 0.1) 0%,
+      rgba(255, 69, 0, 0.1) 20%,
+      rgba(30, 144, 255, 0.1) 40%,
+      rgba(139, 69, 19, 0.1) 60%,
+      transparent 80%
     );
-    animation: element-float 6s ease-in-out infinite;
+    animation: data-particles 8s ease-in-out infinite;
     border-radius: 50%;
-    z-index: 0;
+    z-index: 1;
+    pointer-events: none;
   }
 
-  // Texto en color apropiado para legibilidad
   body.colorscheme-dark & {
-    color: #ffffff;
+    background: linear-gradient(135deg,
+      rgba(13, 17, 23, 0.9) 0%,
+      rgba(255, 69, 0, 0.05) 25%,
+      rgba(30, 144, 255, 0.05) 50%,
+      rgba(139, 69, 19, 0.05) 75%,
+      rgba(135, 206, 235, 0.05) 100%
+    ) !important;
+    color: #ffffff !important;
   }
 }
 
-@keyframes element-float {
-  0%, 100% { 
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.3;
+// ===== SECCIÓN RUTAS (MEJORADA) =====
+.section-rutas {
+  @include section-base;
+  @include section-hover-effect(
+    0 8px 25px rgba(255, 69, 0, 0.2),
+    0 12px 35px rgba(30, 144, 255, 0.15),
+    0 16px 45px rgba(139, 69, 19, 0.1)
+  );
+
+  background: var(--rutas-gradient) !important;
+  color: var(--rutas-fire) !important;
+  border: 2px solid transparent !important;
+  
+  // Borde multicolor que representa los elementos naturales
+  border-image: linear-gradient(135deg,
+    var(--rutas-fire) 0%,
+    var(--rutas-water) 25%,
+    var(--rutas-earth) 50%,
+    var(--rutas-air) 75%,
+    var(--rutas-green) 100%
+  ) 1 !important;
+  
+  border-left: 5px solid var(--rutas-fire) !important;
+  
+  box-shadow:
+    0 4px 15px rgba(255, 69, 0, 0.2),
+    0 8px 25px rgba(30, 144, 255, 0.15),
+    0 12px 35px rgba(139, 69, 19, 0.1);
+
+  // EFECTO VIENTO DE MONTAÑA - Adaptado para rutas
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      rgba(255, 69, 0, 0.3) 0%, // Rojo intenso inicial 
+      rgba(255, 100, 50, 0.25) 20%, // Rojo-naranja 
+      rgba(255, 69, 0, 0.08) 30%, // Calor del sol 
+      rgba(255, 140, 100, 0.2) 40%, // Naranja suave 
+      rgba(30, 144, 255, 0.1) 45%, // Frescura del agua 
+      rgba(100, 150, 255, 0.2) 60%, // Azul intermedio 
+      rgba(50, 120, 255, 0.25) 80%, // Azul más intenso 
+      rgba(30, 144, 255, 0.3) 100% // Azul finaltransparent 100%
+    );
+    animation: mountain-breeze 10s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+    transform-origin: center;
   }
-  25% { 
-    transform: translateY(-10px) rotate(90deg);
-    opacity: 0.6;
-  }
-  50% { 
-    transform: translateY(-5px) rotate(180deg);
-    opacity: 0.4;
-  }
-  75% { 
-    transform: translateY(-15px) rotate(270deg);
+
+  // Iconos de elementos naturales flotantes
+  &::after {
+    content: "🚴‍♂️🔥💧🌍💨🌲";
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 0.85rem;
     opacity: 0.7;
+    z-index: 2;
+    pointer-events: none;
+    animation: nature-elements 15s ease-in-out infinite;
+  }
+
+  body.colorscheme-dark & {
+    color: #ffffff !important;
+    background: linear-gradient(135deg,
+      rgba(255, 69, 0, 0.08) 0%,
+      rgba(30, 144, 255, 0.08) 25%,
+      rgba(139, 69, 19, 0.08) 50%,
+      rgba(135, 206, 235, 0.08) 75%,
+      rgba(34, 139, 34, 0.06) 100%
+    ) !important;
   }
 }
 
-// Tinta - Estilos de Tatuaje
+// ===== SECCIÓN TINTA =====
 .section-tinta {
   @include section-base;
-  @include section-icon("⚙️🐉🎌", 1rem);
+  @include section-hover-effect(
+    0 4px 15px rgba(44, 44, 44, 0.3),
+    0 8px 25px rgba(220, 20, 60, 0.2),
+    inset 0 0 15px rgba(220, 20, 60, 0.1)
+  );
+  @include section-icon("⚙️🐉🎌🖋️🎨", 1rem);
 
-  background: var(--tinta-gradient);
-  color: var(--tinta-japanese);
-  border: 3px solid var(--tinta-realism);
-  border-style: dashed solid dashed solid;
+  background: var(--tinta-gradient) !important;
+  color: var(--tinta-japanese) !important;
+  border: 3px solid var(--tinta-realism) !important;
+  border-style: dashed solid dashed solid !important;
   box-shadow: 0 4px 15px rgba(44, 44, 44, 0.3),
               inset 0 0 15px rgba(220, 20, 60, 0.1);
 
+  // Efecto de tinta goteando
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+      var(--tinta-realism) 0%,
+      var(--tinta-japanese) 50%,
+      var(--tinta-biomech) 100%
+    );
+    animation: ink-drip 5s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+
   body.colorscheme-dark & {
-    color: #ffffff;
+    color: #ffffff !important;
+    background: linear-gradient(135deg,
+      rgba(44, 44, 44, 0.2) 0%,
+      rgba(220, 20, 60, 0.1) 33%,
+      rgba(112, 128, 144, 0.1) 66%,
+      rgba(222, 184, 135, 0.05) 100%
+    ) !important;
   }
 }
 
-// Worldview - Culturas y Tradiciones
+// ===== SECCIÓN WORLDVIEW =====
 .section-worldview {
   @include section-base;
+  @include section-hover-effect(
+    0 8px 25px rgba(147, 112, 219, 0.15),
+    0 12px 35px rgba(255, 215, 0, 0.1),
+    0 16px 45px rgba(255, 99, 71, 0.1)
+  );
   @include section-icon("🎭🎨🌮🎉🌺", 0.9rem);
 
-  background: var(--worldview-gradient);
-  color: var(--worldview-festive);
-  border: 2px solid var(--worldview-festive);
-  border-left: var(--border-width) solid var(--worldview-tradition);
+  background: var(--worldview-gradient) !important;
+  color: var(--worldview-festive) !important;
+  border: 2px solid var(--worldview-festive) !important;
+  border-left: var(--border-width) solid var(--worldview-tradition) !important;
   box-shadow: var(--shadow-light),
               0 8px 25px rgba(147, 112, 219, 0.15),
               0 12px 35px rgba(255, 215, 0, 0.1);
 
+  // Efecto de celebración con partículas
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle,
+      rgba(255, 99, 71, 0.1) 0%,
+      rgba(147, 112, 219, 0.1) 25%,
+      rgba(255, 215, 0, 0.1) 50%,
+      transparent 70%
+    );
+    transform: translate(-50%, -50%);
+    animation: celebration-pulse 4s ease-in-out infinite;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
   body.colorscheme-dark & {
-    color: #ffffff;
+    color: #ffffff !important;
+    background: linear-gradient(135deg,
+      rgba(255, 99, 71, 0.1) 0%,
+      rgba(147, 112, 219, 0.1) 25%,
+      rgba(255, 215, 0, 0.1) 50%,
+      rgba(255, 20, 147, 0.05) 75%,
+      rgba(70, 130, 180, 0.05) 100%
+    ) !important;
   }
 }
 
-// ===== COMPONENTES MEJORADOS =====
+// ===== ANIMACIONES =====
 
-// Grid de Posts
+// Animación matrix scan para TechSec
+@keyframes matrix-scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+// Animación de partículas de datos para TechSec
+@keyframes data-particles {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-15px) rotate(90deg) scale(1.1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg) scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+// Animación de brisa de montaña para Rutas
+@keyframes mountain-breeze {
+  0% { 
+    left: -100%; 
+    transform: skewX(0deg) scaleY(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  20% { 
+    left: -60%; 
+    transform: skewX(12deg) scaleY(1.05) rotate(2deg);
+    opacity: 0.5;
+  }
+  40% { 
+    left: -20%; 
+    transform: skewX(-8deg) scaleY(0.95) rotate(-1deg);
+    opacity: 0.4;
+  }
+  60% { 
+    left: 20%; 
+    transform: skewX(15deg) scaleY(1.1) rotate(3deg);
+    opacity: 0.6;
+  }
+  80% { 
+    left: 60%; 
+    transform: skewX(-5deg) scaleY(1.02) rotate(-2deg);
+    opacity: 0.3;
+  }
+  100% { 
+    left: 100%; 
+    transform: skewX(0deg) scaleY(1) rotate(0deg);
+    opacity: 0.2;
+  }
+}
+
+// Animación de elementos naturales para Rutas
+@keyframes nature-elements {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  15% {
+    transform: translateY(-3px) translateX(2px) rotate(15deg) scale(1.05);
+    opacity: 0.8;
+  }
+  30% {
+    transform: translateY(-8px) translateX(-1px) rotate(-10deg) scale(0.95);
+    opacity: 0.6;
+  }
+  45% {
+    transform: translateY(-12px) translateX(3px) rotate(20deg) scale(1.1);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateY(-6px) translateX(-2px) rotate(-5deg) scale(1.02);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-10px) translateX(1px) rotate(25deg) scale(1.08);
+    opacity: 0.8;
+  }
+  90% {
+    transform: translateY(-4px) translateX(-1px) rotate(-8deg) scale(0.98);
+    opacity: 0.5;
+  }
+}
+
+// Animación de goteo de tinta para Tinta
+@keyframes ink-drip {
+  0%, 100% {
+    height: 3px;
+    opacity: 0.8;
+  }
+  50% {
+    height: 6px;
+    opacity: 1;
+  }
+}
+
+// Animación de pulso de celebración para Worldview
+@keyframes celebration-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+// Animación de iconos flotantes
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-3px) translateX(2px) rotate(5deg) scale(1.05);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-6px) translateX(-1px) rotate(-3deg) scale(0.95);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-2px) translateX(1px) rotate(8deg) scale(1.02);
+    opacity: 0.85;
+  }
+}
+
+// ===== VARIANTES ESPECIALES PARA RUTAS =====
+
+// Rutas de montaña
+.section-rutas.montana {
+  border-left: 5px solid var(--rutas-snow) !important;
+  
+  &::after {
+    content: "🚴‍♂️⛰️❄️🏔️💨";
+  }
+}
+
+// Rutas de valle
+.section-rutas.valle {
+  border-left: 5px solid var(--rutas-green) !important;
+  
+  &::after {
+    content: "🚴‍♂️🌱🌊🦋💚";
+  }
+}
+
+// Rutas de desierto
+.section-rutas.desierto {
+  border-left: 5px solid var(--rutas-sunset) !important;
+  
+  &::after {
+    content: "🚴‍♂️🌵☀️🔥🦎";
+  }
+}
+
+// ===== COMPONENTES - CARDS DE POSTS =====
 .latest-posts-grid {
   @include responsive-grid(300px);
 }
@@ -246,8 +567,8 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 
-  // Soporte para tema oscuro
   body.colorscheme-dark & {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -255,7 +576,7 @@
 
   // Variantes por sección
   &.techsec {
-    @include card-hover-effect(rgba(0, 255, 65, 0.3));
+    @include section-hover-effect(rgba(0, 255, 65, 0.3));
     background: var(--techsec-gradient);
     border-left: 3px solid var(--techsec-primary);
     color: var(--techsec-primary);
@@ -263,158 +584,216 @@
   }
 
   &.rutas {
-    @include card-hover-effect(rgba(255, 107, 53, 0.3));
+    @include section-hover-effect(rgba(255, 107, 53, 0.3));
     background: var(--rutas-gradient);
     border-left: 3px solid var(--rutas-fire);
   }
 
   &.tinta {
-    @include card-hover-effect(rgba(220, 20, 60, 0.3));
+    @include section-hover-effect(rgba(220, 20, 60, 0.3));
     background: var(--tinta-gradient);
     border-left: 3px solid var(--tinta-realism);
     border-style: solid dashed;
   }
 
   &.worldview {
-    @include card-hover-effect(rgba(255, 99, 71, 0.3));
+    @include section-hover-effect(rgba(255, 99, 71, 0.3));
     background: var(--worldview-gradient);
     border-left: 3px solid var(--worldview-festive);
   }
 }
 
-// Contador de Estadísticas (REDISEÑADO COMPACTO)
+// ===== CONTADOR DE ESTADÍSTICAS =====
 .stats-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 1rem 0;
-  flex-wrap: wrap;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  flex-wrap: wrap !important;
+  visibility: visible !important;
 }
 
 .stat-item {
-  // Tamaño más compacto
-  min-width: 120px;
-  padding: 1rem 1.2rem;
-  border-radius: 8px;
-  text-align: center;
-  
-  // Estilo glassmorphism sutil
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  
-  // Efecto hover suave
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
+  min-width: 130px !important;
+  padding: 1.2rem 1.4rem !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.4s ease !important;
+  position: relative;
+  overflow: hidden;
+  display: block !important;
+  visibility: visible !important;
 
-  body.colorscheme-dark & {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  &:hover {
+    transform: translateY(-5px) scale(1.05) !important;
   }
 
   .stat-number {
-    font-size: var(--stat-font-size);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0.3rem;
-    transition: all 0.3s ease;
-
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    margin-bottom: 0.4rem !important;
+    display: block !important;
+    
     // Colores específicos por sección
     .section-techsec & {
-      color: var(--techsec-primary);
-      text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+      color: var(--techsec-primary) !important;
+      text-shadow: 0 0 10px rgba(0, 255, 65, 0.3) !important;
     }
 
     .section-rutas & {
-      // Gradiente multicolor para representar los elementos
-      background: linear-gradient(135deg, 
-        var(--rutas-fire) 0%, 
-        var(--rutas-water) 25%, 
-        var(--rutas-earth) 50%, 
-        var(--rutas-air) 75%, 
+      background: linear-gradient(135deg,
+        var(--rutas-fire) 0%,
+        var(--rutas-water) 25%,
+        var(--rutas-earth) 50%,
+        var(--rutas-air) 75%,
         var(--rutas-green) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: none;
+      ) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
     }
 
     .section-tinta & {
-      color: var(--tinta-japanese);
-      text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+      color: var(--tinta-japanese) !important;
+      text-shadow: 0 0 10px rgba(220, 20, 60, 0.3) !important;
     }
 
     .section-worldview & {
-      color: var(--worldview-tradition);
-      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      color: var(--worldview-tradition) !important;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.3) !important;
     }
   }
 
   .stat-label {
-    font-size: var(--stat-label-size);
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    font-weight: 500;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: block !important;
+    
+    // Colores específicos por sección
+    .section-techsec & {
+      color: var(--techsec-secondary) !important;
+    }
+
+    .section-rutas & {
+      color: var(--rutas-earth) !important;
+    }
+
+    .section-tinta & {
+      color: var(--tinta-biomech) !important;
+    }
+
+    .section-worldview & {
+      color: var(--worldview-cultural) !important;
+    }
+  }
+
+  // Bordes específicos por sección
+  .section-techsec & {
+    border-image: linear-gradient(135deg,
+      rgba(0, 255, 65, 0.4) 0%,
+      rgba(0, 143, 17, 0.4) 50%,
+      rgba(0, 102, 204, 0.4) 100%
+    ) 1 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2) !important;
+  }
+
+  .section-rutas & {
+    border-image: linear-gradient(135deg,
+      rgba(255, 69, 0, 0.4) 0%,
+      rgba(30, 144, 255, 0.4) 25%,
+      rgba(139, 69, 19, 0.4) 50%,
+      rgba(135, 206, 235, 0.4) 75%,
+      rgba(34, 139, 34, 0.4) 100%
+    ) 1 !important;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.2) !important;
+  }
+
+  .section-tinta & {
+    border-image: linear-gradient(135deg,
+      rgba(44, 44, 44, 0.4) 0%,
+      rgba(220, 20, 60, 0.4) 50%,
+      rgba(112, 128, 144, 0.4) 100%
+    ) 1 !important;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.2) !important;
+  }
+
+  .section-worldview & {
+    border-image: linear-gradient(135deg,
+      rgba(255, 99, 71, 0.4) 0%,
+      rgba(147, 112, 219, 0.4) 25%,
+      rgba(255, 215, 0, 0.4) 50%,
+      rgba(255, 20, 147, 0.4) 75%,
+      rgba(70, 130, 180, 0.4) 100%
+    ) 1 !important;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.2) !important;
+  }
+
+  // Modo oscuro
+  body.colorscheme-dark & {
+    background: rgba(20, 20, 20, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 }
 
-// Highlight Boxes Mejorados
+// ===== HIGHLIGHT BOXES MEJORADOS =====
 .highlight-box {
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border-radius: var(--section-border-radius);
-  position: relative;
+  padding: 1.5rem !important;
+  margin: 1rem 0 !important;
+  border-radius: var(--section-border-radius) !important;
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
 
   &.techsec {
-    background: rgba(0, 255, 65, 0.1);
-    border-left: var(--border-width) solid var(--techsec-primary);
-    border-top: 1px dashed var(--techsec-secondary);
-    font-family: 'Courier New', monospace;
+    background: rgba(0, 255, 65, 0.1) !important;
+    border-left: var(--border-width) solid var(--techsec-primary) !important;
+    border-top: 1px dashed var(--techsec-secondary) !important;
+    font-family: 'Courier New', monospace !important;
 
     &::before {
-      content: "[INFO]";
-      position: absolute;
-      top: -8px;
-      left: 15px;
-      background: var(--techsec-dark);
-      color: var(--techsec-primary);
-      padding: 0 8px;
-      font-size: 0.7rem;
-      border-radius: 3px;
+      content: "[INFO]" !important;
+      position: absolute !important;
+      top: -8px !important;
+      left: 15px !important;
+      background: var(--techsec-dark) !important;
+      color: var(--techsec-primary) !important;
+      padding: 0 8px !important;
+      font-size: 0.7rem !important;
+      border-radius: 3px !important;
     }
   }
 
   &.rutas {
-    background: var(--rutas-gradient);
-    border-left: var(--border-width) solid var(--rutas-fire);
-    border-image: linear-gradient(135deg, 
-      var(--rutas-fire) 0%, 
-      var(--rutas-water) 25%, 
-      var(--rutas-earth) 50%, 
-      var(--rutas-air) 75%, 
+    background: var(--rutas-gradient) !important;
+    border-left: var(--border-width) solid var(--rutas-fire) !important;
+    border-image: linear-gradient(135deg,
+      var(--rutas-fire) 0%,
+      var(--rutas-water) 25%,
+      var(--rutas-earth) 50%,
+      var(--rutas-air) 75%,
       var(--rutas-green) 100%
-    ) 1;
+    ) 1 !important;
   }
 
   &.tinta {
-    background: rgba(44, 44, 44, 0.1);
-    border-left: var(--border-width) solid var(--tinta-japanese);
-    border-right: 2px dashed var(--tinta-biomech);
+    background: rgba(44, 44, 44, 0.1) !important;
+    border-left: var(--border-width) solid var(--tinta-japanese) !important;
+    border-right: 2px dashed var(--tinta-biomech) !important;
   }
 
   &.worldview {
     background: linear-gradient(135deg,
       rgba(255, 99, 71, 0.1) 0%,
       rgba(147, 112, 219, 0.1) 50%,
-      rgba(255, 215, 0, 0.1) 100%);
-    border-left: var(--border-width) solid var(--worldview-festive);
+      rgba(255, 215, 0, 0.1) 100%) !important;
+    border-left: var(--border-width) solid var(--worldview-festive) !important;
   }
 }
 
@@ -422,39 +801,43 @@
 
 // CTF Info (para TechSec)
 .ctf-info {
-  background: rgba(0, 255, 65, 0.1);
-  border: 2px solid var(--techsec-primary);
-  border-radius: var(--section-border-radius);
-  padding: 1rem;
-  margin: 1rem 0;
-  font-family: 'Courier New', monospace;
-  position: relative;
+  background: rgba(0, 255, 65, 0.1) !important;
+  border: 2px solid var(--techsec-primary) !important;
+  border-radius: var(--section-border-radius) !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  font-family: 'Courier New', monospace !important;
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
 
   &::before {
-    content: "[SYSTEM]";
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    background: var(--techsec-dark);
-    color: var(--techsec-primary);
-    padding: 0 8px;
-    font-size: 0.7rem;
-    border-radius: 3px;
+    content: "[SYSTEM]" !important;
+    position: absolute !important;
+    top: -10px !important;
+    left: 10px !important;
+    background: var(--techsec-dark) !important;
+    color: var(--techsec-primary) !important;
+    padding: 0 8px !important;
+    font-size: 0.7rem !important;
+    border-radius: 3px !important;
   }
 
   strong {
-    color: var(--techsec-primary);
-    text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+    color: var(--techsec-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.3) !important;
   }
 }
 
 // Difficulty Stars (para TechSec)
 .difficulty-stars {
-  color: #ffd700;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-  animation: pulse-stars 2s infinite;
+  color: #ffd700 !important;
+  font-size: 1.1rem !important;
+  margin: 0.5rem 0 !important;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5) !important;
+  animation: pulse-stars 2s infinite !important;
+  display: inline-block !important;
+  visibility: visible !important;
 }
 
 @keyframes pulse-stars {
@@ -476,7 +859,45 @@
 .border-tinta { border-color: var(--tinta-realism) !important; }
 .border-worldview { border-color: var(--worldview-festive) !important; }
 
-// ===== RESPONSIVE DESIGN =====
+// ===== SOLUCIÓN PARA ELEMENTOS NO RENDERIZADOS =====
+
+// Asegurar que todos los elementos se muestren correctamente
+div[class*="stats-counter"],
+.stats-counter,
+[class*="stats"] {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  flex-wrap: wrap !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+div[class*="stat-item"],
+.stat-item,
+[class*="stat"] {
+  min-width: 130px !important;
+  padding: 1.2rem 1.4rem !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+  }
+}
+
+// ===== RESPONSIVE DESIGN MEJORADO =====
 @media (max-width: 768px) {
   :root {
     --card-padding: 1rem;
@@ -486,48 +907,53 @@
   }
 
   .latest-posts-grid {
-    grid-template-columns: 1fr;
-    gap: var(--grid-gap-small);
+    grid-template-columns: 1fr !important;
+    gap: var(--grid-gap-small) !important;
   }
 
   .stats-counter {
-    gap: 1rem;
-    margin: 0.5rem 0;
+    gap: 1rem !important;
+    margin: 0.5rem 0 !important;
   }
 
   .stat-item {
-    min-width: 100px;
-    padding: 0.8rem 1rem;
+    min-width: 100px !important;
+    padding: 0.8rem 1rem !important;
   }
 
   .post-card {
-    padding: var(--card-padding);
+    padding: var(--card-padding) !important;
   }
 
-  // Ocultar iconos decorativos en móvil
+  // Ocultar iconos decorativos en móvil para mejor performance
   .section-techsec::after,
   .section-rutas::after,
   .section-tinta::after,
   .section-worldview::after {
-    display: none;
+    display: none !important;
   }
 
   // Simplificar efectos en móvil
   .section-techsec::before,
   .section-rutas::before {
-    animation: none;
+    animation: none !important;
+  }
+
+  .highlight-box {
+    padding: 1rem !important;
+    margin: 0.5rem 0 !important;
   }
 }
 
 @media (max-width: 480px) {
   .stats-counter {
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: column !important;
+    gap: 0.8rem !important;
   }
 
   .stat-item {
-    min-width: 80px;
-    padding: 0.6rem 0.8rem;
+    min-width: 80px !important;
+    padding: 0.6rem 0.8rem !important;
   }
 
   :root {
@@ -536,23 +962,139 @@
   }
 
   .highlight-box.techsec::before {
-    display: none;
+    display: none !important;
+  }
+
+  .section-base {
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
   }
 }
 
 // ===== MODO OSCURO MEJORADO =====
 body.colorscheme-dark {
   .post-card {
-    background: rgba(20, 20, 20, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(20, 20, 20, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
   .stat-item {
-    background: rgba(20, 20, 20, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(20, 20, 20, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
   .highlight-box {
-    background: rgba(20, 20, 20, 0.5);
+    background: rgba(20, 20, 20, 0.5) !important;
+  }
+
+  .ctf-info {
+    background: rgba(0, 255, 65, 0.05) !important;
+    border: 2px solid var(--techsec-primary) !important;
+  }
+
+  // Asegurar visibilidad en modo oscuro
+  .section-techsec,
+  .section-rutas,
+  .section-tinta,
+  .section-worldview {
+    color: #ffffff !important;
+  }
+
+  .stat-number {
+    color: inherit !important;
+  }
+
+  .stat-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+
+// ===== FALLBACKS PARA COMPATIBILIDAD =====
+
+// Fallback para navegadores que no soportan backdrop-filter
+@supports not (backdrop-filter: blur(10px)) {
+  .section-techsec,
+  .section-rutas,
+  .section-tinta,
+  .section-worldview,
+  .post-card,
+  .stat-item {
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  body.colorscheme-dark {
+    .section-techsec,
+    .section-rutas,
+    .section-tinta,
+    .section-worldview,
+    .post-card,
+    .stat-item {
+      background: rgba(20, 20, 20, 0.9) !important;
+    }
+  }
+}
+
+// Fallback para navegadores que no soportan CSS Grid
+@supports not (display: grid) {
+  .latest-posts-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--grid-gap) !important;
+  }
+
+  .post-card {
+    flex: 1 1 300px !important;
+  }
+
+  .stats-counter {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+// ===== ASEGURAR RENDERIZADO CORRECTO =====
+
+// Forzar renderizado de elementos críticos
+.section-techsec,
+.section-rutas,
+.section-tinta,
+.section-worldview,
+.stats-counter,
+.stat-item,
+.post-card,
+.highlight-box,
+.ctf-info {
+  will-change: transform !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+// Optimización para animaciones
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// ===== PRINT STYLES =====
+@media print {
+  .section-techsec::before,
+  .section-rutas::before,
+  .section-tinta::before,
+  .section-worldview::before,
+  .section-techsec::after,
+  .section-rutas::after,
+  .section-tinta::after,
+  .section-worldview::after {
+    display: none !important;
+  }
+
+  .post-card,
+  .stat-item,
+  .highlight-box {
+    break-inside: avoid !important;
+    box-shadow: none !important;
   }
 }
