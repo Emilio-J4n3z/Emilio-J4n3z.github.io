@@ -1,0 +1,15 @@
+{{/*
+Shortcode para highlight boxes temáticas
+Uso: {{< highlight-box type="techsec" title="Título" >}}contenido{{< /highlight-box >}}
+*/}}
+{{ $type := .Get "type" | default "default" }}
+{{ $title := .Get "title" | default "" }}
+
+<div class="highlight-box {{ $type }}">
+  {{ if $title }}
+    <h3>{{ $title }}</h3>
+  {{ end }}
+  <div class="highlight-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
