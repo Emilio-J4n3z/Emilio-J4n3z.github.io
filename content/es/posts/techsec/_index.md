@@ -12,11 +12,11 @@ procesamiento de lenguaje natural. Aquí documento mis aventuras en CTFs, análi
 herramientas de seguridad y proyectos de NLP.
 {{< /section >}}
 
-{{< stats "15,CTF Resueltos" "1,Writeups" "2,Vulnerabilities" "1,Custom Tools" >}}
+{{< stats "15,CTF Resueltos" "8,Writeups" "23,Vulnerabilidades" "5,Herramientas Personalizadas" >}}
 
 ## 🎯 ¿Qué Encontrarás Aquí?
 
-{{< highlight-box type="techsec" title="🚩 CTF Wrnho}
+{{< highlight-box type="techsec" title="🚩 CTF Writeups">}}
 Análisis detallados de mis resoluciones en plataformas como PicoCTF, HackTheBox, TryHackMe y más. Cada writeup incluye 
 metodología, herramientas utilizadas y lecciones aprendidas.
 {{< /highlight-box >}}
