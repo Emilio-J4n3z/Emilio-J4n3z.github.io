@@ -365,8 +365,6 @@ que me permitirá reconocer y explotar SSTI en futuros desafíos.
 
 ### Recursos Prácticos
 - **[PayloadsAllTheThings - SSTI](https://swisskyrepo.github.io/PayloadsAllTheThings/Server%20Side%20Template%20Injection/)** - Colección de payloads
-- **[HackTricks SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection)** - Técnicas avanzadas
-- **[SecLists SSTI](https://github.com/danielmiessler/SecLists/tree/master/Fuzzing/template-engines-special-vars)** - Wordlists para fuzzing
 
 ### Labs para Practicar
 - **[PortSwigger Web Security Academy](https://portswigger.net/web-security/server-side-template-injection)** - Labs gratuitos
