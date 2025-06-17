@@ -21,10 +21,10 @@ author = "Emilio Juárez"
 description = "Emilio Juárez personal website"
 keywords = "blog,developer,personal"
 info = ["Incursionando en Ciberseguridad", "Free Software", "Ciclista", "AI (NLP, Machine Learning)"]
-avatarURL = "images/avatar.jpg"
+avatarURL = "images/me_fondo_azul.jpg"
 #gravatar = "john.doe@example.com"
-dateFormat = "January 2, 2006"
-since = 2019
+dateFormat = "April 17, 2025"
+since = 2025
 # Git Commit in Footer, uncomment the line below to enable it
 commit = "https://github.com/luizdepra/hugo-coder/tree/"
 # Right To Left, shift content direction for languages such as Arabic
