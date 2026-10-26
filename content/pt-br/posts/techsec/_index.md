@@ -1,6 +1,7 @@
 ---
 title: "TechSec"
 description: "Artigos sobre cibersegurança, hacking ético e tecnologia"
+tags: []
 ---
 
 # TechSec

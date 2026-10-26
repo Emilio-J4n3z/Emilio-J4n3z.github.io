@@ -1,0 +1,12 @@
+# Hugo generated
+/public/
+/resources/_gen/
+hugo_stats.json
+.hugo_build.lock
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

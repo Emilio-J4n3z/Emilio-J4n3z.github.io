@@ -1,25 +1,26 @@
-+++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
-+++
+---
+title: "About"
+description: "Um olhar sobre minha pessoa, hobbies, aventuras e forma de pensar"
+date: "2019-02-28"
+aliases: ["about-us", "about-hugo", "contact"]
+author: "Emilinho"
+tags: []
+---
 
-Escrito em Go, Hugo é um gerador de sites estáticos de código aberto disponível sobre a licença [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) O Hugo suporta TOML, YAML e JSON como arquivos de dados, Markdown e HTML como arquivos de conteúdo, e usa shortcodes para adicionar conteúdos ricos. Outras funcionalidades notaveis são taxonomias, modo multilingual, processamento de imagens, formatos de saída customizaveis, minificação de HTML/CSS/JS e suporte a fluxos SASS/SCSS.
+# Sobre Mim
 
-O Hugo faz o uso de vários projetos de código aberto incluíndo:
+Olá, sou **Emilio Jáñez** — desenvolvedor, ciclista e mente curiosa baseado na Cidade do México.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+Sou apaixonado por segurança cibernética, NLP e código aberto. Quando não estou em frente a um terminal, provavelmente estou na minha bicicleta subindo alguma colina pela CDMX.
 
-O Hugo é ideal para blogs, sites corporativos, protfólio criativos, revistas online, aplicações de página única ou até sites com milhares de páginas.
+## O que Faço
 
-O Hugo é para pessoas que querem cuidar do seu próprio site sem se preocupar com a configuração ambientes complicados, dependências e bancos de dados.
+- 🛡️ Segurança cibernética e ethical hacking (CTFs, writeups, pentesting)
+- 🗣️ Projetos de NLP e IA, incluindo preservação de línguas indígenas
+- 🚴 Ciclismo de estrada e documentação de rotas pelo México
+- 🎨 Arte de tatuagem e design biomecânico
 
-Sites contru;idos com Hugo são extremamente rápidos, seguros e podem ser implantados em qualquer lugar, incluíndo AWS, GitHub Pages, Heroku, Netlify e outros provedores de hospedagem.
+## Contato
 
-Saiba mais e contribua em [GitHub](https://github.com/gohugoio).
+- **GitHub**: [github.com/Emilio-J4n3z](https://github.com/Emilio-J4n3z)
+- **LinkedIn**: [linkedin.com/in/emilinho](https://linkedin.com/in/emilinho)

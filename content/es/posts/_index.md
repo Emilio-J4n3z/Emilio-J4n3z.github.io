@@ -1,3 +1,5 @@
-+++
-title = "Publicaciones"
-+++
+---
+tags: []
+title: "Publicaciones"
+---
+tags: []

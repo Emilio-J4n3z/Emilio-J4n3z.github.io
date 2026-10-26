@@ -2,39 +2,33 @@
 title: "TechSec Hub"
 description: "Donde la seguridad se encuentra con la inteligencia artificial"
 date: 2025-06-13
+tags: []
 ---
 
 # 🛡️ TechSec: Cybersecurity, AI & NLP
 
-{{< section "techsec" >}}
-Bienvenido a **TechSec**, mi espacio dedicado al mundo de la ciberseguridad, ethical hacking, inteligencia artificial y 
-procesamiento de lenguaje natural. Aquí documento mis aventuras en CTFs, análisis de vulnerabilidades, desarrollo de 
-herramientas de seguridad y proyectos de NLP.
-{{< /section >}}
+Bienvenido a **TechSec**, mi espacio dedicado al mundo de la ciberseguridad, ethical hacking, inteligencia artificial y procesamiento de lenguaje natural. Aquí documento mis aventuras en CTFs, análisis de vulnerabilidades, desarrollo de herramientas de seguridad y proyectos de NLP.
 
-{{< stats "15,CTF Resueltos" "8,Writeups" "23,Vulnerabilidades" "5,Herramientas Personalizadas" >}}
+| Métrica | Valor |
+|---|---|
+| 🚩 CTF Resueltos | 15 |
+| 📝 Writeups | 8 |
+| 🔓 Vulnerabilidades | 23 |
+| 🛠️ Herramientas Personalizadas | 5 |
 
 ## 🎯 ¿Qué Encontrarás Aquí?
 
-{{< highlight-box type="techsec" title="🚩 CTF Writeups">}}
-Análisis detallados de mis resoluciones en plataformas como PicoCTF, HackTheBox, TryHackMe y más. Cada writeup incluye 
-metodología, herramientas utilizadas y lecciones aprendidas.
-{{< /highlight-box >}}
+**🚩 CTF Writeups**
+Análisis detallados de mis resoluciones en plataformas como PicoCTF, HackTheBox, TryHackMe y más. Cada writeup incluye metodología, herramientas utilizadas y lecciones aprendidas.
 
-{{< highlight-box type="techsec" title="🤖 Machine Learning & Security" >}}
-Explorando la intersección entre IA y ciberseguridad: detección de anomalías, OSINT potenciado por IA, y análisis de 
-malware con machine learning.
-{{< /highlight-box >}}
+**🤖 Machine Learning & Security**
+Explorando la intersección entre IA y ciberseguridad: detección de anomalías, OSINT potenciado por IA, y análisis de malware con machine learning.
 
-{{< highlight-box type="techsec" title="🗣️ Procesamiento de Lenguaje Natural" >}}
-Proyectos de NLP incluyendo traductor web interactivo y mi participación actual en el desafío de lenguas indígenas. 
-Democratizando el acceso a la tecnología lingüística.
-{{< /highlight-box >}}
+**🗣️ Procesamiento de Lenguaje Natural**
+Proyectos de NLP incluyendo traductor web interactivo y mi participación actual en el desafío de lenguas indígenas. Democratizando el acceso a la tecnología lingüística.
 
-{{< highlight-box type="techsec" title="🛠️ Herramientas Personalizadas" >}}
-Scripts, exploits y herramientas que he desarrollado para automatizar tareas de pentesting, análisis de seguridad y 
-procesamiento de texto.
-{{< /highlight-box >}}
+**🛠️ Herramientas Personalizadas**
+Scripts, exploits y herramientas que he desarrollado para automatizar tareas de pentesting, análisis de seguridad y procesamiento de texto.
 
 ## 📚 Categorías Principales
 
@@ -74,24 +68,21 @@ Automatización es eficiencia. Mis herramientas favoritas:
 
 ## 🎖️ Últimos Logros
 
-• Top 50 en PicoCTF 2024  
-• 15 máquinas completadas en HackTheBox  
-• Contribuidor activo en ExploitDB  
-• Speaker en conferencia local de ciberseguridad  
-• Participante activo en desafío de lenguas indígenas
+- Top 50 en PicoCTF 2024
+- 15 máquinas completadas en HackTheBox
+- Contribuidor activo en ExploitDB
+- Speaker en conferencia local de ciberseguridad
+- Participante activo en desafío de lenguas indígenas
 
 ## 🚀 Posts Destacados
 
 ### 📝 Writeups Más Populares
-- [**SSTI1 PicoCTF: Mi Primera Template Injection**](./writeups/ssti-picoctf-writeup/) - Mi experiencia descubriendo 
-Server-Side Template Injection
-- [**Buffer Overflow Básico: Cuando la Memoria se Desborda**](./writeups/buffer-overflow-basics/) - Introducción 
-práctica a la explotación de memoria
+- [**SSTI1 PicoCTF: Mi Primera Template Injection**](./writeups/ssti-picoctf-writeup/) - Mi experiencia descubriendo Server-Side Template Injection
+- [**Buffer Overflow Básico: Cuando la Memoria se Desborda**](./writeups/buffer-overflow-basics/) - Introducción práctica a la explotación de memoria
 - [**SQL Injection: Del Error al Shell**](./writeups/sqli-to-shell/) - Escalando desde SQLi básico hasta RCE
 
 ### 🤖 Machine Learning & Security
-- [**Detección de Anomalías con Python**](./ml-security/ml-anomaly-detection/) - Implementando sistemas de detección 
-inteligente
+- [**Detección de Anomalías con Python**](./ml-security/ml-anomaly-detection/) - Implementando sistemas de detección inteligente
 - [**OSINT Potenciado por IA**](./ml-security/ai-powered-osint/) - Automatizando la recolección de inteligencia
 
 ### 🗣️ Proyectos NLP
@@ -105,11 +96,7 @@ inteligente
 
 ## 💭 Mi Filosofía en Tecnología
 
-{{< section "techsec" >}}
-La tecnología debe ser una herramienta de democratización y empoderamiento. Ya sea protegiendo sistemas con 
-ciberseguridad o preservando lenguas con NLP, mi misión es crear puentes entre lo técnico y lo humano.
-
-{{< /section >}}
+La tecnología debe ser una herramienta de democratización y empoderamiento. Ya sea protegiendo sistemas con ciberseguridad o preservando lenguas con NLP, mi misión es crear puentes entre lo técnico y lo humano.
 
 ## 🌐 Proyectos NLP Actuales
 
@@ -131,37 +118,35 @@ Participando activamente en la preservación digital de lenguas originarias:
 
 ¿Tienes preguntas sobre algún writeup? ¿Quieres colaborar en un proyecto? ¿Interesado en NLP o lenguas indígenas?
 
-- **Telegram**: [@emilinho](https://t.me/emilinho)
-- **GitHub**: [github.com/emilinho](https://github.com/Emilio-J4n3z)
+- **GitHub**: [github.com/Emilio-J4n3z](https://github.com/Emilio-J4n3z)
 - **LinkedIn**: [Emilio Security](https://linkedin.com/in/emilinho)
 
 ## 📈 Roadmap 2025
 
-- [ ] **25 CTF Writeups** - Documentar cada desafío interesante
-- [ ] **2 Herramientas Open Source** - Contribuir a la comunidad
-- [ ] **ML Security Course** - Crear contenido educativo
-- [ ] **Conference Talk** - Compartir experiencias en eventos
-- [ ] **Traductor Web v2.0** - Versión mejorada con más funciones
-- [ ] **Proyecto Lenguas Indígenas** - Completar fase inicial del desafío
+- [ ] **25 CTF Writeups** — Documentar cada desafío interesante
+- [ ] **2 Herramientas Open Source** — Contribuir a la comunidad
+- [ ] **ML Security Course** — Crear contenido educativo
+- [ ] **Conference Talk** — Compartir experiencias en eventos
+- [ ] **Traductor Web v2.0** — Versión mejorada con más funciones
+- [ ] **Proyecto Lenguas Indígenas** — Completar fase inicial del desafío
 
----
-
-{{< section "techsec" >}}
 ## 🔥 Últimas Actualizaciones
 
-**Enero 2024**: Nuevo writeup SSTI1 PicoCTF - Mi primera template injection  
-**Diciembre 2023**: Lanzamiento de herramienta de análisis de logs con ML  
-**Noviembre 2023**: Top 50 en PicoCTF Fall Championship  
-**Octubre 2023**: Contribución aceptada en Metasploit Framework  
-**Septiembre 2023**: Inicio del proyecto de traductor web  
-**Agosto 2023**: Unión al desafío de lenguas indígenas  
-{{< /section >}}
+| Fecha | Actualización |
+|---|---|
+| Enero 2024 | Nuevo writeup SSTI1 PicoCTF |
+| Diciembre 2023 | Lanzamiento de herramienta de análisis de logs con ML |
+| Noviembre 2023 | Top 50 en PicoCTF Fall Championship |
+| Octubre 2023 | Contribución aceptada en Metasploit Framework |
+| Septiembre 2023 | Inicio del proyecto de traductor web |
+| Agosto 2023 | Unión al desafío de lenguas indígenas |
+
+---
 
 ¡Bienvenido al lado más técnico y lingüístico de mi mundo digital! 🚀
 
 ---
 
-*"La mejor manera de aprender hacking es documentar tu proceso. Aquí documento el mío, junto con mi pasión por preservar 
-la diversidad lingüística a través de la tecnología."* - **Emilinho**
+> *"La mejor manera de aprender hacking es documentar tu proceso. Aquí documento el mío, junto con mi pasión por preservar la diversidad lingüística a través de la tecnología."* — **Emilinho**
 
-*"In cybersecurity, paranoia is just thorough preparation."* - **Emilinho**
+> *"In cybersecurity, paranoia is just thorough preparation."* — **Emilinho**

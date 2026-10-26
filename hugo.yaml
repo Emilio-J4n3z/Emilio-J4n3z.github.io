@@ -1,0 +1,389 @@
+baseURL: "https://emilio-j4n3z.github.io/"
+languageCode: "es"
+title: "José Emilio Sánchez"
+theme: hugo-profile
+
+defaultContentLanguage: "es"
+defaultContentLanguageInSubdir: false
+
+languages:
+  es:
+    label: "Español"
+    weight: 1
+    contentDir: "content/es"
+    menu:
+      main:
+        - identifier: blog
+          name: Blog
+          title: Blog
+          url: /blogs
+          weight: 1
+        - identifier: techsec
+          name: "🛡️ TechSec"
+          url: /tags/ciberseguridad
+          parent: blog
+          weight: 1
+        - identifier: bici
+          name: "🚴 Bici & Rutas"
+          url: /tags/ciclismo
+          parent: blog
+          weight: 2
+        - identifier: tinta
+          name: "🎨 Tinta & Alma"
+          url: /tags/tatuajes
+          parent: blog
+          weight: 3
+        - identifier: worldview
+          name: "🌍 Worldview"
+          url: /tags/cultura
+          parent: blog
+          weight: 4
+        - identifier: libros
+          name: "📚 Libros"
+          url: /tags/libros
+          parent: blog
+          weight: 5
+        - identifier: gallery
+          name: Galería
+          title: Galería
+          url: /gallery
+          weight: 2
+  en:
+    label: "English"
+    weight: 2
+    contentDir: "content/en"
+    menu:
+      main:
+        - identifier: blog
+          name: Blog
+          title: Blog
+          url: /en/blogs
+          weight: 1
+        - identifier: gallery
+          name: Gallery
+          title: Gallery
+          url: /en/gallery
+          weight: 2
+  pt-br:
+    label: "Português"
+    weight: 3
+    contentDir: "content/pt-br"
+    menu:
+      main:
+        - identifier: blog
+          name: Blog
+          title: Blog
+          url: /pt-br/blogs
+          weight: 1
+        - identifier: gallery
+          name: Galeria
+          title: Galeria
+          url: /pt-br/gallery
+          weight: 2
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 6
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "José Emilio Sánchez"
+  description: "Ingeniero en Sistemas | Blue Team y Seguridad de Aplicaciones"
+  favicon: "/images/favicon.svg"
+
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "dark"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Emilio Sánchez"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hola, mi nombre es"
+    title: "José Emilio."
+    subtitle: "Blue Team · Seguridad de Aplicaciones · CTF"
+    content: "Ingeniero en Sistemas (TESCI, dic. 2026) con doble titulación en Matemáticas Aplicadas (UNAM). Residente en IIMAS-UNAM: evalué 4 apps web, 8 vulnerabilidades documentadas con CVSS/CWE/OWASP — máx. CVSS 9.8. Enfoque Blue Team con base ofensiva en CTFs."
+    image: /images/pachuca_reoj_segunda.jpg
+    bottomImage:
+      enable: true
+    roundImage: true
+    button:
+      enable: true
+      name: "Currículum"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/Emilio-J4n3z
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/josé-emilio-sánchez
+
+  about:
+    enable: true
+    title: "Sobre Mí"
+    image: "/images/me_fondo_azul.jpg"
+    content: |-
+      Ingeniero en Sistemas Computacionales (graduación dic. 2026, TESCI) con doble titulación simultánea en Matemáticas Aplicadas y Computación en la FES Acatlán UNAM.
+
+      En mi residencia profesional en IIMAS-UNAM evalué la seguridad de un servidor con 4 aplicaciones web, identifiqué 8 vulnerabilidades documentadas con CVSS v3.1, CWE y MITRE ATT&CK — la más grave con CVSS 9.8 (CWE-306, acceso sin autenticación a n8n). También integré LLMs locales (Ollama) al triage de hallazgos con validación humana.
+
+      Mi objetivo es desarrollarme en Blue Team y seguridad de aplicaciones, entendiendo el ataque para defender mejor.
+    skills:
+      enable: true
+      title: "Tecnologías con las que trabajo:"
+      items:
+        - "Python · Bash · C/C++"
+        - "FastAPI · Flask · HTMX"
+        - "Nmap · Burp Suite · OWASP ZAP"
+        - "Nikto · Gobuster · Lynis"
+        - "CVSS v3.1 · CWE · MITRE ATT&CK"
+        - "Docker · Git · Linux"
+        - "nginx · TLS/SSL · SSH"
+        - "OWASP Top 10 · CIS · NIST"
+
+  experience:
+    enable: true
+    items:
+      - company: "IIMAS-UNAM"
+        companyUrl: "https://www.iimas.unam.mx"
+        jobs:
+          - name: "Residente Profesional — Seguridad de Aplicaciones Web"
+            date: "Mar 2026 - Jul 2026"
+            info:
+              content: Ciudad de México
+            content: |
+              - Evaluación iterativa de un servidor con 4 aplicaciones web: reconocimiento (OSINT pasivo, Nmap, WhatWeb, Gobuster), pruebas OWASP Top 10 (ZAP, Burp Suite, Nikto)
+              - Identifiqué 8 vulnerabilidades; la más grave: acceso sin autenticación a n8n (CVSS 9.8, CWE-306) con riesgo de ejecución de código
+              - Documenté cada hallazgo con evidencia, CVSS v3.1, CWE y técnica MITRE ATT&CK
+              - Propuse mitigaciones priorizadas (inmediato, 1–4 semanas, 1–3 meses) con base en CIS y NIST
+              - Integré LLMs locales (Ollama) al triage de resultados — la IA propone, una persona valida
+
+          - name: "Asistente de Investigación — NLP y Documentos Legales"
+            date: "Ago 2025 - Feb 2026"
+            info:
+              content: Part-time · 20 hrs/semana
+            content: |
+              - Análisis automatizado de 500+ documentos legales con extracción de entidades (NER)
+              - Visualización de grafos de citación con FastAPI, HTMX y Tailwind CSS
+              - Búsqueda con Meilisearch · despliegue con Docker
+
+      - company: "OffSec Community"
+        companyUrl: "https://github.com/Emilio-J4n3z"
+        jobs:
+          - name: "Mentor en Seguridad y Líder Comunitario"
+            date: "Feb 2025 - Presente"
+            info:
+              content: Voluntario · CDMX
+            content: |
+              - Mentoría en fundamentos de seguridad, metodologías CTF y criptografía
+              - Soporte técnico en software libre y entornos virtuales de laboratorio
+
+      - company: "Independiente / Open Source"
+        companyUrl: "https://github.com/Emilio-J4n3z"
+        jobs:
+          - name: "Investigador en Ciberseguridad"
+            date: "Feb 2025 - Presente"
+            info:
+              content: Voluntario
+            content: |
+              - CTF internacionales (PicoCTF, HackTheBox, TryHackMe, EchoCTF): web exploitation, criptografía y binary exploitation
+              - Práctica ofensiva para mejorar detección y defensa · Miembro del equipo white_void (CTFtime)
+
+      - company: "CEDETEC LASC"
+        companyUrl: "#"
+        jobs:
+          - name: "Asistente de Investigación — Ciberseguridad"
+            date: "Feb 2023 - Nov 2023"
+            info:
+              content: Part-time · Estado de México
+            content: |
+              - Talleres de fundamentos de seguridad y metodologías de pruebas
+              - Hardening de infraestructura Linux (firewalls, SSH, logs) en entorno Kali Linux
+
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "Ingeniería en Sistemas Computacionales"
+        school:
+          name: "Tecnológico de Estudios Superiores de Cuautitlán Izcalli (TESCI)"
+          url: "https://tesci.edomex.gob.mx"
+        date: "2022 - Dic 2026 (esperado)"
+        GPA: "8vo semestre"
+        content: |-
+          Especialización en Ciberseguridad, Machine Learning, NLP y Desarrollo de Software.
+        featuredLink:
+          enable: false
+
+      - title: "Matemáticas Aplicadas y Computación"
+        school:
+          name: "FES Acatlán — UNAM"
+          url: "https://www.acatlan.unam.mx"
+        date: "2020 - Jun 2027 (esperado)"
+        GPA: "Doble titulación simultánea"
+        content: |-
+          Cursando en paralelo con ingeniería. Teaching Assistant: Organización de Computadoras (2021).
+        featuredLink:
+          enable: false
+
+  achievements:
+    enable: true
+    items:
+      - title: "Residencia IIMAS-UNAM — CVSS 9.8"
+        content: "Evaluación de seguridad real: 8 vulnerabilidades en 4 apps web. Hallazgo crítico: acceso sin autenticación a n8n con riesgo de RCE."
+        image: /images/achievement.jpg
+
+      - title: "Pre Security Path — TryHackMe"
+        content: "Completado oct. 2026 · 19h 10min. Siguiente: Cyber Security 101 y ruta Security Analyst."
+        image: /images/achievement.jpg
+
+      - title: "CCNA: Enterprise Networking, Security and Automation"
+        content: "Cisco Networking Academy 2026. Redes empresariales, protocolos de seguridad y automatización."
+        image: /images/achievement.jpg
+
+      - title: "Introduction to Linux (LFS101)"
+        content: "The Linux Foundation · Feb 2026 · ID: LF-bybqihldkf."
+        image: /images/achievement.jpg
+
+      - title: "MEIA 2025 — AI Macrotraining UNAM"
+        content: "40+ horas de entrenamiento en Deep Learning, NLP y Computer Vision."
+        image: /images/achievement.jpg
+
+      - title: "Equipo white_void — CTFtime"
+        content: "10+ soluciones documentadas en CTFs internacionales."
+        url: "https://github.com/Emilio-J4n3z"
+        image: /images/achievement.jpg
+
+      - title: "Instructor Taller NLP — 50+ participantes"
+        content: "Workshop en línea: Python, NLTK, spaCy y transformers."
+        image: /images/achievement.jpg
+
+      - title: "Organizador FLISoL y Semana Académica"
+        content: "FLISoL (150+ asistentes) y Semana Académica (500+ asistentes) en FES Acatlán UNAM."
+        image: /images/achievement.jpg
+
+  projects:
+    enable: true
+    items:
+      - title: "Evaluación de Seguridad — IIMAS-UNAM"
+        content: "Evaluación de 4 apps web con 8 hallazgos documentados (CVSS/CWE/MITRE ATT&CK). Hallazgo crítico: CVSS 9.8, CWE-306. Plan de mitigación por plazos con base en CIS y NIST."
+        image: /images/projects/profile.png
+        badges:
+          - "Burp Suite"
+          - "OWASP ZAP"
+          - "Nmap"
+          - "CVSS v3.1"
+          - "MITRE ATT&CK"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Emilio-J4n3z
+
+      - title: "Análisis de Documentos Legales con NLP"
+        content: "Sistema de análisis automatizado de 500+ documentos legales con NER, grafos de citación y búsqueda full-text."
+        image: /images/projects/profile2.jpg
+        badges:
+          - "Python"
+          - "FastAPI"
+          - "spaCy"
+          - "Meilisearch"
+          - "Docker"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Emilio-J4n3z
+
+      - title: "CTF Writeups — TechSec Hub"
+        content: "10+ writeups técnicos en español de CTFs internacionales. Especialización en web exploitation, criptografía y binary exploitation."
+        image: /images/N90.jpg
+        featured:
+          name: Ver Blog
+          link: /blogs
+        badges:
+          - "Python"
+          - "Burp Suite"
+          - "Web Exploitation"
+          - "CTF"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Emilio-J4n3z
+
+  contact:
+    enable: true
+    content: "Mi bandeja de entrada siempre está abierta. ¿Tienes una pregunta sobre seguridad, quieres colaborar o simplemente saludar? Haré todo lo posible para responderte."
+    btnName: "Escríbeme"
+    btnLink: "mailto:emilinho18@gmail.com"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Posts Recientes
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/Emilio-J4n3z
+      linkedin: https://linkedin.com/in/josé-emilio-sánchez
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min de lectura"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Leer"
+    toc: "Tabla de Contenidos"
+    copyright: "Todos los derechos reservados"
+    pageNotFound: "Página no encontrada"
+    emailText: "Visita mi sitio"
+
+  datesFormat:
+    article: "2 Jan, 2006"
+    articleList: "2 Jan, 2006"
+    articleRecent: "2 Jan, 2006"

@@ -1,25 +1,26 @@
-+++
-title = "About"
-description = "Vistazo acerca de mi persona hobbies, aventuras y forma de pensar"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
-+++
+---
+title: "About"
+description: "Vistazo acerca de mi persona hobbies, aventuras y forma de pensar"
+date: "2019-02-28"
+aliases: ["about-us", "about-hugo", "contact"]
+author: "Emilinho"
+tags: []
+---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+# Sobre Mí
 
-Hugo makes use of a variety of open source projects including:
+Hola, soy **Emilio Jáñez** — desarrollador, ciclista y mente curiosa basado en Ciudad de México.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+Me apasiona la ciberseguridad, el NLP y el open source. Cuando no estoy frente a una terminal, probablemente estoy en mi bicicleta subiendo alguna colina por la CDMX.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+## Lo que Hago
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+- 🛡️ Ciberseguridad y ethical hacking (CTFs, writeups, pentesting)
+- 🗣️ Proyectos de NLP e IA, incluyendo preservación de lenguas indígenas
+- 🚴 Ciclismo de ruta y documentación de rutas por México
+- 🎨 Arte de tatuajes y diseño biomecánico
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+## Contáctame
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- **GitHub**: [github.com/Emilio-J4n3z](https://github.com/Emilio-J4n3z)
+- **LinkedIn**: [linkedin.com/in/emilinho](https://linkedin.com/in/emilinho)

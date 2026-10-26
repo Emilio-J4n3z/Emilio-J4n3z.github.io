@@ -1,6 +1,7 @@
 ---
 title: "Worldview"
 description: "Reflections on life, technology and society"
+tags: []
 ---
 
 # Worldview

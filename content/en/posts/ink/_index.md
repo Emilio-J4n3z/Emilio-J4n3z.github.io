@@ -1,6 +1,7 @@
 ---
 title: "Ink"
 description: "Creative writing, reflections and thoughts expressed in words"
+tags: []
 ---
 
 # Ink

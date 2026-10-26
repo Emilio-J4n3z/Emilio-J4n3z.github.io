@@ -1,6 +1,7 @@
 ---
 title: "Routes"
 description: "Cycling routes, adventures and experiences on two wheels"
+tags: []
 ---
 
 # Routes

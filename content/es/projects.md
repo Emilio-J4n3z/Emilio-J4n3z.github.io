@@ -1,10 +1,10 @@
-
 ---
 title: "Proyectos"
 description: "Explorando la intersección entre tecnología, aventura y humanidad"
 author: "Emilinho"
 date: "2024-01-01"
 draft: false
+tags: []
 ---
 
 # 🚀 Proyectos Técnicos & Humanos

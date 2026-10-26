@@ -2,692 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/es/posts/primer_ejemplo/</loc>
+    <loc>https://emilio-j4n3z.github.io/posts/primer_ejemplo/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/difficulty/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+    <loc>https://emilio-j4n3z.github.io/gallery/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/categories/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+    <loc>https://emilio-j4n3z.github.io/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://emilio-j4n3z.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/categories/"
+                href="https://emilio-j4n3z.github.io/pt-br/"
                 />
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/blogs/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/blue-team/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/categories/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/categories/"
+                href="https://emilio-j4n3z.github.io/categories/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/ctf-writeups/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/es/difficulty/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/difficulty/"
+                href="https://emilio-j4n3z.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/difficulty/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/difficulty/"
+                href="https://emilio-j4n3z.github.io/pt-br/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/</loc>
+    <loc>https://emilio-j4n3z.github.io/tags/ciberseguridad/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/ctf/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/categories/ctf-writeups/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/hacking/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/jinja2/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/picoctf/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/posts/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://emilio-j4n3z.github.io/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/"
+                href="https://emilio-j4n3z.github.io/pt-br/posts/"
                 />
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/ssti/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/blogs/ssti-picoctf-writeup/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/posts/techsec/writeups/ssti-picoctf-writeup/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/"
+                href="https://emilio-j4n3z.github.io/tags/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/jinja2/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/es/tags/picoctf/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/es/posts/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/"
+                href="https://emilio-j4n3z.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/"
+                href="https://emilio-j4n3z.github.io/pt-br/tags/"
                 />
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/posts/techsec/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/es/posts/"
+                href="https://emilio-j4n3z.github.io/posts/techsec/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/ssti/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/es/posts/techsec/writeups/ssti-picoctf-writeup/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/es/tags/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://emilio-j4n3z.github.io/en/posts/techsec/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/"
+                href="https://emilio-j4n3z.github.io/pt-br/posts/techsec/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/posts/techsec/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/techsec/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/techsec/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/techsec/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/web-exploitation/</loc>
+    <loc>https://emilio-j4n3z.github.io/blogs/techsec-hub/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/web-exploitation/</loc>
+    <loc>https://emilio-j4n3z.github.io/categories/web-exploitation/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/posts/rutas/</loc>
+    <loc>https://emilio-j4n3z.github.io/tags/web-exploitation/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/arte/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/contact/</loc>
+    <loc>https://emilio-j4n3z.github.io/blogs/bici-rutas/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/biomec%C3%A1nico/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/cdmx/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/ciclismo/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/m%C3%A9xico/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/rutas/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/posts/rutas/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/tatuajes/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/posts/tinta/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/posts/tinta/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://emilio-j4n3z.github.io/pt-br/posts/tinta/"
+                />
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/blogs/tinta-alma/</loc>
+    <lastmod>2025-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/contact/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/contact/"
+                href="https://emilio-j4n3z.github.io/en/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/contact/"
+                href="https://emilio-j4n3z.github.io/pt-br/contact/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/posts/tinta/</loc>
-    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/tinta/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/tinta/"
-                />
+    <loc>https://emilio-j4n3z.github.io/tags/aprendizaje/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/anatom%C3%ADa/</loc>
-    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+    <loc>https://emilio-j4n3z.github.io/tags/cursos/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/biomec%C3%A1nico/</loc>
-    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+    <loc>https://emilio-j4n3z.github.io/tags/libros/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/ciclismo/</loc>
+    <loc>https://emilio-j4n3z.github.io/blogs/libros-aprendizaje/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/recursos/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/anatom%C3%ADa/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/dise%C3%B1o-personal/</loc>
+    <loc>https://emilio-j4n3z.github.io/tags/dise%C3%B1o-personal/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/posts/tinta/mi-vision-biomecanica/</loc>
+    <loc>https://emilio-j4n3z.github.io/blogs/mi-vision-biomecanica/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/categories/proyectos-personales/</loc>
+    <loc>https://emilio-j4n3z.github.io/posts/tinta/mi-vision-biomecanica/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/blue/</loc>
+    <loc>https://emilio-j4n3z.github.io/categories/proyectos-personales/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/tags/blue/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/blue/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/blue/"
-                />
   </url><url>
-    <loc>http://localhost:1313/es/tags/red/</loc>
+    <loc>https://emilio-j4n3z.github.io/tags/red/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/red/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/red/"
-                />
   </url><url>
-    <loc>http://localhost:1313/es/projects/</loc>
+    <loc>https://emilio-j4n3z.github.io/tags/cultura/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/projects/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/projects/"
+                href="https://emilio-j4n3z.github.io/en/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/projects/"
+                href="https://emilio-j4n3z.github.io/pt-br/projects/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/posts/worldview/</loc>
+    <loc>https://emilio-j4n3z.github.io/tags/tradiciones/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://emilio-j4n3z.github.io/posts/worldview/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/posts/worldview/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/worldview/"
+                href="https://emilio-j4n3z.github.io/en/posts/worldview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/worldview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/worldview/"
+                href="https://emilio-j4n3z.github.io/pt-br/posts/worldview/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/authors/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/authors/"
-                />
+    <loc>https://emilio-j4n3z.github.io/blogs/worldview/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/es/tags/css/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/css/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/markdown-syntax/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/markdown-syntax/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/html/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/html/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/hugo/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/hugo/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/authors/lone-coder/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/authors/lone-coder/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/authors/lone-coder/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/authors/lone-coder/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/markdown/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/markdown/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/series/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/series/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/syntax/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/categoria/sintaxe/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/categories/syntax/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/categories/theme-demo/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/theme-demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/categories/theme-demo/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/series/theme-demo/</loc>
-    <lastmod>2023-07-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/series/theme-demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/series/theme-demo/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/rich-content/</loc>
-    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/rich-content/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/shortcodes/</loc>
-    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/shortcodes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/shortcodes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/shortcodes/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/more-rich-content/</loc>
-    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/more-rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/more-rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/more-rich-content/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/math-typesetting/</loc>
-    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/math-typesetting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/math-typesetting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/math-typesetting/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/html-and-css-only-tabs/</loc>
-    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/html-and-css-only-tabs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/html-and-css-only-tabs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/html-and-css-only-tabs/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/mermaid-support/</loc>
-    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/mermaid-support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/mermaid-support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/mermaid-support/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/emoji/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/emoji/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/emoji/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/emoji/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/emoji-support/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/emoji-support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/emoji-support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/emoji-support/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/hugo-coder-wiki/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/hugo-coder-wiki/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/hugo-coder-wiki/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/hugo-coder-wiki/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/posts/placeholder-text/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/placeholder-text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/posts/placeholder-text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/posts/placeholder-text/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/text/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/tags/text/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/authors/hugo-authors/</loc>
-    <lastmod>2023-01-05T01:15:29+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/authors/hugo-authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/autores/autores-de-hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/authors/hugo-authors/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/about/</loc>
+    <loc>https://emilio-j4n3z.github.io/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://emilio-j4n3z.github.io/about/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/about/"
+                href="https://emilio-j4n3z.github.io/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/about/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/sections/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/sections/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/sections/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="http://localhost:1313/es/sections/"
+                href="https://emilio-j4n3z.github.io/pt-br/about/"
                 />
   </url>
 </urlset>

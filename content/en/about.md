@@ -1,25 +1,26 @@
-+++
-title = "About"
-description = "Vistazo acerca de mi persona hobbies, aventuras y forma de pensar"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
-+++
+---
+title: "About"
+description: "A glimpse of who I am — hobbies, adventures and way of thinking"
+date: "2019-02-28"
+aliases: ["about-us", "about-hugo", "contact"]
+author: "Emilinho"
+tags: []
+---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+# About Me
 
-Hugo makes use of a variety of open source projects including:
+Hi, I'm **Emilio Jáñez** — a developer, cyclist, and curious mind based in Mexico City.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+I'm passionate about cybersecurity, NLP, and open source. When I'm not in front of a terminal, I'm probably on my bike climbing some hill around CDMX.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+## What I Do
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+- 🛡️ Cybersecurity & ethical hacking (CTFs, writeups, pentesting)
+- 🗣️ NLP & AI projects, including indigenous language preservation
+- 🚴 Road cycling and documenting routes across Mexico
+- 🎨 Exploring tattoo art and biomechanical design
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+## Get in Touch
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- **GitHub**: [github.com/Emilio-J4n3z](https://github.com/Emilio-J4n3z)
+- **LinkedIn**: [linkedin.com/in/emilinho](https://linkedin.com/in/emilinho)

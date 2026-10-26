@@ -3,6 +3,7 @@ title: "Contacto"
 description: "Ponte en contacto conmigo para colaboraciones y consultas"
 date: 2025-01-06
 draft: false
+tags: []
 ---
 
 # Contacto
