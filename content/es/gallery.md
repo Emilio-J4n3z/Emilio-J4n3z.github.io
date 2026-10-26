@@ -6,9 +6,9 @@ description: "Ciclismo, rutas y momentos 🚴"
 layout: "gallery"
 galleryImages:
   - src: /images/primera_bici.jpg
-  - src: /images/priemra_bici_pachuca.jpg
+  - src: /images/primera_bici_pachuca.jpg
   - src: /images/wakanda.jpg
-  - src: /images/lago_priemras_salidas.jpg
+  - src: /images/lago_primeras_salidas.jpg
   - src: /images/primera_bici_pachuca.jpg
   - src: /images/peña_bernal_primero.jpg
   - src: /images/guanajuato.jpg
@@ -18,7 +18,7 @@ galleryImages:
   - src: /images/crono.jpg
   - src: /images/marquesa.jpg
   - src: /images/speciallized_car_rojo.jpg
-  - src: /images/salida_valle_cantimplora.jpg
+  - src: /images/salida_valle_cantimploras.jpg
   - src: /images/valle_cantimploras.jpg
   - src: /images/villa_victor.jpg
   - src: /images/acampada_primera.jpg
