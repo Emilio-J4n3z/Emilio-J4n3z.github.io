@@ -9,7 +9,6 @@ galleryImages:
   - src: /images/primera_bici_pachuca.jpg
   - src: /images/wakanda.jpg
   - src: /images/lago_primeras_salidas.jpg
-  - src: /images/primera_bici_pachuca.jpg
   - src: /images/peña_bernal_primero.jpg
   - src: /images/guanajuato.jpg
   - src: /images/subida_concentracion.jpg
@@ -30,13 +29,13 @@ galleryImages:
   - src: /images/spiderman.jpg
   - src: /images/amigos.jpg
   - src: /images/hermano_me.jpg
-  - src: /images/kike_me,jpg
+  - src: /images/kike_me_recorrido.jpg
   - src: /images/monkeys.jpg
   - src: /images/monkeys_2.jpg
   - src: /images/todos_amigos.jpg
   - src: /images/mural_bici.jpg
   - src: /images/mevscamion.jpg
-  - src: /images/mensaje_mientras_Ando.jpg
+  - src: /images/menaje_mientras_Ando.jpg
   - src: /images/real_monte.jpg
   - src: /images/real_monte_estatua_caida.jpg
   - src: /images/salida_CCO.jpg
@@ -46,7 +45,7 @@ galleryImages:
   - src: /images/parque_izcalli.jpg
   - src: /images/caballo_2025-06-16.jpg
   - src: /images/caballo_aprendizaje_2025-06-16.jpg
-  - src: /images/guanajuato_2.jpg
+  - src: /images/guanjuato_2.jpg
   - src: /images/ida_fiesta_papas_kike.jpg
   - src: /images/huehotoca.jpg
   - src: /images/malinche.jpg

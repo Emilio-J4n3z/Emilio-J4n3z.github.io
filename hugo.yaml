@@ -1,5 +1,5 @@
 baseURL: "https://emilio-j4n3z.github.io/"
-languageCode: "es"
+locale: "es"
 title: "José Emilio Sánchez"
 theme: hugo-profile
 
@@ -105,6 +105,11 @@ params:
   description: "Ingeniero en Sistemas | Blue Team y Seguridad de Aplicaciones"
   favicon: "/images/favicon.svg"
 
+  # NUEVO: imagen para vista previa al compartir en LinkedIn/WhatsApp (1200x630).
+  # Crea static/images/og-card.jpg. Verifica con "ver código fuente" que aparezca og:image.
+  images:
+    - "/images/og-card.jpg"
+
   useBootstrapCDN: false
   mathjax: false
   animate: true
@@ -140,7 +145,8 @@ params:
     intro: "Hola, mi nombre es"
     title: "José Emilio."
     subtitle: "Blue Team · Seguridad de Aplicaciones · CTF"
-    content: "Ingeniero en Sistemas (TESCI, dic. 2026) con doble titulación en Matemáticas Aplicadas (UNAM). Residente en IIMAS-UNAM: evalué 4 apps web, 8 vulnerabilidades documentadas con CVSS/CWE/OWASP — máx. CVSS 9.8. Enfoque Blue Team con base ofensiva en CTFs."
+    # CAMBIO: "Residente" (presente) -> "Residencia en IIMAS-UNAM (2026)"
+    content: "Ingeniero en Sistemas (TESCI, dic. 2026) con doble titulación en Matemáticas Aplicadas (UNAM). Residencia en IIMAS-UNAM (2026): evalué 4 apps web, 8 vulnerabilidades documentadas con CVSS/CWE/OWASP — máx. CVSS 9.8. Enfoque Blue Team con base ofensiva en CTFs."
     image: /images/pachuca_reoj_segunda.jpg
     bottomImage:
       enable: true
@@ -148,7 +154,8 @@ params:
     button:
       enable: true
       name: "Currículum"
-      url: "#"
+      # CAMBIO: antes era "#". Sube el PDF a static/CV_Jose_Emilio_Sanchez.pdf
+      url: "/CV_Jose_Emilio_Sanchez.pdf"
       download: true
       newPage: false
     socialLinks:
@@ -156,12 +163,14 @@ params:
         - icon: fab fa-github
           url: https://github.com/Emilio-J4n3z
         - icon: fab fa-linkedin
-          url: https://linkedin.com/in/josé-emilio-sánchez
+          # CAMBIO: URL sin acentos
+          url: https://www.linkedin.com/in/jose-emilio-sanchez
 
   about:
     enable: true
     title: "Sobre Mí"
     image: "/images/me_fondo_azul.jpg"
+    # REVISAR: "acceso sin autenticación a n8n" / CWE-306. Tu evidencia muestra que n8n tiene login.
     content: |-
       Ingeniero en Sistemas Computacionales (graduación dic. 2026, TESCI) con doble titulación simultánea en Matemáticas Aplicadas y Computación en la FES Acatlán UNAM.
 
@@ -187,6 +196,7 @@ params:
       - company: "IIMAS-UNAM"
         companyUrl: "https://www.iimas.unam.mx"
         jobs:
+          # REVISAR: fechas (CV/sitio mar-jul; informe abr-jul; evidencias hasta sept. 2026)
           - name: "Residente Profesional — Seguridad de Aplicaciones Web"
             date: "Mar 2026 - Jul 2026"
             info:
@@ -229,8 +239,9 @@ params:
               - CTF internacionales (PicoCTF, HackTheBox, TryHackMe, EchoCTF): web exploitation, criptografía y binary exploitation
               - Práctica ofensiva para mejorar detección y defensa · Miembro del equipo white_void (CTFtime)
 
+      # CAMBIO: se quitó companyUrl "#". Si tu tema falla sin ese campo,
+      # pon aquí la URL real de CEDETEC LASC o https://emilio-j4n3z.github.io/
       - company: "CEDETEC LASC"
-        companyUrl: "#"
         jobs:
           - name: "Asistente de Investigación — Ciberseguridad"
             date: "Feb 2023 - Nov 2023"
@@ -249,7 +260,8 @@ params:
           name: "Tecnológico de Estudios Superiores de Cuautitlán Izcalli (TESCI)"
           url: "https://tesci.edomex.gob.mx"
         date: "2022 - Dic 2026 (esperado)"
-        GPA: "8vo semestre"
+        # CAMBIO: antes "8vo semestre"
+        GPA: "Residencia concluida; titulación en trámite"
         content: |-
           Especialización en Ciberseguridad, Machine Learning, NLP y Desarrollo de Software.
         featuredLink:
@@ -260,7 +272,8 @@ params:
           name: "FES Acatlán — UNAM"
           url: "https://www.acatlan.unam.mx"
         date: "2020 - Jun 2027 (esperado)"
-        GPA: "Doble titulación simultánea"
+        # CAMBIO: antes "Doble titulación simultánea"
+        GPA: "En curso; titulación esperada jun. 2027"
         content: |-
           Cursando en paralelo con ingeniería. Teaching Assistant: Organización de Computadoras (2021).
         featuredLink:
@@ -269,45 +282,48 @@ params:
   achievements:
     enable: true
     items:
+      # CAMBIO: una imagen por logro. Crea static/images/achievements/
       - title: "Residencia IIMAS-UNAM — CVSS 9.8"
         content: "Evaluación de seguridad real: 8 vulnerabilidades en 4 apps web. Hallazgo crítico: acceso sin autenticación a n8n con riesgo de RCE."
-        image: /images/achievement.jpg
+        image: /images/achievements/residencia.jpg
 
       - title: "Pre Security Path — TryHackMe"
         content: "Completado oct. 2026 · 19h 10min. Siguiente: Cyber Security 101 y ruta Security Analyst."
-        image: /images/achievement.jpg
+        image: /images/achievements/tryhackme.jpg
 
       - title: "CCNA: Enterprise Networking, Security and Automation"
         content: "Cisco Networking Academy 2026. Redes empresariales, protocolos de seguridad y automatización."
-        image: /images/achievement.jpg
+        image: /images/achievements/cisco.jpg
 
       - title: "Introduction to Linux (LFS101)"
         content: "The Linux Foundation · Feb 2026 · ID: LF-bybqihldkf."
-        image: /images/achievement.jpg
+        url: "https://www.credly.com/badges/9c7a6e63-9365-4a70-8c59-36193b50340e"
+        image: /images/achievements/linux.jpg
 
       - title: "MEIA 2025 — AI Macrotraining UNAM"
         content: "40+ horas de entrenamiento en Deep Learning, NLP y Computer Vision."
-        image: /images/achievement.jpg
+        image: /images/achievements/meia.jpg
 
       - title: "Equipo white_void — CTFtime"
         content: "10+ soluciones documentadas en CTFs internacionales."
         url: "https://github.com/Emilio-J4n3z"
-        image: /images/achievement.jpg
+        image: /images/achievements/white_void.jpg
 
+      # Si curso_ipn.jpg está directo en static/ (no en static/images/), usa /curso_ipn.jpg
       - title: "Instructor Taller NLP — 50+ participantes"
         content: "Workshop en línea: Python, NLTK, spaCy y transformers."
-        image: /images/achievement.jpg
+        image: /images/curso_ipn.jpg
 
       - title: "Organizador FLISoL y Semana Académica"
         content: "FLISoL (150+ asistentes) y Semana Académica (500+ asistentes) en FES Acatlán UNAM."
-        image: /images/achievement.jpg
+        image: /images/achievements/flisol.jpg
 
   projects:
     enable: true
     items:
       - title: "Evaluación de Seguridad — IIMAS-UNAM"
         content: "Evaluación de 4 apps web con 8 hallazgos documentados (CVSS/CWE/MITRE ATT&CK). Hallazgo crítico: CVSS 9.8, CWE-306. Plan de mitigación por plazos con base en CIS y NIST."
-        image: /images/projects/profile.png
+        image: /images/projects/evaluacion-seguridad.jpg
         badges:
           - "Burp Suite"
           - "OWASP ZAP"
@@ -320,7 +336,7 @@ params:
 
       - title: "Análisis de Documentos Legales con NLP"
         content: "Sistema de análisis automatizado de 500+ documentos legales con NER, grafos de citación y búsqueda full-text."
-        image: /images/projects/profile2.jpg
+        image: /images/projects/nlp-legal.jpg
         badges:
           - "Python"
           - "FastAPI"
@@ -333,7 +349,8 @@ params:
 
       - title: "CTF Writeups — TechSec Hub"
         content: "10+ writeups técnicos en español de CTFs internacionales. Especialización en web exploitation, criptografía y binary exploitation."
-        image: /images/N90.jpg
+        # CAMBIO: antes /images/N90.jpg (la misma de Bici & Rutas)
+        image: /images/projects/ctf.jpg
         featured:
           name: Ver Blog
           link: /blogs
@@ -361,7 +378,8 @@ params:
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/Emilio-J4n3z
-      linkedin: https://linkedin.com/in/josé-emilio-sánchez
+      # CAMBIO: URL sin acentos
+      linkedin: https://www.linkedin.com/in/jose-emilio-sanchez
 
   listPages:
     disableFeaturedImage: false

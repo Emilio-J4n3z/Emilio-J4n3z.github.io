@@ -2,302 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://emilio-j4n3z.github.io/posts/primer_ejemplo/</loc>
+    <loc>http://localhost:1313/posts/primer_ejemplo/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/gallery/</loc>
+    <loc>http://localhost:1313/blogs/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/blue-team/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ciberseguridad/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ctf/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/hacking/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/pt-br/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/blogs/techsec-hub/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/gallery/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/"
+                href="http://localhost:1313/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/"
+                href="http://localhost:1313/pt-br/categories/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/</loc>
+    <loc>http://localhost:1313/categories/ctf-writeups/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/blue-team/</loc>
+    <loc>http://localhost:1313/tags/jinja2/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/categories/</loc>
+    <loc>http://localhost:1313/tags/picoctf/</loc>
+    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/categories/"
+                href="http://localhost:1313/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/categories/"
+                href="http://localhost:1313/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/categories/"
+                href="http://localhost:1313/pt-br/posts/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/ciberseguridad/</loc>
+    <loc>http://localhost:1313/tags/ssti/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/ctf/</loc>
+    <loc>http://localhost:1313/blogs/ssti-picoctf-writeup/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/categories/ctf-writeups/</loc>
+    <loc>http://localhost:1313/posts/techsec/writeups/ssti-picoctf-writeup/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/hacking/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/jinja2/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/picoctf/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/techsec/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/posts/"
+                href="http://localhost:1313/posts/techsec/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/posts/"
+                href="http://localhost:1313/en/posts/techsec/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/posts/"
+                href="http://localhost:1313/pt-br/posts/techsec/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/ssti/</loc>
+    <loc>http://localhost:1313/categories/web-exploitation/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/ssti-picoctf-writeup/</loc>
+    <loc>http://localhost:1313/tags/web-exploitation/</loc>
     <lastmod>2025-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/techsec/writeups/ssti-picoctf-writeup/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://emilio-j4n3z.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/tags/"
-                />
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/techsec/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://emilio-j4n3z.github.io/posts/techsec/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/posts/techsec/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/posts/techsec/"
-                />
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/techsec-hub/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/categories/web-exploitation/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/web-exploitation/</loc>
-    <lastmod>2025-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/arte/</loc>
+    <loc>http://localhost:1313/tags/arte/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/bici-rutas/</loc>
+    <loc>http://localhost:1313/blogs/bici-rutas/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/biomec%C3%A1nico/</loc>
+    <loc>http://localhost:1313/tags/biomec%C3%A1nico/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/cdmx/</loc>
+    <loc>http://localhost:1313/tags/cdmx/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/ciclismo/</loc>
+    <loc>http://localhost:1313/tags/ciclismo/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/m%C3%A9xico/</loc>
+    <loc>http://localhost:1313/tags/m%C3%A9xico/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/rutas/</loc>
+    <loc>http://localhost:1313/tags/rutas/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/rutas/</loc>
+    <loc>http://localhost:1313/posts/rutas/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/tatuajes/</loc>
+    <loc>http://localhost:1313/tags/tatuajes/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/tinta/</loc>
+    <loc>http://localhost:1313/posts/tinta/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/posts/tinta/"
+                href="http://localhost:1313/posts/tinta/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/posts/tinta/"
+                href="http://localhost:1313/pt-br/posts/tinta/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/tinta-alma/</loc>
+    <loc>http://localhost:1313/blogs/tinta-alma/</loc>
     <lastmod>2025-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/contact/"
+                href="http://localhost:1313/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/contact/"
+                href="http://localhost:1313/en/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/contact/"
+                href="http://localhost:1313/pt-br/contact/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/aprendizaje/</loc>
+    <loc>http://localhost:1313/tags/aprendizaje/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/cursos/</loc>
+    <loc>http://localhost:1313/tags/cursos/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/libros/</loc>
+    <loc>http://localhost:1313/tags/libros/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/libros-aprendizaje/</loc>
+    <loc>http://localhost:1313/blogs/libros-aprendizaje/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/recursos/</loc>
+    <loc>http://localhost:1313/tags/recursos/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/anatom%C3%ADa/</loc>
+    <loc>http://localhost:1313/tags/anatom%C3%ADa/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/dise%C3%B1o-personal/</loc>
+    <loc>http://localhost:1313/tags/dise%C3%B1o-personal/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/mi-vision-biomecanica/</loc>
+    <loc>http://localhost:1313/blogs/mi-vision-biomecanica/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/tinta/mi-vision-biomecanica/</loc>
+    <loc>http://localhost:1313/posts/tinta/mi-vision-biomecanica/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/categories/proyectos-personales/</loc>
+    <loc>http://localhost:1313/categories/proyectos-personales/</loc>
     <lastmod>2024-02-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/blue/</loc>
+    <loc>http://localhost:1313/tags/blue/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/red/</loc>
+    <loc>http://localhost:1313/tags/red/</loc>
     <lastmod>2024-02-02T04:14:54-08:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/cultura/</loc>
+    <loc>http://localhost:1313/tags/cultura/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/projects/"
+                href="http://localhost:1313/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/projects/"
+                href="http://localhost:1313/en/projects/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/projects/"
+                href="http://localhost:1313/pt-br/projects/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/tags/tradiciones/</loc>
+    <loc>http://localhost:1313/tags/tradiciones/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/posts/worldview/</loc>
+    <loc>http://localhost:1313/posts/worldview/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/posts/worldview/"
+                href="http://localhost:1313/posts/worldview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/posts/worldview/"
+                href="http://localhost:1313/en/posts/worldview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/posts/worldview/"
+                href="http://localhost:1313/pt-br/posts/worldview/"
                 />
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/blogs/worldview/</loc>
+    <loc>http://localhost:1313/blogs/worldview/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://emilio-j4n3z.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://emilio-j4n3z.github.io/about/"
+                href="http://localhost:1313/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://emilio-j4n3z.github.io/en/about/"
+                href="http://localhost:1313/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="https://emilio-j4n3z.github.io/pt-br/about/"
+                href="http://localhost:1313/pt-br/about/"
                 />
   </url>
 </urlset>

@@ -3,8 +3,8 @@ title: "Tinta & Alma 🎨"
 date: 2025-06-10
 draft: false
 author: "Emilinho"
-tags: ["tatuajes", "arte", "biomecánico", "ciclismo"]
-image: /images/post.jpg
+tags: ["tatuajes", "arte", "biomecánico"]
+image: /images/blogs/tinta-alma.jpg
 description: "Historias grabadas en piel — realismo, arte japonés y biomecánica"
 toc: true
 ---

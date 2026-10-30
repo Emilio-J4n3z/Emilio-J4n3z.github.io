@@ -4,7 +4,7 @@ date: 2025-01-01
 draft: false
 author: "Emilinho"
 tags: ["libros", "aprendizaje", "recursos", "cursos"]
-image: /images/post.jpg
+image: /images/blogs/libros.jpg
 description: "Recursos, libros y cursos que han marcado mi camino"
 toc: true
 ---

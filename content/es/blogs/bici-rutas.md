@@ -4,7 +4,7 @@ date: 2025-06-10
 draft: false
 author: "Emilinho"
 tags: ["ciclismo", "rutas", "México", "CDMX"]
-image: /images/N90.jpg
+image: /images/blogs/bici-rutas.jpg
 description: "Cada kilómetro cuenta una historia — rutas de ciclismo de ruta en México"
 toc: true
 ---

@@ -1,10 +1,10 @@
 ---
 title: "TechSec Hub 🛡️"
-date: 2025-06-13
+date: 2026-10-29
 draft: false
 author: "Emilinho"
 tags: ["ciberseguridad", "CTF", "blue-team", "hacking"]
-image: /images/post.jpg
+image: /images/blogs/techsec-hub.jpg
 description: "Ciberseguridad, Blue Team y CTF writeups — entendiendo el ataque para defender mejor"
 toc: true
 ---

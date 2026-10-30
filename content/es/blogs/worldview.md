@@ -4,7 +4,7 @@ date: 2024-01-01
 draft: false
 author: "Emilinho"
 tags: ["cultura", "México", "CDMX", "tradiciones"]
-image: /images/post.jpg
+image: /images/blogs/worldview.jpg
 description: "Perspectivas desde todos los rincones — culturas, tradiciones y celebraciones"
 toc: true
 ---

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>José Emilio Sánchez</title>
-		<link>https://emilio-j4n3z.github.io/en/</link>
+		<link>http://localhost:1313/en/</link>
 		<description>Recent content on José Emilio Sánchez</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,33 +12,33 @@
 		
 			<lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://emilio-j4n3z.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>External Page: Hugo Coder Wiki</title>
-				<link>https://emilio-j4n3z.github.io/en/posts/hugo-coder-wiki/</link>
+				<link>http://localhost:1313/en/posts/hugo-coder-wiki/</link>
 				<pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/en/posts/hugo-coder-wiki/</guid>
+				<guid>http://localhost:1313/en/posts/hugo-coder-wiki/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>About</title>
-				<link>https://emilio-j4n3z.github.io/en/about/</link>
+				<link>http://localhost:1313/en/about/</link>
 				<pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/en/about/</guid>
+				<guid>http://localhost:1313/en/about/</guid>
 				<description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;&#xA;&lt;p&gt;Hi, I&amp;rsquo;m &lt;strong&gt;Emilio Jáñez&lt;/strong&gt; — a developer, cyclist, and curious mind based in Mexico City.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m passionate about cybersecurity, NLP, and open source. When I&amp;rsquo;m not in front of a terminal, I&amp;rsquo;m probably on my bike climbing some hill around CDMX.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-do&#34;&gt;What I Do&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🛡️ Cybersecurity &amp;amp; ethical hacking (CTFs, writeups, pentesting)&lt;/li&gt;&#xA;&lt;li&gt;🗣️ NLP &amp;amp; AI projects, including indigenous language preservation&lt;/li&gt;&#xA;&lt;li&gt;🚴 Road cycling and documenting routes across Mexico&lt;/li&gt;&#xA;&lt;li&gt;🎨 Exploring tattoo art and biomechanical design&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in Touch&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/Emilio-J4n3z&#34;&gt;github.com/Emilio-J4n3z&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href=&#34;https://linkedin.com/in/emilinho&#34;&gt;linkedin.com/in/emilinho&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
 			</item>
 			<item>
 				<title>Contact</title>
-				<link>https://emilio-j4n3z.github.io/en/contact/</link>
+				<link>http://localhost:1313/en/contact/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/en/contact/</guid>
+				<guid>http://localhost:1313/en/contact/</guid>
 				<description>&lt;p&gt;tags: []&lt;/p&gt;&#xA;&lt;p&gt;Follow me, @emilinhone&#xA;email @algois.com&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Projects</title>
-				<link>https://emilio-j4n3z.github.io/en/projects/</link>
+				<link>http://localhost:1313/en/projects/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/en/projects/</guid>
+				<guid>http://localhost:1313/en/projects/</guid>
 				<description>&lt;p&gt;tags: []&lt;/p&gt;&#xA;&lt;p&gt;Nothing to see here&amp;hellip; Move along!&lt;/p&gt;</description>
 			</item>
 	</channel>

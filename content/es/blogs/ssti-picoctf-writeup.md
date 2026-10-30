@@ -1,6 +1,7 @@
 ---
 title: "SSTI1 PicoCTF: Mi Primera Template Injection"
 date: 2025-06-13
+image: /images/blogs/ssti-picoctf.jpg
 lastmod: 2025-06-13
 description: "Análisis paso a paso de cómo descubrí y exploté mi primera vulnerabilidad Server-Side Template Injection"
 tags: ["SSTI", "PicoCTF", "Web Exploitation", "Jinja2"]

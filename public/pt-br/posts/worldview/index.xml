@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>José Emilio Sánchez</title>
-		<link>https://emilio-j4n3z.github.io/pt-br/posts/worldview/</link>
+		<link>http://localhost:1313/pt-br/posts/worldview/</link>
 		<description>Recent content on José Emilio Sánchez</description>
 		<generator>Hugo</generator>
 		<language>pt-br</language>
@@ -10,6 +10,6 @@
 		
 		
 		
-			<atom:link href="https://emilio-j4n3z.github.io/pt-br/posts/worldview/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/pt-br/posts/worldview/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>

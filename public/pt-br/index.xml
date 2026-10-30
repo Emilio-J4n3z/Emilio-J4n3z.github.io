@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>José Emilio Sánchez</title>
-		<link>https://emilio-j4n3z.github.io/pt-br/</link>
+		<link>http://localhost:1313/pt-br/</link>
 		<description>Recent content on José Emilio Sánchez</description>
 		<generator>Hugo</generator>
 		<language>pt-br</language>
@@ -12,33 +12,33 @@
 		
 			<lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://emilio-j4n3z.github.io/pt-br/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/pt-br/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Página Externa: Wiki Hugo Coder</title>
-				<link>https://emilio-j4n3z.github.io/pt-br/posts/hugo-coder-wiki/</link>
+				<link>http://localhost:1313/pt-br/posts/hugo-coder-wiki/</link>
 				<pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/pt-br/posts/hugo-coder-wiki/</guid>
+				<guid>http://localhost:1313/pt-br/posts/hugo-coder-wiki/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>About</title>
-				<link>https://emilio-j4n3z.github.io/pt-br/about/</link>
+				<link>http://localhost:1313/pt-br/about/</link>
 				<pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/pt-br/about/</guid>
+				<guid>http://localhost:1313/pt-br/about/</guid>
 				<description>&lt;h1 id=&#34;sobre-mim&#34;&gt;Sobre Mim&lt;/h1&gt;&#xA;&lt;p&gt;Olá, sou &lt;strong&gt;Emilio Jáñez&lt;/strong&gt; — desenvolvedor, ciclista e mente curiosa baseado na Cidade do México.&lt;/p&gt;&#xA;&lt;p&gt;Sou apaixonado por segurança cibernética, NLP e código aberto. Quando não estou em frente a um terminal, provavelmente estou na minha bicicleta subindo alguma colina pela CDMX.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-faço&#34;&gt;O que Faço&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🛡️ Segurança cibernética e ethical hacking (CTFs, writeups, pentesting)&lt;/li&gt;&#xA;&lt;li&gt;🗣️ Projetos de NLP e IA, incluindo preservação de línguas indígenas&lt;/li&gt;&#xA;&lt;li&gt;🚴 Ciclismo de estrada e documentação de rotas pelo México&lt;/li&gt;&#xA;&lt;li&gt;🎨 Arte de tatuagem e design biomecânico&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;contato&#34;&gt;Contato&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/Emilio-J4n3z&#34;&gt;github.com/Emilio-J4n3z&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href=&#34;https://linkedin.com/in/emilinho&#34;&gt;linkedin.com/in/emilinho&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
 			</item>
 			<item>
 				<title>Contato</title>
-				<link>https://emilio-j4n3z.github.io/pt-br/contact/</link>
+				<link>http://localhost:1313/pt-br/contact/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/pt-br/contact/</guid>
+				<guid>http://localhost:1313/pt-br/contact/</guid>
 				<description>&lt;p&gt;tags: []&lt;/p&gt;&#xA;&lt;p&gt;Me siga em @joaoninguem.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Projetos</title>
-				<link>https://emilio-j4n3z.github.io/pt-br/projects/</link>
+				<link>http://localhost:1313/pt-br/projects/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://emilio-j4n3z.github.io/pt-br/projects/</guid>
+				<guid>http://localhost:1313/pt-br/projects/</guid>
 				<description>&lt;p&gt;tags: []&lt;/p&gt;&#xA;&lt;p&gt;Nada para ver aqui.. Circulando!&lt;/p&gt;</description>
 			</item>
 	</channel>

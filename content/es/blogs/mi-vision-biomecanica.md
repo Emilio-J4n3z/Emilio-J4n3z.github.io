@@ -1,6 +1,7 @@
 ---
 title: "Mi Visión Biomecánica: Cuando la Bicicleta se Fusiona con el Cuerpo"
 date: 2024-02-15
+image: /images/blogs/tinta-alma.jpg
 description: "El proceso de diseñar un tatuaje que fusione mi pasión por el ciclismo con la estética biomecánica"
 tags: ["Biomecánico", "Ciclismo", "Diseño Personal", "Anatomía"]
 categories: ["Proyectos Personales"]
